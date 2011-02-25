@@ -1,0 +1,35 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="cenditel.ppm">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="cenditel.ppm.interfaces.folderproj.Ifolderproj"
+      layer="cenditel.ppm.interfaces.folderproj.IfolderprojSpecific"
+      name="folderproj_view"
+      class=".folderprojview.folderprojview"
+      template="templates/folderprojview.pt"
+      allowed_interface=".folderprojview.Ifolderprojview"
+      permission="zope.Public"
+      />
+
+  <browser:page
+      for="cenditel.ppm.interfaces.project.Iproject"
+      class=".projectview.projectview"
+      name="project_view"
+      template="templates/projectview.pt"
+      permission="zope.Public"
+      />
+
+ <browser:page
+      for="cenditel.ppm.interfaces.folderproj.Ifolderproj"
+      name="newproposal"
+      class=".proposaltemplate.proposaltemplateview"
+      permission="cmf.AddPortalContent"
+      />
+
+</configure>

@@ -1,0 +1,156 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="ppm">
+
+ <body>
+
+  <div metal:fill-slot="main">
+	
+   <tal:main-macro metal:define-macro="main"
+        tal:define="Element view/searching;             
+                    createfolder view/createfol;
+                    GettingTags view/GetTags"> 
+	   
+    <div>
+     <p tal:content="createfolder"></p>
+     <a i18n:translate='label_createnewproject' href="./createObject?type_name=project">Create New Project</a><br />
+     <a i18n:translate='label_createnewproposal' href="./@@newproposal">Create New Proposal</a><br /><br />
+    </div>
+
+    <br />
+
+    <div tal:replace="structure provider:plone.belowcontentbody" />
+      
+    <dl id="completedProposals" class="collapsible inline "> 
+
+     <dt i18n:translate='label_collapsibleHeader' class="collapsibleHeader">Select Projects by Manager or Tag</dt> 
+
+     <dd class="collapsibleContent"> 
+
+      <br /><strong i18n:translate='label_clikclose'>^ Click above to close selection window</strong><br /><br /> 
+
+      <form name="searchform" action="search" tal:define="action view/searching"> 
+       <table cellspacing="1" cellpadding="1" border="0">
+        <tbody> 
+      
+        <span tal:define="titulo python:Element">
+        <tr>
+         <th i18n:translate='label_selectmanager'>Select By Manager</th>
+         <th i18n:translate='label_selecttags'>Select By Tag</th> 
+        </tr> 
+
+        <tr>  
+
+         <td valign='top' align='center'> 
+          <select id="manager" name="manager">
+           <option i18n:translate='label_allmanagers' value=''>All Managers</option>
+           
+           <span tal:repeat="titulo python:Element">
+           <option tal:content="titulo/manager"></option> 
+           </span> 
+          
+          </select> 
+         </td> 
+
+         <td valign='top' align='center'> 
+
+          <select id="SearchableText" name="SearchableText" multiple="multiple">
+            <option i18n:translate='label_alltags' value=''>All Tags</option> 
+            <span tal:repeat="MyTag python:GettingTags">
+            <option tal:content="MyTag"><tal:comment replace="nothing">"tags"</tal:comment></option>
+            </span>
+          </select>
+          </td> 
+          
+          <td valign='top' align='center'> 
+
+          <select id="Type" name="Type" >
+            <option i18n:translate='label_project' value='project'>projects</option> 
+            <option i18n:translate='label_proposal' value="proposals"> proposals </option>
+          </select>
+          </td> 
+ 
+        </tr> 
+
+        </span>
+        </tbody>
+
+       </table> 
+
+       <input type="submit" 
+              value="Search"
+              title="Show Projects by Manager/Tag"
+              i18n:attributes="value label_valuebottonsearch;
+                               title label_titlebottonsearch"
+              method="" /> 
+      </form> 
+      <br /><br /> 
+
+     </dd> 
+
+    </dl>
+
+   <h1 i18n:translate='label_allprojects'>All Projects</h1>
+    <div> 
+    <br />
+    <dl id="completedProposals" class="collapsible inline collapsedOnLoad"> 
+     <dt class="collapsibleHeader" i18n:translate=''>Projects:</dt> 
+      <dd class="collapsibleContent"><br /> 
+           
+       <table class="listing" id="sortable" cellspacing="1" cellpadding="1" border="1" align="" summary=""> 
+        <thead> 
+         <tr> 
+          <th i18n:translate='label_nameproj'>Name Project</th>  
+          <th i18n:translate='label_projmanager'>Project Manager</th> 
+          <th i18n:translate='label_schesatatus'>Schedule Status</th> 
+          <th i18n:translate='label_budgetstatus'>Budget Status</th> 
+          <th i18n:translate='label_begindate'>Begin Date</th> 
+          <th i18n:translate='label_enddate'>End Date</th> 
+          <th i18n:translate='label_suscribers'>Suscribers</th> 
+          <th i18n:translate='label_tags'>Tags</th> 
+         </tr> 
+        </thead> 
+    
+        <tbody> 
+    
+         <tr tal:repeat="titulo python:Element">  
+          <span tal:define="link titulo/absolute_url">
+           <td><a href="" tal:attributes="href link"><span tal:content="titulo/Title"></span></a></td> 
+           <td tal:content="titulo/manager"></td> 
+           <td tal:define="status titulo/status; py_color python:(status == 'Time Stimated' and 'White') or (status == 'Delayed' and 'Red') or (status == 'Completed' and 'Green') or (status != 'Completed' and 'White')" tal:attributes='bgcolor string:$py_color' tal:content="status"></td> 
+           <td tal:define="bud_status titulo/bud_status ; py_budcolor python:(bud_status == 'On Budget' and 'Yellow') or (bud_status == 'Over Budget' and 'Red') or (bud_status == 'Under Budget' and 'Green') or (bud_status != 'Under Budget' and 'White')" tal:attributes='bgcolor string:$py_budcolor' tal:content="bud_status"></td>  
+           <td tal:content="titulo/begin_date"></td> 
+           <td tal:content="titulo/end_date" bgcolor='White'><a href=""><br /></a></td> 
+           <td tal:content="titulo/suscribers" bgcolor='White'></td> 
+           <td tal:content="titulo/tags"><tal:comment replace="nothing">Tags</tal:comment></td> 
+          </span>
+         </tr>
+        </tbody> 
+       </table> 
+      
+       <br />
+
+      <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+       show related items if they exist
+      </div>
+
+      </dd>
+
+    </dl> 
+
+   </div>  
+
+    </tal:main-macro>
+
+  </div>
+
+ </body>
+
+</html>
+
+
+ 

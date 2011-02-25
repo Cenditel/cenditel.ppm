@@ -1,0 +1,44 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="cenditel.ppm">
+
+  <!-- configure your content components here -->
+  
+  <!-- -*- extra stuff goes here -*- -->
+  <class class=".proposals.proposals">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.Iproposals"
+        />
+  </class>
+
+  <class class=".project.project">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.Iproject"
+        />
+    <require
+        permission="cmf.ModifyPortalContent"
+        set_schema="..interfaces.Iproject"
+        />
+  </class>
+
+  <class class=".folderproj.folderproj">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.Ifolderproj"
+        />
+    <require
+        permission="cmf.ModifyPortalContent"
+        set_schema="..interfaces.Ifolderproj"
+        />
+  </class>
+
+  <utility
+        component="cenditel.ppm.usuarios.usuarioVocabularyFactory"
+        name="cenditel.ppm.user"
+        />
+        
+</configure>

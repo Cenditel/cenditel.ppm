@@ -1,0 +1,151 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="ppm">
+
+ <body>
+ 
+  <div metal:fill-slot="main">
+
+   
+  <tal:main-macro metal:define-macro="main"
+      tal:define="Assumptions here/assumptions;
+                  createfol view/subfol;
+                  roles view/roles;
+                  suscribers here/getSuscribers;
+                  tags here/getTags;
+                  bud_status here/getBud_status;
+                  act_budget here/getAct_budget;
+                  est_budget here/getEst_budget;
+                  status here/getStatus;
+                  completed here/getCompleted;
+                  end_date here/getEnd_date;                
+                  begin_date here/getBegin_date;
+                  manager here/getManager" >  
+	   
+    <div>
+     <p tal:content="createfol"></p>
+     <p tal:content="string:$roles"></p>
+     <h1 tal:content="context/Title" ></h1>
+    </div>
+      <p> 
+      <b></b> 
+      </p> 
+      <p></p> 
+ 
+      <table>
+       <tbody> 
+       
+        <tr> 
+         <span>
+          <th i18n:translate='label_projectmanager' align="left">Project Manager</th>  
+          <td><strong tal:content="manager" />
+          </td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th i18n:translate='label_schesatatus' align="left">Schedule Status</th>
+          <td> 
+           <p tal:replace="status">
+           </p>
+          </td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th  i18n:translate='label_begindate' align="left">Begin Date</th> 
+          <td><p tal:replace="begin_date"></p></td> 
+          <td></td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th i18n:translate='label_enddate'  align="left">End Date</th> 
+          <td><p tal:replace="end_date"></p></td> 
+          <td></td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th i18n:translate='label_complete' align="left">% Complete</th> 
+          <td>
+           <p tal:replace="completed">
+           </p>%
+          </td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th i18n:translate='label_estimatebud' align="left">Estimated Budget</th> 
+            <td>$ <p tal:replace="est_budget"></p></td>  
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span>  
+          <th i18n:translate='label_actualbud' align="left">Actual Budget</th> 
+            <td>$ <p tal:replace="act_budget"></p></td>  
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th  i18n:translate='label_budgetstatus' align="left">Budget Status</th> 
+            <td><p tal:replace="bud_status"></p></td>  
+          <td></td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th i18n:translate='label_assumtions' align="left">Assumptions</th> 
+          <td><p tal:replace="Assumptions"></p></td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th i18n:translate='label_tags' align="left">Tags</th> 
+          <td><strong tal:content="tags" />
+          </td> 
+         </span> 
+        </tr> 
+        
+        <tr> 
+         <span> 
+          <th i18n:translate='label_suscribers' align="left">Suscribers</th> 
+          <td>
+           <fieldset>
+            <table>
+             <tbody>
+              <tr>
+               <td>
+                <strong tal:content="suscribers" />
+               </td>
+              </tr>
+             </tbody>
+            </table>
+           </fieldset>
+          </td> 
+         </span> 
+        </tr> 
+       </tbody>
+      </table> 
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+        <br /><div metal:use-macro="here/document_relateditems/macros/relatedItems">
+
+
+        </div>
+    </tal:main-macro>
+</div>
+</body>
+</html>

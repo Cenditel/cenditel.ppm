@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <!-- -*- extra stuff goes here -*- -->
+    <permission name="cenditel.ppm: Add proposals" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
+    <permission name="cenditel.ppm: Add project" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
+    <permission name="cenditel.ppm: Add folderproj" acquire="False">
+      <role name="Manager" />
+      <role name="Contributor" />
+    </permission>
+  </permissions>
+</rolemap>

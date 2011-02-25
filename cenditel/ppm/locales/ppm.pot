@@ -1,0 +1,374 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-02-22 16:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: ppm\n"
+
+#: ../content/project.py:82
+msgid "% Completed"
+msgstr ""
+
+#: ../profiles/default/types/folderproj.xml
+msgid "A Folder dedicate to proposals and projects"
+msgstr ""
+
+#: ../content/project.py:101
+msgid "Actual Budget"
+msgstr ""
+
+#: ../content/project.py:102
+msgid "Actual Budget of the project"
+msgstr ""
+
+#: ../content/project.py:121
+msgid "Assumptions"
+msgstr ""
+
+#: ../content/project.py:122
+msgid "Assumptions of project"
+msgstr ""
+
+#: ../content/project.py:65
+msgid "Begin Date"
+msgstr ""
+
+#: ../content/project.py:111
+msgid "Budget Status"
+msgstr ""
+
+#: ../content/project.py:112
+msgid "Budget states of the project"
+msgstr ""
+
+#: ../content/project.py:90
+msgid "Buget estimate"
+msgstr ""
+
+#: ../content/project.py:56
+msgid "Completed"
+msgstr ""
+
+#: ../profiles/default/types/project.xml
+msgid "Create projects for a project portfolio"
+msgstr ""
+
+#: ../profiles/default/types/proposals.xml
+msgid "Create proposals of future projects for a project portfolio"
+msgstr ""
+
+#: ../content/project.py:56
+msgid "Delayed"
+msgstr ""
+
+#: ../content/folderproj.py:28
+msgid "Description"
+msgstr ""
+
+#: ../content/project.py:148
+msgid "Discussion"
+msgstr ""
+
+#: ../content/project.py:147
+msgid "Documents"
+msgstr ""
+
+#: ../content/project.py:75
+msgid "End Date"
+msgstr ""
+
+#: ../content/folderproj.py:27
+msgid "Enter a list of groups (departments / communities / sections) within this portfolio."
+msgstr ""
+
+#: ../content/project.py:157
+msgid "Enter the names of sub-folders to create by default for each project created."
+msgstr ""
+
+#: ../content/project.py:91
+msgid "Estimate Budget of the project"
+msgstr ""
+
+#: ../content/project.py:146
+msgid "Events"
+msgstr ""
+
+#: ../content/project.py:149
+msgid "Forms"
+msgstr ""
+
+#: ../content/project.py:42
+msgid "Manager"
+msgstr ""
+
+#: ../content/project.py:114
+msgid "On Budget"
+msgstr ""
+
+#: ../content/project.py:114
+msgid "Over Budget"
+msgstr ""
+
+#: ../content/project.py:150
+msgid "Plans"
+msgstr ""
+
+#: ../content/project.py:151
+msgid "PoiTracker"
+msgstr ""
+
+#: ../content/project.py:156
+msgid "Project Folders"
+msgstr ""
+
+#: ../browser/templates/folderprojview.pt:101
+msgid "Projects:"
+msgstr ""
+
+#: ../content/project.py:54
+msgid "State of the project"
+msgstr ""
+
+#: ../content/project.py:53
+msgid "Status"
+msgstr ""
+
+#: ../content/project.py:138
+msgid "Suscribers"
+msgstr ""
+
+#: ../content/project.py:139
+msgid "Suscribers of projects"
+msgstr ""
+
+#: ../content/project.py:131
+msgid "Tags"
+msgstr ""
+
+#: ../content/project.py:132
+msgid "Tags of projects"
+msgstr ""
+
+#: ../content/project.py:56
+msgid "Time estimated"
+msgstr ""
+
+#: ../content/folderproj.py:28
+msgid "Title"
+msgstr ""
+
+#: ../content/project.py:114
+msgid "Under Budget"
+msgstr ""
+
+#: ../content/project.py:152
+msgid "Weblog"
+msgstr ""
+
+#: ../profiles/default/types/folderproj.xml
+msgid "folderproj"
+msgstr ""
+
+#. Default: "Actual Budget"
+#: ../browser/templates/projectview.pt:93
+msgid "label_actualbud"
+msgstr ""
+
+#. Default: "All Managers"
+#: ../browser/templates/folderprojview.pt:50
+msgid "label_allmanagers"
+msgstr ""
+
+#. Default: "All Projects"
+#: ../browser/templates/folderprojview.pt:97
+msgid "label_allprojects"
+msgstr ""
+
+#. Default: "All Tags"
+#: ../browser/templates/folderprojview.pt:62
+msgid "label_alltags"
+msgstr ""
+
+#. Default: "Assumptions"
+#: ../browser/templates/projectview.pt:108
+msgid "label_assumtions"
+msgstr ""
+
+#. Default: "Begin Date"
+#: ../browser/templates/folderprojview.pt:111
+#: ../browser/templates/projectview.pt:62
+msgid "label_begindate"
+msgstr ""
+
+#. Default: "Budget Status"
+#: ../browser/templates/folderprojview.pt:110
+#: ../browser/templates/projectview.pt:100
+msgid "label_budgetstatus"
+msgstr ""
+
+#. Default: "^ Click above to close selection window"
+#: ../browser/templates/folderprojview.pt:34
+msgid "label_clikclose"
+msgstr ""
+
+#. Default: "Select Projects by Manager or Tag"
+#: ../browser/templates/folderprojview.pt:30
+msgid "label_collapsibleHeader"
+msgstr ""
+
+#. Default: "% Complete"
+#: ../browser/templates/projectview.pt:78
+msgid "label_complete"
+msgstr ""
+
+#. Default: "Create New Project"
+#: ../browser/templates/folderprojview.pt:20
+msgid "label_createnewproject"
+msgstr ""
+
+#. Default: "Create New Proposal"
+#: ../browser/templates/folderprojview.pt:21
+msgid "label_createnewproposal"
+msgstr ""
+
+#. Default: "End Date"
+#: ../browser/templates/folderprojview.pt:112
+#: ../browser/templates/projectview.pt:70
+msgid "label_enddate"
+msgstr ""
+
+#. Default: "Estimated Budget"
+#: ../browser/templates/projectview.pt:86
+msgid "label_estimatebud"
+msgstr ""
+
+#. Default: "Name Project"
+#: ../browser/templates/folderprojview.pt:107
+msgid "label_nameproj"
+msgstr ""
+
+#. Default: "projects"
+#: ../browser/templates/folderprojview.pt:72
+msgid "label_project"
+msgstr ""
+
+#. Default: "Project Manager"
+#: ../browser/templates/projectview.pt:44
+msgid "label_projectmanager"
+msgstr ""
+
+#. Default: "Project Manager"
+#: ../browser/templates/folderprojview.pt:108
+msgid "label_projmanager"
+msgstr ""
+
+#. Default: "proposals"
+#: ../browser/templates/folderprojview.pt:73
+msgid "label_proposal"
+msgstr ""
+
+#. Default: "Proposal Identification"
+#: ../browser/templates/porposalselecttemplate.pt:22
+msgid "label_proposaliden"
+msgstr ""
+
+#. Default: "Subject"
+#: ../browser/templates/porposalselecttemplate.pt:51
+msgid "label_proposalsubject"
+msgstr ""
+
+#. Default: "Proposal Type"
+#: ../browser/templates/porposalselecttemplate.pt:64
+msgid "label_proposaltype"
+msgstr ""
+
+#. Default: "Schedule Status"
+#: ../browser/templates/folderprojview.pt:109
+#: ../browser/templates/projectview.pt:52
+msgid "label_schesatatus"
+msgstr ""
+
+#. Default: "Select Group"
+#: ../browser/templates/porposalselecttemplate.pt:30
+msgid "label_selectgroup"
+msgstr ""
+
+#. Default: "Select By Manager"
+#: ../browser/templates/folderprojview.pt:42
+msgid "label_selectmanager"
+msgstr ""
+
+#. Default: "Select By Tag"
+#: ../browser/templates/folderprojview.pt:43
+msgid "label_selecttags"
+msgstr ""
+
+#. Default: "Suscribers"
+#: ../browser/templates/folderprojview.pt:113
+#: ../browser/templates/projectview.pt:123
+msgid "label_suscribers"
+msgstr ""
+
+#. Default: "Tags"
+#: ../browser/templates/folderprojview.pt:114
+#: ../browser/templates/projectview.pt:115
+msgid "label_tags"
+msgstr ""
+
+#. Default: "Show Projects by Manager/Tag"
+#: ../browser/templates/folderprojview.pt:84
+msgid "label_titlebottonsearch"
+msgstr ""
+
+#. Default: "Cancel"
+#: ../browser/templates/porposalselecttemplate.pt:90
+msgid "label_valuebottoncancel"
+msgstr ""
+
+#. Default: "create"
+#: ../browser/templates/porposalselecttemplate.pt:83
+msgid "label_valuebottoncreate"
+msgstr ""
+
+#. Default: "Next"
+#: ../browser/templates/porposalselecttemplate.pt:83
+msgid "label_valuebottonnext"
+msgstr ""
+
+#. Default: "Search"
+#: ../browser/templates/folderprojview.pt:84
+msgid "label_valuebottonsearch"
+msgstr ""
+
+#: ../content/project.py:43
+msgid "manager of project"
+msgstr ""
+
+#: ../profiles/default/types/project.xml
+msgid "project"
+msgstr ""
+
+#: ../content/project.py:83
+msgid "project % completed"
+msgstr ""
+
+#: ../profiles/default/types/proposals.xml
+msgid "proposals"
+msgstr ""
+
+#: ../content/project.py:168
+msgid "type"
+msgstr ""
+

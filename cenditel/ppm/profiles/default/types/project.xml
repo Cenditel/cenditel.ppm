@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<object name="project"
+   meta_type="Factory-based Type Information with dynamic views"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="ppm">
+
+  <property name="title" i18n:translate="">project</property>
+  <property name="description" i18n:translate="">Create projects for a project portfolio</property>
+  <property name="content_meta_type">project</property>
+  <property name="content_icon">project.gif</property>
+  <property name="product">cenditel.ppm</property>
+  <property name="factory">addproject</property>
+  <property name="immediate_view">atct_edit</property>
+  <property name="global_allow">True</property>
+  <property name="filter_content_types">True</property>
+  <property name="allowed_content_types">
+     <element value="Folder"/>
+     <element value="Ploneboard"/>
+     <element value="PoiTracker"/>
+     <element value="Weblog"/></property>
+  <property name="allow_discussion">False</property>
+  <property name="default_view">@@project_view</property>
+  <property name="view_methods">
+    <element value="base_view" />
+  </property>
+  <alias from="(Default)" to="@@project_view" />
+  <alias from="edit" to="atct_edit" />
+  <alias from="sharing" to="@@sharing" />
+  <alias from="view" to="@@project_view" />
+  <action title="View" action_id="view" category="object" condition_expr=""
+    url_expr="string:${folder_url}/" visible="True">
+    <permission value="View" />
+  </action>
+  <action title="Edit" action_id="edit" category="object" condition_expr=""
+    url_expr="string:${object_url}/edit" visible="True">
+    <permission value="Modify portal content" />
+  </action>
+</object>
