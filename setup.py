@@ -22,7 +22,7 @@ long_description = (
     'Detailed Documentation\n'
     '**********************\n'
     + '\n' +
-    read('Products', 'ppm', 'README.txt')
+    read('cenditel', 'ppm', 'README.txt')
     + '\n' +
     'Contributors\n'
     '************\n'
@@ -34,7 +34,7 @@ long_description = (
 
 tests_require = ['zope.testing']
 
-setup(name='Project Portfolio Management Framework NG',
+setup(name='cenditel.ppm',
       version=version,
       description="A framework for managing projects within a project porfolio using wikis, blogs, and issue tracker.",
       long_description=long_description,
@@ -61,7 +61,7 @@ setup(name='Project Portfolio Management Framework NG',
       url='http://svn.plone.org/svn/collective/cenditel.ppm',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
-      namespace_packages=['Products', ],
+      namespace_packages=['cenditel', ],
       include_package_data=True,
       zip_safe=False,
       install_requires=['setuptools',

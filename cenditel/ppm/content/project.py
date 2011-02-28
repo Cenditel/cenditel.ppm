@@ -15,7 +15,6 @@ from Products.validation.validators.RegexValidator import RegexValidator
 from Products.validation import validation 
 from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.atapi import LinesWidget
-#from cenditel.ppm.usuarios import Usuarios
 from Products.DataGridField import DataGridField, DataGridWidget
 from Products.DataGridField.Column import Column
 from Products.DataGridField.SelectColumn import SelectColumn
@@ -34,10 +33,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
     schemata='Project',
 	required=True,
 	searchable=True,
-	#storage=atapi.AnnotationStorage(),
     vocabulary_factory="cenditel.ppm.user",
-    #vocabulary_display_path_bound=-1, # Avoid silly Archetypes object title magic
-    #enforceVocabulary=True,
 	widget=atapi.SelectionWidget(
             label=_(u"Manager"),
 	    description=_(u"manager of project")
@@ -59,7 +55,6 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
     atapi.DateTimeField('begin_date', 
                 schemata='Project',
                 required=True,
-	            #required=True,
                 validators = ('isValidDate'), 
                 widget = atapi.CalendarWidget(format=('%Y;%m;%d;%H;%M'), 
                 label=_(u'Begin Date'),) 
@@ -69,7 +64,6 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
                 name='end_date',
                 schemata='Project',
                 required=True,
-	            #required=True,
                 validators = ('isValidDate'), 
                 widget = atapi.CalendarWidget(format=('%Y;%m;%d;%H;%M'), 
                 label=_(u'End Date'),) 
@@ -85,7 +79,6 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
     ),
     atapi.StringField('est_budget',
     schemata='Project',
-	#storage=atapi.AnnotationStorage(),
 	widget=atapi.StringWidget(
             label=_(u"Buget estimate"),
 	    descrption=_(u"Estimate Budget of the project")
@@ -95,7 +88,6 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
     atapi.StringField(
         name='act_budget',
         schemata='Project',
-	    #storage=atapi.AnnotationStorage(),
 	    widget=atapi.StringWidget(
             label=_(u"Actual Budget"),
 	        descrption=_(u"Actual Budget of the project")

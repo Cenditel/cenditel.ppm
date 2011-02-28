@@ -21,7 +21,7 @@ msgstr "% Completado"
 
 #: ../profiles/default/types/folderproj.xml
 msgid "A Folder dedicate to proposals and projects"
-msgstr ""
+msgstr "Carpeta dedicada a Propuestas y Proyectos"
 
 #: ../content/project.py:101
 msgid "Actual Budget"
@@ -61,11 +61,11 @@ msgstr "Completado"
 
 #: ../profiles/default/types/project.xml
 msgid "Create projects for a project portfolio"
-msgstr ""
+msgstr "Crear proyectos para esta cartera de proyectos"
 
 #: ../profiles/default/types/proposals.xml
 msgid "Create proposals of future projects for a project portfolio"
-msgstr ""
+msgstr "Crear propuestas de futuros proyectos para esta cartera de proyectos"
 
 #: ../content/project.py:56
 msgid "Delayed"
