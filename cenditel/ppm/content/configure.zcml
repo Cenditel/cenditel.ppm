@@ -37,7 +37,7 @@
   </class>
 
   <utility
-        component="cenditel.ppm.usuarios.usuarioVocabularyFactory"
+        component="cenditel.ppm.users.userVocabularyFactory"
         name="cenditel.ppm.user"
         />
         
