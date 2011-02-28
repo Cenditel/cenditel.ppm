@@ -7,23 +7,23 @@ from Products.CMFCore.utils import getToolByName
 
 
 
-def usuarioVocabularyFactory(context):
+def userVocabularyFactory(context):
     """Vocabulary factory to find all registered users
     """
-    usuarios = context.acl_users.getUserIds()
+    users = context.acl_users.getUserIds()
     i=0
     lista=[]
     items=[]
-    for usuario in usuarios:
-        if len(usuarios)==1:
+    for user in users:
+        if len(users)==1:
             break
         else:
             i+=1
 
-            items.append((usuario,usuario))
+            items.append((user,user))
     tuplaitems=tuple(items)
     values=SimpleVocabulary.fromItems(tuplaitems)    
     return values
 
 
-directlyProvides(usuarioVocabularyFactory, IVocabularyFactory)
+directlyProvides(userVocabularyFactory, IVocabularyFactory)
