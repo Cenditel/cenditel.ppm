@@ -1,0 +1,29 @@
+## FTP configuration as the following block
+#    <ftp-server>
+#        # valid key is "address"
+#        #address 127.0.0.1:8021
+#        address ${hosts:ftp-address}:${ports:ftp-address}
+#    </ftp-server>
+
+## WebDAV configuration as the following block
+#    <webdav-source-server>
+#        # valid keys are "address" and "force-connection-close"
+#        #address 127.0.0.1:8280
+#        address ${hosts:webdav-address}:${ports:webdav-address}
+#        # force-connection-close off
+#    </webdav-source-server>
+
+# Define each mount point as the following block
+#    <zodb_db ${buildout:site-id}> 
+#        <filestorage>
+#          path $FILESTORAGE/${buildout:site-id}.fs
+#        </filestorage>
+#        mount-point /${buildout:site-id}
+#    </zodb_db>
+
+    <zodb_db ${buildout:site-id}>
+        <filestorage>
+            path $FILESTORAGE/${buildout:site-id}/Data.fs
+        </filestorage>
+        mount-point /${buildout:site-id}
+    </zodb_db>
