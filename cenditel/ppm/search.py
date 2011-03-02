@@ -9,9 +9,10 @@ from Acquisition import aq_base, aq_inner, aq_parent
 
 import Globals
 
-class buscador:
-    """aplicacion la cual es utilizada para buscar los proyectos
-       dentro de una cartera de proyectos  especifica"""
+class searching:
+    """application which is used to find projects
+        within a specified portfolio"""
+       
     security = ClassSecurityInfo()
     def __call__(self):
         pass
@@ -20,8 +21,8 @@ class buscador:
     	catalog = getToolByName(context, 'portal_catalog')
     	parent = aq_base(catalog)
     	listaH=[]
-    	for hijo in context.getChildNodes():
-    		listaH.append(hijo.getId())
+    	for child in context.getChildNodes():
+    		listaH.append(child.getId())
     	
     	result=catalog.searchResults(portal_type='project', review_state='published', getId = listaH)
     	self.listat=[]
@@ -32,4 +33,5 @@ class buscador:
     		obj=dic.getObject()
     		self.listat.append(obj)
     	return self.listat
-Globals.InitializeClass(buscador)
+    	
+Globals.InitializeClass(searching)

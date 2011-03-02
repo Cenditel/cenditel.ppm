@@ -52,6 +52,27 @@ class projectview(BrowserView):
         roles = self.context.get_local_roles()
         self.context.manage_setLocalRoles(member, ['Owner'])
         return "."
+        
+    def blog(self):
+        """
+        """
+        holder=self.context
+        catalog = getToolByName(holder, 'portal_catalog')
+        List=[]
+
+        blogs=getattr(holder,"Weblog")
+        URL=blogs._getURL()
+        for child in blogs.getChildNodes(): 
+            List.append(child.getId())
+            
+        result=catalog.searchResults(portal_type='WeblogEntry', review_state='published', getId = List)
+        dic=[]
+        ListA=[]
+    	for brain in result:
+    		dic=brain
+    		obj=dic.getObject()
+    		ListA.append(obj)
+        return ListA
 
 
 

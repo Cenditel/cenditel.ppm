@@ -24,6 +24,7 @@
                   completed here/getCompleted;
                   end_date here/getEnd_date;                
                   begin_date here/getBegin_date;
+                  Blog view/blog;
                   manager here/getManager" >  
 	   
     <div>
@@ -139,7 +140,13 @@
          </span> 
         </tr> 
        </tbody>
-      </table> 
+      </table>
+      
+      <span tal:repeat="Base python:Blog"> 
+       <h1 tal:content="Base/Title" ></h1>
+       <div tal:content="structure python:Base.getText()" />
+      </span>
+       
         <div tal:replace="structure provider:plone.belowcontentbody" />
         <br /><div metal:use-macro="here/document_relateditems/macros/relatedItems">
 

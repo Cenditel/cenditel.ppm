@@ -36,7 +36,7 @@ class folderprojview(BrowserView, object):
     
 
     def searching(self):
-        z=search.buscador()
+        z=search.searching()
         self.result=z.searching(self.context)
         return self.result
     
