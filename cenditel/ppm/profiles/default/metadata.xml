@@ -1,4 +1,11 @@
 <?xml version="1.0"?>
 <metadata>
   <version>0.1</version>
+  <dependencies>
+    <dependency>profile-Products.AddRemoveWidget:default</dependency>
+    <dependency>profile-Products.DataGridField:default</dependency>
+    <dependency>profile-Products.Quills:default</dependency>
+    <dependency>profile-Products.Ploneboard:default</dependency>
+    <dependency>profile-Products.Poi:default</dependency>
+  </dependencies>
 </metadata>
