@@ -12,7 +12,7 @@ from Products.DataGridField import DataGridField, DataGridWidget
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm.config import PROJECTNAME
 from cenditel.ppm.interfaces import Ifolderproj
-from cenditel.ppm.validator import EvilValidator
+from cenditel.ppm.validator import GroupsValidator
 
 folderprojSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
@@ -26,7 +26,7 @@ folderprojSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         ),
         schemata='Groups',
         required=True,
-        validators = ('evilness',),
+        validators = ('isGroups',),
 	default=(
             { 
              'title' : '', 

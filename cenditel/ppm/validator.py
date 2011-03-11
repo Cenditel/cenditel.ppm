@@ -6,15 +6,20 @@ except ImportError:
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), os.pardir))
     from interfaces.IValidator import IValidator
     del sys, os
-listaValidadores=[]
 
-class EvilValidator:
+from cenditel.ppm import ppmMessageFactory as _
+
+ValidatorsList=[]
+
+class GroupsValidator:
     """Validator for empty fields are not in groups within
-       the portfolio of projects  """
+       the portfolio of projects"""
+
     __implements__ = IValidator
+
     def __init__(self,
         name,
-        title='Evil validator',
+        title='Groups validator',
         description='You will fail'):
             self.name = name
             self.title = title or name
@@ -24,10 +29,9 @@ class EvilValidator:
     	  Dic=value[0]
     	  value = str(value)
     	  if Dic['Title']=='':
-    	      return(' Group required, please correct.')
-          
+    	      return (_(u'Group required, please correct.'))
        
-listaValidadores.append(EvilValidator('evilness', title='', description=''))
+ValidatorsList.append(GroupsValidator('isGroups', title='', description=''))
 
-for validador in listaValidadores:
+for validador in ValidatorsList:
          validation.register(validador)
