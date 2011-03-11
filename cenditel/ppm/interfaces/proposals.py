@@ -1,11 +1,6 @@
 from zope.interface import Interface
-# -*- Additional Imports Here -*-
+from plone.theme.interfaces import IDefaultPloneLayer
 
-from zope.i18nmessageid import MessageFactory
-
-_ = MessageFactory('cenditel.ppm')
 class Iproposals(Interface):
-    """proposals of future projects"""
+    """Create proposals of future projects for a project portfolio"""
 
-    # -*- schema definition goes here -*-
-   

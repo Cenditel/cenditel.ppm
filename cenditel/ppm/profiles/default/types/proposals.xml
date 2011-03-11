@@ -6,7 +6,7 @@
   <property name="title" i18n:translate="">proposals</property>
   <property name="description" i18n:translate="">Create proposals of future projects for a project portfolio</property>
   <property name="content_meta_type">proposals</property>
-  <property name="content_icon">proposal.gif</property>
+  <property name="content_icon">++resource++cenditel.ppm.images/proposal.gif</property>
   <property name="product">cenditel.ppm</property>
   <property name="factory">addproposals</property>
   <property name="immediate_view">atct_edit</property>

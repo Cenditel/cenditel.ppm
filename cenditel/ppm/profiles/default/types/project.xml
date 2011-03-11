@@ -6,7 +6,7 @@
   <property name="title" i18n:translate="">project</property>
   <property name="description" i18n:translate="">Create projects for a project portfolio</property>
   <property name="content_meta_type">project</property>
-  <property name="content_icon">project.gif</property>
+  <property name="content_icon">++resource++cenditel.ppm.images/project.gif</property>
   <property name="product">cenditel.ppm</property>
   <property name="factory">addproject</property>
   <property name="immediate_view">atct_edit</property>

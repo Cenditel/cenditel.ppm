@@ -6,7 +6,7 @@
   <property name="title" i18n:translate="">folderproj</property>
   <property name="description" i18n:translate="">A Folder dedicate to proposals and projects</property>
   <property name="content_meta_type">folderproj</property>
-  <property name="content_icon">folder_icon.png</property>
+  <property name="content_icon">++resource++cenditel.ppm.images/folder_icon.png</property>
   <property name="product">cenditel.ppm</property>
   <property name="factory">addfolderproj</property>
   <property name="immediate_view">atct_edit</property>
