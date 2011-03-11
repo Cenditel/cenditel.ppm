@@ -6,15 +6,14 @@ from zope.i18nmessageid import MessageFactory
 from Products.Archetypes import atapi
 from Products.CMFCore import utils
 
-from cenditel.ppm import config
-from cenditel.ppm import validator
-
 # Define a message factory for when this product is internationalised.
 # This will be imported with the special name "_" in most modules. Strings
 # like _(u"message") will then be extracted by i18n tools for translation.
-
 ppmMessageFactory = MessageFactory('ppm')
 #ppmMessageFactory = MessageFactory('cenditel.ppm')
+
+from cenditel.ppm import config
+from cenditel.ppm import validator
 
 
 def initialize(context):

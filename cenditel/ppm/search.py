@@ -16,21 +16,22 @@ class searching:
     security = ClassSecurityInfo()
     def __call__(self):
         pass
+
     security.declarePublic('searching')
     def searching(self, context):
     	catalog = getToolByName(context, 'portal_catalog')
     	parent = aq_base(catalog)
-    	listaH=[]
+    	listaH = []
     	for child in context.getChildNodes():
     		listaH.append(child.getId())
     	
-    	result=catalog.searchResults(portal_type='project', review_state='published', getId = listaH)
-    	self.listat=[]
-    	listam=[]
-    	dic=[]
+    	result = catalog.searchResults(portal_type='project', review_state='published', getId = listaH)
+    	self.listat = []
+    	listam = []
+    	dic = []
     	for brain in result:
-    		dic=brain
-    		obj=dic.getObject()
+    		dic = brain
+    		obj = dic.getObject()
     		self.listat.append(obj)
     	return self.listat
     	
