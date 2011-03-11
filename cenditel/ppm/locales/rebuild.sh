@@ -1,8 +1,5 @@
-i18ndude rebuild-pot --pot ./ppm.pot --create ppm ../ || exit 1
+i18ndude rebuild-pot --pot ./ppm.pot --merge ./manual.pot --create ppm ../ || exit 1
 i18ndude sync --pot ./ppm.pot ./*/LC_MESSAGES/ppm.po
-
-#i18ndude rebuild-pot --pot ../i18n/ppm-plone.pot --create plone ../ || exit 1
-#i18ndude sync --pot ../i18n/ppm-plone.pot ../i18n/ppm-plone-*.po
 
 ERRORS=`find ../ -name "*pt" | xargs i18ndude find-untranslated | grep -e '^-ERROR' | wc -l`
 WARNINGS=`find ../ -name "*pt" | xargs i18ndude find-untranslated | grep -e '^-WARN' | wc -l`
