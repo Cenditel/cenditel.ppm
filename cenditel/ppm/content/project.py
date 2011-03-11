@@ -1,96 +1,102 @@
 """Definition of the project content type
 """
 
+from DateTime.DateTime import *
+
 from zope.interface import implements
 
 from Products.Archetypes import atapi
+from Products.Archetypes.utils import DisplayList
+
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 
-from cenditel.ppm import ppmMessageFactory as _
-from cenditel.ppm.interfaces import Iproject
-from cenditel.ppm.config import PROJECTNAME
-from DateTime.DateTime import *
-from Products.validation.validators.RegexValidator import RegexValidator 
-from Products.validation import validation 
 from Products.CMFCore.utils import getToolByName
-from Products.Archetypes.atapi import LinesWidget
+
 from Products.DataGridField import DataGridField, DataGridWidget
 from Products.DataGridField.Column import Column
 from Products.DataGridField.SelectColumn import SelectColumn
 
-from Products.Archetypes.utils import DisplayList
+from Products.validation.validators.RegexValidator import RegexValidator 
+from Products.validation import validation 
 
-
-
+from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm.config import PROJECTNAME
+from cenditel.ppm.interfaces import Iproject
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
     atapi.StringField(
-    name='manager',
-    schemata='Project',
-	required=True,
-	searchable=True,
-    vocabulary_factory="cenditel.ppm.user",
-	widget=atapi.SelectionWidget(
+        name='manager',
+        widget=atapi.SelectionWidget(
             label=_(u"Manager"),
-	    description=_(u"manager of project")
+            description=_(u"manager of project")
         ),
-    ),
-
-
-   atapi.StringField( 
-        name='status', 
         schemata='Project',
+        required=True,
+        searchable=True,
+        vocabulary_factory="cenditel.ppm.user",
+    ),
+    
+    atapi.StringField( 
+        name='status',
         widget=atapi.SelectionWidget( 
             format='select', 
             label=_(u"Status"),             
-           description=_(u"State of the project"),           
-        ), 
+            description=_(u"State of the project"),           
+        ),
+        schemata='Project',
         vocabulary=[_(u"Time estimated"), _(u"Delayed"), _(u"Completed")] 
-    ), 
-
-    atapi.DateTimeField('begin_date', 
-                schemata='Project',
-                required=True,
-                validators = ('isValidDate'), 
-                widget = atapi.CalendarWidget(format=('%Y;%m;%d;%H;%M'), 
-                label=_(u'Begin Date'),) 
-                ), 
+    ),
 
     atapi.DateTimeField(
-                name='end_date',
-                schemata='Project',
-                required=True,
-                validators = ('isValidDate'), 
-                widget = atapi.CalendarWidget(format=('%Y;%m;%d;%H;%M'), 
-                label=_(u'End Date'),) 
-                ), 
+        name='begin_date', 
+        widget = atapi.CalendarWidget(
+            format=('%Y;%m;%d;%H;%M'),  
+            label=_(u'Begin Date'), 
+        ),
+        schemata='Project', 
+        required=True, 
+        validators = ('isValidDate'), 
+    ), 
 
-    atapi.StringField('completed',
-    schemata='Project',
+    atapi.DateTimeField(
+        name='end_date',
+        widget = atapi.CalendarWidget(
+            format=('%Y;%m;%d;%H;%M'),
+            label=_(u'End Date'),
+        ),
+        schemata='Project',
+        required=True,
+        validators = ('isValidDate'),
+    ), 
+
+    atapi.StringField(
+        name='completed',
+        schemata='Project',
 	storage=atapi.AnnotationStorage(),
-	widget=atapi.StringWidget(
+	widget=atapi.StringWidget( 
             label=_(u"% Completed"),
-	    descrption=_(u"project % completed")
+	    descrption=_(u"project % completed"),
         ),
     ),
-    atapi.StringField('est_budget',
-    schemata='Project',
+    atapi.StringField(
+        name='est_budget',
+	schemata='Project',
 	widget=atapi.StringWidget(
             label=_(u"Buget estimate"),
-	    descrption=_(u"Estimate Budget of the project")
+	    descrption=_(u"Estimate Budget of the project"),
         ),
     ),
 
     atapi.StringField(
         name='act_budget',
         schemata='Project',
-	    widget=atapi.StringWidget(
+	widget=atapi.StringWidget(
             label=_(u"Actual Budget"),
-	        descrption=_(u"Actual Budget of the project")
+            descrption=_(u"Actual Budget of the project"),
         ),
     ),
 
@@ -99,64 +105,69 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         schemata='Project', 
         widget=atapi.SelectionWidget( 
             format='select', 
-            label=_(u"Budget Status"),             
-           description=_(u"Budget states of the project"),           
+            label=_(u"Budget Status"),
+            description=_(u"Budget states of the project"),           
         ), 
         vocabulary=[_(u"On Budget"), _(u"Under Budget"), _(u"Over Budget")] 
     ), 
 
-    atapi.StringField('assumptions',
-    schemata='Project',
+    atapi.StringField(
+        name='assumptions',
+        schemata='Project',
 	widget=atapi.LinesWidget(
             label=_(u'Assumptions'),
             description=_(u'Assumptions of project'),
-	    size=5)
+	    size=5
+        ) 
     ),
 
-    atapi.StringField('tags',
-    schemata='Project',
+    atapi.StringField(
+        name='tags',
+        schemata='Project',
 	searchable=True,
 	widget=atapi.LinesWidget(
             label=_(u'Tags'),
             description=_(u'Tags of projects'),
-	    size=5)
+	    size=5
+        )
     ),
 
-    atapi.LinesField('suscribers',
-    schemata='Project',
+    atapi.LinesField(
+        name='suscribers',
+        schemata='Project',
 	widget=atapi.LinesWidget(
             label=_(u'Suscribers'),
 	    description=_(u'Suscribers of projects'),
-	    size=5)
+	    size=5
+        )
     ),
 	        
      DataGridField(
-            name='project_folders',
-            schemata='Project',
-            vocabulary_factory="cenditel.ppm.getLocalSubFolderVocabulary",
-            default=({'title' : _(u'Events'),         'type' : 'Folder'},
-                     {'title' : _(u'Documents'),      'type' : 'Folder'},
-                     {'title' : _(u'Discussion'),     'type' : 'Ploneboard'},
-                     {'title' : _(u'Forms'),          'type' : 'Folder'},
-                     {'title' : _(u'Plans'),          'type' : 'Folder'},
-                     {'title' : _(u'PoiTracker'),     'type' : 'PoiTracker'},
-                     {'title' : _(u'Weblog'),         'type' : 'Weblog'},
-                    ),
-            widget=DataGridWidget(
-                label=_(u"Project Folders"),
-                description=_(u"Enter the names of sub-folders to create by default for each project created."),
-                columns={
-                        'title'   : Column('Title'),
-                        'type'    : SelectColumn('Type', vocabulary="getSampleVocabulary"),
-               
-                    },
-                label_msgid='ppm_label_proj_folders',
-                description_msgid='ppm_help_proj_folders',
-                i18n_domain='PPM',
-            ),
-            required=True,
-            columns=('title', _(u'type'),),
+        name='project_folders',
+        schemata='Project',
+        widget=DataGridWidget(
+            label=_(u"Project Folders"),
+            description=_(u"Enter the names of sub-folders to create by default for each project created."),
+            columns={
+                     'title'   : Column('Title'),
+                     'type'    : SelectColumn('Type', vocabulary="getSampleVocabulary"),
+            },
+            #label_msgid='ppm_label_proj_folders',
+            #description_msgid='ppm_help_proj_folders',
+            #i18n_domain='PPM',
         ),
+        vocabulary_factory="cenditel.ppm.getLocalSubFolderVocabulary",
+        default=({'title' : _(u'Events'),         'type' : 'Folder'},
+                 {'title' : _(u'Documents'),      'type' : 'Folder'},
+                 {'title' : _(u'Discussion'),     'type' : 'Ploneboard'},
+                 {'title' : _(u'Forms'),          'type' : 'Folder'},
+                 {'title' : _(u'Plans'),          'type' : 'Folder'},
+                 {'title' : _(u'PoiTracker'),     'type' : 'PoiTracker'},
+                 {'title' : _(u'Weblog'),         'type' : 'Weblog'},
+        ),
+        required=True,
+        columns=('title', _(u'type'),),
+     ),
 
 ))
 
@@ -190,12 +201,5 @@ class project(folder.ATFolder):
          ("Ploneboard", "Ploneboard",),
          ("PoiTracker", "PoiTracker",),
          ("Weblog", "Weblog",),))
-
-    # -*- Your ATSchema to Python Property Bridges Here ... -*-
-   # def subfolders (obj):
-   # obj = getattr(projectSchema)
-   # projectSchema.invokeFactory(id='subfolder1', type_name='Folder')
-   # return obj
-
 
 atapi.registerType(project, PROJECTNAME)
