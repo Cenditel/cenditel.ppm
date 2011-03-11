@@ -74,5 +74,3 @@ class projectview(BrowserView):
     		ListA.append(obj)
         return ListA
 
-
-

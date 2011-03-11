@@ -10,8 +10,8 @@
 <object name="portal_factory" meta_type="Plone Factory Tool">
   <factorytypes>
     <!-- -*- extra stuff goes here -*- -->
+    <type portal_type="folderproj" />
     <type portal_type="proposals" />
     <type portal_type="project" />
-    <type portal_type="folderproj" />
   </factorytypes>
 </object>

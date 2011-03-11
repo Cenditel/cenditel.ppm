@@ -17,7 +17,6 @@ from cenditel.ppm.validator import GroupsValidator
 folderprojSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
-
     DataGridField(
         name='group',
         widget = DataGridWidget(

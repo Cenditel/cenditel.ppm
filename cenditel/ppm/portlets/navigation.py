@@ -1,10 +1,10 @@
-
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
 from zope.interface import implements
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.formlib import form
-from Products.CMFPlone import PloneMessageFactory as _
+
+from cenditel.ppm import ppmMessageFactory as _
 
 class INavigationPortlet(IPortletDataProvider):
     pass
@@ -21,8 +21,6 @@ class Renderer(base.Renderer):
 
     def __init__(self, context, request, view, manager, data):
         base.Renderer.__init__(self, context, request, view, manager, data)
-        
-        
         
     def title (self):
     	list=[]

@@ -1,10 +1,11 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xml:lang="en" lang="en"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      lang="en"
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="ppm">
+
 <body>
 
 <div metal:fill-slot="main">
@@ -14,7 +15,7 @@
     <tal:main-macro metal:define-macro="main"
            tal:define="search view/searchtemplates;
                        actionform view/newproposalss;
-                       Grups view/groups;">
+                       Groups view/groups;">
            
       <form name="selecttemplate" tal:attributes="action python:actionform">
       <table>
@@ -24,7 +25,7 @@
         </tr>
         
         
-        <!-- Grup Type -->
+        <!-- Group Type -->
         <tr>
          <td class="field1">
           <label i18n:translate='label_selectgroup' for="types">
@@ -33,10 +34,8 @@
          </td>
          <td>
        
-       
-       
             <select name="Group" id="Group">
-              <span tal:repeat="gg python:Grups">
+              <span tal:repeat="gg python:Groups">
                <option tal:content="gg" />
               </span>
             </select>
@@ -80,15 +79,14 @@
 
           <td></td>
           <td>
-           <input i18n:attributes= "value label_valuebottonnext;
-                                    title label_valuebottoncreate"
-           
+           <input i18n:attributes="value label_valuebottonnext;
+                                   title label_valuebottoncreate"
                   type="submit"
                   name="form.button.next"
                   value="Next" 
                   title="create" />
-           <input i18n:attributes= "value label_valuebottoncancel"
-           
+
+           <input i18n:attributes="value label_valuebottoncancel"
                   class="standalone" type="submit"
                   name="form.button.cancel"
                   value="Cancel" />

@@ -68,9 +68,9 @@
           
           <td valign='top' align='center'> 
 
-          <select id="Type" name="Type" >
+          <select id="Type" name="Type">
             <option i18n:translate='label_project' value='project'>projects</option> 
-            <option i18n:translate='label_proposal' value="proposals"> proposals </option>
+            <option i18n:translate='label_proposal' value="proposals">proposals</option>
           </select>
           </td> 
  
@@ -151,6 +151,3 @@
  </body>
 
 </html>
-
-
- 

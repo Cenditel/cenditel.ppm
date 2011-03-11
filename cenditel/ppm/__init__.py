@@ -10,7 +10,6 @@ from Products.CMFCore import utils
 # This will be imported with the special name "_" in most modules. Strings
 # like _(u"message") will then be extracted by i18n tools for translation.
 ppmMessageFactory = MessageFactory('ppm')
-#ppmMessageFactory = MessageFactory('cenditel.ppm')
 
 from cenditel.ppm import config
 from cenditel.ppm import validator

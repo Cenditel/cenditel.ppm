@@ -4,7 +4,7 @@
    
  <object name="content_actions" meta_type="CMF Action Category">
 
-  <object name="select_template" meta_type="CMF Action" i18n:domain="cenditel.ppm">
+  <object name="select_template" meta_type="CMF Action" i18n:domain="ppm">
    <property name="title" i18n:translate="">Select Template</property>
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:${object_url}/@@newproposal</property>

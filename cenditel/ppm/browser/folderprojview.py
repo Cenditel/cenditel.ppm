@@ -40,7 +40,6 @@ class folderprojview(BrowserView, object):
         self.result=z.searching(self.context)
         return self.result
     
-        
 	
     def GetTags(self):
         """
@@ -90,7 +89,4 @@ contents with the information you want collected.
         except:
             pass
         return 
-
-
-
 

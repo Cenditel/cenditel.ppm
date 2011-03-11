@@ -81,7 +81,6 @@ class proposaltemplateview(BrowserView):
             Tit=self.request.form["subj"]
             proposal=proposal.lower()
             
-            
             title = '%s %s' % (Tit, year)
             folder=getattr(holder,"Templates") 
             hhh=getattr(folder, proposal)

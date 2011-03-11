@@ -9,7 +9,6 @@
  <body>
  
   <div metal:fill-slot="main">
-
    
   <tal:main-macro metal:define-macro="main"
       tal:define="Assumptions here/assumptions;
@@ -25,12 +24,12 @@
                   end_date here/getEnd_date;                
                   begin_date here/getBegin_date;
                   Blog view/blog;
-                  manager here/getManager" >  
+                  manager here/getManager">  
 	   
     <div>
      <p tal:content="createfol"></p>
      <p tal:content="string:$roles"></p>
-     <h1 tal:content="context/Title" ></h1>
+     <h1 tal:content="context/Title"></h1>
     </div>
       <p> 
       <b></b> 
@@ -68,7 +67,7 @@
         
         <tr> 
          <span> 
-          <th i18n:translate='label_enddate'  align="left">End Date</th> 
+          <th i18n:translate='label_enddate' align="left">End Date</th> 
           <td><p tal:replace="end_date"></p></td> 
           <td></td> 
          </span> 
@@ -143,15 +142,18 @@
       </table>
       
       <span tal:repeat="Base python:Blog"> 
-       <h1 tal:content="Base/Title" ></h1>
+       <h1 tal:content="Base/Title"></h1>
        <div tal:content="structure python:Base.getText()" />
       </span>
        
-        <div tal:replace="structure provider:plone.belowcontentbody" />
-        <br /><div metal:use-macro="here/document_relateditems/macros/relatedItems">
+      <div tal:replace="structure provider:plone.belowcontentbody" />
 
+      <br />
 
-        </div>
+      <div metal:use-macro="here/document_relateditems/macros/relatedItems">
+       show related items if they exist
+      </div>
+
     </tal:main-macro>
 </div>
 </body>

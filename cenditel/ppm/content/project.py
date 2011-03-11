@@ -27,7 +27,6 @@ from cenditel.ppm.interfaces import Iproject
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
-
     atapi.StringField(
         name='manager',
         widget=atapi.SelectionWidget(
@@ -152,9 +151,6 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
                      'title'   : Column('Title'),
                      'type'    : SelectColumn('Type', vocabulary="getSampleVocabulary"),
             },
-            #label_msgid='ppm_label_proj_folders',
-            #description_msgid='ppm_help_proj_folders',
-            #i18n_domain='PPM',
         ),
         vocabulary_factory="cenditel.ppm.getLocalSubFolderVocabulary",
         default=({'title' : _(u'Events'),         'type' : 'Folder'},

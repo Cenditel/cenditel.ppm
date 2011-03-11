@@ -13,12 +13,9 @@ from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm.config import PROJECTNAME
 from cenditel.ppm.interfaces import Iproposals
 
-#from Products.DataGridField import DataGridField, DataGridWidget
-#from Products.DataGridField.Column import Column
-#from Products.DataGridField.SelectColumn import SelectColumn
-
 proposalsSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
+    # -*- Your Archetypes field definitions here ... -*-
     atapi.TextField(
         name='templatest',
         widget=atapi.RichWidget(
@@ -31,7 +28,6 @@ proposalsSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
         default_content_type = 'text/restructured',
         allowable_content_types=('text/plain', 'text/restructured', 'text/html',),
         default_output_type = 'text/x-html-safe',
-        #vocabulary_factory="cenditel.ppm.prop",
         searchable=True,
         required=False
     ),
@@ -49,6 +45,7 @@ schemata.finalizeATCTSchema(proposalsSchema, moveDiscussion=False)
 
 class proposals(base.ATCTContent):
     """Create proposals of future projects for a project portfolio"""
+
     implements(Iproposals)
 
     meta_type = "proposals"

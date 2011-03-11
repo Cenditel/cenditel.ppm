@@ -1,20 +1,20 @@
+<?xml version="1.0"?>
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="cenditel.ppm">
+    i18n_domain="ppm">
 
   <!-- Ensure Plone's portlets ZCML has already been processed;
        without this, we may get a permission lookup error -->
+
   <include package="plone.app.portlets" />
   
-    <plone:portlet
-        name="ppm.navigation"
-        interface=".navigation.INavigationPortlet"
-        assignment=".navigation.Assignment"
-        renderer=".navigation.Renderer"
-        addview=".navigation.AddForm"
-    />
-
-	<!-- -*- extra stuff goes here -*- -->
+  <plone:portlet
+      name="ppm.navigation"
+      interface=".navigation.INavigationPortlet"
+      assignment=".navigation.Assignment"
+      renderer=".navigation.Renderer"
+      addview=".navigation.AddForm"
+      />
 
 </configure>
