@@ -1,9 +1,9 @@
 # Oswaldo Lopez <oswaldolo@hotmail.com>. 2011
 msgid ""
 msgstr ""
-"Project-Id-Version: ppm\n"
-"POT-Creation-Date: 2011-03-11 06:43+0000\n"
-"PO-Revision-Date: 2011-03-11 04:25-0400\n"
+"Project-Id-Version: cenditel.ppm\n"
+"POT-Creation-Date: 2011-03-11 10:54+0000\n"
+"PO-Revision-Date: 2011-03-11 06:46-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +58,7 @@ msgstr "Estado del Presupuesto del Proyecto"
 
 #: ../content/project.py:89
 msgid "Buget estimate"
-msgstr "Presupuesto mesiado"
+msgstr "Presupuesto estimado"
 
 #: ../content/project.py:51
 msgid "Completed"
@@ -74,7 +74,7 @@ msgstr "Crear propuestas de futuros proyectos para esta cartera de proyectos"
 
 #: ../content/project.py:51
 msgid "Delayed"
-msgstr "Tardio"
+msgstr "Tardío"
 
 #: ../content/folderproj.py:36
 msgid "Description"
@@ -90,7 +90,7 @@ msgstr "Documentos"
 
 #: ../content/project.py:69
 msgid "End Date"
-msgstr "Fecha de Finalizacion"
+msgstr "Fecha de Finalización"
 
 #: ../content/folderproj.py:25
 msgid "Enter a list of groups (departments / communities / sections) within this portfolio."
@@ -111,6 +111,10 @@ msgstr "Eventos"
 #: ../content/project.py:163
 msgid "Forms"
 msgstr "Formas"
+
+#: ../validator.py:32
+msgid "Group required, please correct."
+msgstr "Grupo es requerido, por favor corrija."
 
 #: ../content/folderproj.py:24
 msgid "Groups"
@@ -194,7 +198,7 @@ msgstr "Por debajo del Presupuesto"
 
 #: ../content/project.py:166
 msgid "Weblog"
-msgstr "Blog"
+msgstr "Bitácora"
 
 #. Default: "Project"
 #: ../content/project.py:
