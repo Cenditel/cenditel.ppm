@@ -69,7 +69,7 @@ setup(name='cenditel.ppm',
                         "Products.DataGridField==1.6.2",
                         "Products.Quills==1.7.0",
                         "Products.Ploneboard==2.1b2",
-                        "Products.Poi==1.2.9",
+                        #"Products.Poi==1.2.9",
                         # -*- Extra requirements: -*-
                         ],
       tests_require=tests_require,
