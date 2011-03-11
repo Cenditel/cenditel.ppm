@@ -14,7 +14,7 @@ class Assignment(base.Assignment):
 
     @property
     def title(self):
-        return _(u"Navigation ppm")
+        return _(u"Navigation PPM")
 
 class Renderer(base.Renderer):
     render = ViewPageTemplateFile('navigation.pt')
@@ -34,8 +34,8 @@ class Renderer(base.Renderer):
 
 class AddForm(base.NullAddForm):
     form_fields = form.Fields(INavigationPortlet)
-    label = _(u"Add Hello Portlet")
-    description = _(u"Hello example")
+    label = _(u"Add Portlet")
+    description = _(u"Navigation PPM Portlet")
 
     def create(self):
         return Assignment()
