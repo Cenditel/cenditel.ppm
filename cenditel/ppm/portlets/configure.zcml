@@ -6,6 +6,14 @@
   <!-- Ensure Plone's portlets ZCML has already been processed;
        without this, we may get a permission lookup error -->
   <include package="plone.app.portlets" />
+  
+    <plone:portlet
+        name="ppm.navigation"
+        interface=".navigation.INavigationPortlet"
+        assignment=".navigation.Assignment"
+        renderer=".navigation.Renderer"
+        addview=".navigation.AddForm"
+    />
 
 	<!-- -*- extra stuff goes here -*- -->
 

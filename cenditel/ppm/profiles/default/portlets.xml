@@ -5,4 +5,12 @@
   -->
 <portlets>
   <!-- -*- extra stuff goes here -*- -->
+  
+    <portlet 
+       addview="ppm.navigation"
+       title="navigation"
+       description="A portlet navigation of the project."
+       />
+       
+        
 </portlets>
