@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-02-22 16:39+0000\n"
+"POT-Creation-Date: 2011-03-11 06:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ppm\n"
 
-#: ../content/project.py:82
+#: ../content/project.py:81
 msgid "% Completed"
 msgstr ""
 
@@ -25,39 +25,43 @@ msgstr ""
 msgid "A Folder dedicate to proposals and projects"
 msgstr ""
 
-#: ../content/project.py:101
+#: ../content/project.py:98
 msgid "Actual Budget"
 msgstr ""
 
-#: ../content/project.py:102
+#: ../content/project.py:99
 msgid "Actual Budget of the project"
 msgstr ""
 
-#: ../content/project.py:121
+#: ../portlets/navigation.py:37
+msgid "Add Portlet"
+msgstr ""
+
+#: ../content/project.py:118
 msgid "Assumptions"
 msgstr ""
 
-#: ../content/project.py:122
+#: ../content/project.py:119
 msgid "Assumptions of project"
 msgstr ""
 
-#: ../content/project.py:65
+#: ../content/project.py:58
 msgid "Begin Date"
 msgstr ""
 
-#: ../content/project.py:111
+#: ../content/project.py:108
 msgid "Budget Status"
 msgstr ""
 
-#: ../content/project.py:112
+#: ../content/project.py:109
 msgid "Budget states of the project"
 msgstr ""
 
-#: ../content/project.py:90
+#: ../content/project.py:89
 msgid "Buget estimate"
 msgstr ""
 
-#: ../content/project.py:56
+#: ../content/project.py:51
 msgid "Completed"
 msgstr ""
 
@@ -69,67 +73,79 @@ msgstr ""
 msgid "Create proposals of future projects for a project portfolio"
 msgstr ""
 
-#: ../content/project.py:56
+#: ../content/project.py:51
 msgid "Delayed"
 msgstr ""
 
-#: ../content/folderproj.py:28
+#: ../content/folderproj.py:36
 msgid "Description"
 msgstr ""
 
-#: ../content/project.py:148
+#: ../content/project.py:162
 msgid "Discussion"
 msgstr ""
 
-#: ../content/project.py:147
+#: ../content/project.py:161
 msgid "Documents"
 msgstr ""
 
-#: ../content/project.py:75
+#: ../content/project.py:69
 msgid "End Date"
 msgstr ""
 
-#: ../content/folderproj.py:27
+#: ../content/folderproj.py:25
 msgid "Enter a list of groups (departments / communities / sections) within this portfolio."
 msgstr ""
 
-#: ../content/project.py:157
+#: ../content/project.py:150
 msgid "Enter the names of sub-folders to create by default for each project created."
 msgstr ""
 
-#: ../content/project.py:91
+#: ../content/project.py:90
 msgid "Estimate Budget of the project"
 msgstr ""
 
-#: ../content/project.py:146
+#: ../content/project.py:160
 msgid "Events"
 msgstr ""
 
-#: ../content/project.py:149
+#: ../content/project.py:163
 msgid "Forms"
 msgstr ""
 
-#: ../content/project.py:42
+#: ../content/folderproj.py:24
+msgid "Groups"
+msgstr ""
+
+#: ../content/project.py:34
 msgid "Manager"
 msgstr ""
 
-#: ../content/project.py:114
+#: ../portlets/navigation.py:17
+msgid "Navigation PPM"
+msgstr ""
+
+#: ../portlets/navigation.py:38
+msgid "Navigation PPM Portlet"
+msgstr ""
+
+#: ../content/project.py:111
 msgid "On Budget"
 msgstr ""
 
-#: ../content/project.py:114
+#: ../content/project.py:111
 msgid "Over Budget"
 msgstr ""
 
-#: ../content/project.py:150
+#: ../content/project.py:164
 msgid "Plans"
 msgstr ""
 
-#: ../content/project.py:151
+#: ../content/project.py:165
 msgid "PoiTracker"
 msgstr ""
 
-#: ../content/project.py:156
+#: ../content/project.py:149
 msgid "Project Folders"
 msgstr ""
 
@@ -137,44 +153,53 @@ msgstr ""
 msgid "Projects:"
 msgstr ""
 
-#: ../content/project.py:54
+#: ../content/project.py:48
 msgid "State of the project"
 msgstr ""
 
-#: ../content/project.py:53
+#: ../content/project.py:47
 msgid "Status"
 msgstr ""
 
-#: ../content/project.py:138
-msgid "Suscribers"
+#: ../content/proposals.py:25
+msgid "Summary"
 msgstr ""
 
 #: ../content/project.py:139
+msgid "Suscribers"
+msgstr ""
+
+#: ../content/project.py:140
 msgid "Suscribers of projects"
 msgstr ""
 
-#: ../content/project.py:131
+#: ../content/project.py:129
 msgid "Tags"
 msgstr ""
 
-#: ../content/project.py:132
+#: ../content/project.py:130
 msgid "Tags of projects"
 msgstr ""
 
-#: ../content/project.py:56
+#: ../content/project.py:51
 msgid "Time estimated"
 msgstr ""
 
-#: ../content/folderproj.py:28
+#: ../content/folderproj.py:36
 msgid "Title"
 msgstr ""
 
-#: ../content/project.py:114
+#: ../content/project.py:111
 msgid "Under Budget"
 msgstr ""
 
-#: ../content/project.py:152
+#: ../content/project.py:166
 msgid "Weblog"
+msgstr ""
+
+#. Default: "Project"
+#: ../content/project.py:
+msgid "fieldsetlegend-project"
 msgstr ""
 
 #: ../profiles/default/types/folderproj.xml
@@ -182,7 +207,7 @@ msgid "folderproj"
 msgstr ""
 
 #. Default: "Actual Budget"
-#: ../browser/templates/projectview.pt:93
+#: ../browser/templates/projectview.pt:96
 msgid "label_actualbud"
 msgstr ""
 
@@ -202,19 +227,19 @@ msgid "label_alltags"
 msgstr ""
 
 #. Default: "Assumptions"
-#: ../browser/templates/projectview.pt:108
+#: ../browser/templates/projectview.pt:111
 msgid "label_assumtions"
 msgstr ""
 
 #. Default: "Begin Date"
 #: ../browser/templates/folderprojview.pt:111
-#: ../browser/templates/projectview.pt:62
+#: ../browser/templates/projectview.pt:63
 msgid "label_begindate"
 msgstr ""
 
 #. Default: "Budget Status"
 #: ../browser/templates/folderprojview.pt:110
-#: ../browser/templates/projectview.pt:100
+#: ../browser/templates/projectview.pt:103
 msgid "label_budgetstatus"
 msgstr ""
 
@@ -229,7 +254,7 @@ msgid "label_collapsibleHeader"
 msgstr ""
 
 #. Default: "% Complete"
-#: ../browser/templates/projectview.pt:78
+#: ../browser/templates/projectview.pt:79
 msgid "label_complete"
 msgstr ""
 
@@ -245,12 +270,12 @@ msgstr ""
 
 #. Default: "End Date"
 #: ../browser/templates/folderprojview.pt:112
-#: ../browser/templates/projectview.pt:70
+#: ../browser/templates/projectview.pt:71
 msgid "label_enddate"
 msgstr ""
 
 #. Default: "Estimated Budget"
-#: ../browser/templates/projectview.pt:86
+#: ../browser/templates/projectview.pt:89
 msgid "label_estimatebud"
 msgstr ""
 
@@ -265,7 +290,7 @@ msgid "label_project"
 msgstr ""
 
 #. Default: "Project Manager"
-#: ../browser/templates/projectview.pt:44
+#: ../browser/templates/projectview.pt:45
 msgid "label_projectmanager"
 msgstr ""
 
@@ -296,7 +321,7 @@ msgstr ""
 
 #. Default: "Schedule Status"
 #: ../browser/templates/folderprojview.pt:109
-#: ../browser/templates/projectview.pt:52
+#: ../browser/templates/projectview.pt:53
 msgid "label_schesatatus"
 msgstr ""
 
@@ -317,13 +342,13 @@ msgstr ""
 
 #. Default: "Suscribers"
 #: ../browser/templates/folderprojview.pt:113
-#: ../browser/templates/projectview.pt:123
+#: ../browser/templates/projectview.pt:126
 msgid "label_suscribers"
 msgstr ""
 
 #. Default: "Tags"
 #: ../browser/templates/folderprojview.pt:114
-#: ../browser/templates/projectview.pt:115
+#: ../browser/templates/projectview.pt:118
 msgid "label_tags"
 msgstr ""
 
@@ -352,7 +377,7 @@ msgstr ""
 msgid "label_valuebottonsearch"
 msgstr ""
 
-#: ../content/project.py:43
+#: ../content/project.py:35
 msgid "manager of project"
 msgstr ""
 
@@ -360,7 +385,7 @@ msgstr ""
 msgid "project"
 msgstr ""
 
-#: ../content/project.py:83
+#: ../content/project.py:82
 msgid "project % completed"
 msgstr ""
 
@@ -368,7 +393,11 @@ msgstr ""
 msgid "proposals"
 msgstr ""
 
-#: ../content/project.py:168
+#: ../content/proposals.py:26
+msgid "template of the proposal"
+msgstr ""
+
+#: ../content/project.py:169
 msgid "type"
 msgstr ""
 
