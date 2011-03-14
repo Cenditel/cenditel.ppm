@@ -26,7 +26,7 @@ folderprojSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         schemata='Groups',
         required=True,
         validators = ('isGroups',),
-	default=(
+        default=(
             { 
              'title' : '', 
              'Description' : ''
