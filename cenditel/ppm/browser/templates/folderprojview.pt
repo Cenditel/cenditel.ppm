@@ -17,8 +17,16 @@
 	   
     <div>
      <p tal:content="createfolder"></p>
-     <a i18n:translate='label_createnewproject' href="./createObject?type_name=project">Create New Project</a><br />
-     <a i18n:translate='label_createnewproposal' href="./@@newproposal">Create New Proposal</a><br /><br />
+     <img src="++resource++cenditel.ppm.images/proposal.gif" alt="Create New Proposal" 
+          i18n:attributes="alt label_createnewproposal" />
+     <a href="./@@newproposal" title="Create New Proposal" 
+        i18n:attributes="title label_createnewproposal" i18n:translate="label_createnewproposal">Create New Proposal</a>
+     <br />
+     <img src="++resource++cenditel.ppm.images/project.gif" alt="Create New Project" 
+          i18n:attributes="alt label_createnewproject" />
+     <a href="./createObject?type_name=project" title="Create New Project" 
+        i18n:attributes="title label_createnewproject" i18n:translate='label_createnewproject'>Create New Project</a>
+     <br /><br />
     </div>
 
     <br />
