@@ -1,22 +1,19 @@
+#from Acquisition import aq_inner
+#from Acquisition import aq_base, aq_inner, aq_parent
+#from cenditel.ppm.interfaces import Ifolderproj
 from DateTime import DateTime
-
-from Acquisition import aq_inner
 
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from Products.CMFCore.utils import getToolByName
 
-from Acquisition import aq_base, aq_inner, aq_parent
-
-from cenditel.ppm.interfaces import Ifolderproj
 from Products.Archetypes.utils import DisplayList
-from DateTime import DateTime
 
 
 class proposaltemplateview(BrowserView):
 
-    template = ViewPageTemplateFile('templates/porposalselecttemplate.pt')
+    template = ViewPageTemplateFile('templates/proposalselecttemplate.pt')
     
     def __init__(self, context, request):
          self.context=context
@@ -28,36 +25,36 @@ class proposaltemplateview(BrowserView):
         return self.template()
         
     def groups(context):
-        """Vocabulary factory for currently published films
+        """Vocabulary factory for currently project's groups 
         """
-        listaG=[]
+        listG=[]
         Dic=context.context.getGroup()
         i=0
         
         for x in Dic:
             qq=Dic[i].values()[1]
-            listaG.append((qq,qq))
+            listG.append((qq,qq))
             i+=1
-        tuplegrup=tuple(listaG)
+        tuplegrup=tuple(listG)
         LISTG = DisplayList(tuplegrup)
         
         return LISTG
         
         
     def searchtemplates(context):
-        """Vocabulary factory for currently published films
+        """Vocabulary factory for currently proposals templates 
         """
         catalog = getToolByName(context, 'portal_catalog')
         templates=getattr(context.context, "Templates")
-        listaH=[]
-        listaT=[]
-        for hijo in templates.getChildNodes():
-            listaH.append(hijo.getId())
-            Titlep=hijo.Title()
-            listaT.append((Titlep, Titlep))
+        listH=[]
+        listT=[]
+        for child in templates.getChildNodes():
+            listH.append(child.getId())
+            Titlep = child.Title()
+            listT.append((Titlep, Titlep))
         
-        tupla=tuple(listaT)
-        LIST = DisplayList(tupla)
+        tuple = tuple(listT)
+        LIST = DisplayList(tuple)
         
         return LIST
         
