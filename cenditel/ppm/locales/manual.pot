@@ -19,11 +19,15 @@ msgstr ""
 
 #. Default: "Groups"
 #: ../content/folderproj.py:
-msgid "Groups"
+msgid "groups"
 msgstr ""
 
 #. Default: "Project"
 #: ../content/project.py:
-msgid "fieldsetlegend-project"
+msgid "project"
+msgstr ""
+
+#. Default: "Base View"
+msgid "base_view"
 msgstr ""
 
