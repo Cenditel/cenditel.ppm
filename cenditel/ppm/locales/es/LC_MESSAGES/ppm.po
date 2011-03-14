@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-11 20:07+0000\n"
-"PO-Revision-Date: 2011-03-11 15:39-0400\n"
+"POT-Creation-Date: 2011-03-14 14:20+0000\n"
+"PO-Revision-Date: 2011-03-14 09:50-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -52,6 +52,10 @@ msgstr "Supuestos del Proyecto"
 msgid "Begin Date"
 msgstr "Fecha de inicio"
 
+#: ../config.py:20
+msgid "Blog"
+msgstr "Bitácora/Blog"
+
 #: ../content/project.py:107
 msgid "Budget Status"
 msgstr "Estado del Presupuesto"
@@ -80,6 +84,10 @@ msgstr "Crear propuestas de futuros proyectos para esta cartera de proyectos"
 msgid "Delayed"
 msgstr "Tardío"
 
+#: ../config.py:19
+msgid "Demands"
+msgstr "Solicitudes"
+
 #: ../content/folderproj.py:35
 msgid "Description"
 msgstr "Descripción"
@@ -87,6 +95,10 @@ msgstr "Descripción"
 #: ../content/project.py:158
 msgid "Discussion"
 msgstr "Discusiones"
+
+#: ../config.py:18
+msgid "Discussions board"
+msgstr "Discusiones/Debates"
 
 #: ../content/project.py:157
 msgid "Documents"
@@ -111,6 +123,10 @@ msgstr "Presupuesto estimado del Proyecto"
 #: ../content/project.py:156
 msgid "Events"
 msgstr "Eventos"
+
+#: ../config.py:17
+msgid "Folder"
+msgstr "Carpeta"
 
 #: ../content/project.py:159
 msgid "Forms"
@@ -156,7 +172,7 @@ msgstr "Seguidor de incidencias"
 msgid "Project Folders"
 msgstr "Sub-carpetas del Proyecto"
 
-#: ../browser/templates/folderprojview.pt:101
+#: ../browser/templates/folderprojview.pt:109
 msgid "Projects:"
 msgstr "Proyectos:"
 
@@ -208,14 +224,18 @@ msgstr "Por debajo del Presupuesto"
 msgid "Weblog"
 msgstr "Bitácora"
 
-#. Default: "Project"
-#: ../content/project.py:
-msgid "fieldsetlegend-project"
-msgstr "Proyecto"
+#. Default: "Base View"
+msgid "base_view"
+msgstr "Vista base"
 
 #: ../profiles/default/types/folderproj.xml
 msgid "folderproj"
 msgstr "Portafolio de Proyectos"
+
+#. Default: "Groups"
+#: ../content/folderproj.py:
+msgid "groups"
+msgstr "Grupos"
 
 #. Default: "Actual Budget"
 #: ../browser/templates/projectview.pt:95
@@ -223,17 +243,17 @@ msgid "label_actualbud"
 msgstr "Presupuesto Actual"
 
 #. Default: "All Managers"
-#: ../browser/templates/folderprojview.pt:50
+#: ../browser/templates/folderprojview.pt:58
 msgid "label_allmanagers"
 msgstr "Todos los Administradores"
 
 #. Default: "All Projects"
-#: ../browser/templates/folderprojview.pt:97
+#: ../browser/templates/folderprojview.pt:105
 msgid "label_allprojects"
 msgstr "Todos los Proyectos"
 
 #. Default: "All Tags"
-#: ../browser/templates/folderprojview.pt:62
+#: ../browser/templates/folderprojview.pt:70
 msgid "label_alltags"
 msgstr "Todas las Etiquetas"
 
@@ -243,24 +263,24 @@ msgid "label_assumtions"
 msgstr "Asunto"
 
 #. Default: "Begin Date"
-#: ../browser/templates/folderprojview.pt:111
+#: ../browser/templates/folderprojview.pt:119
 #: ../browser/templates/projectview.pt:62
 msgid "label_begindate"
 msgstr "Fecha de inicio"
 
 #. Default: "Budget Status"
-#: ../browser/templates/folderprojview.pt:110
+#: ../browser/templates/folderprojview.pt:118
 #: ../browser/templates/projectview.pt:102
 msgid "label_budgetstatus"
 msgstr "Estatus del Presupuesto"
 
 #. Default: "^ Click above to close selection window"
-#: ../browser/templates/folderprojview.pt:34
+#: ../browser/templates/folderprojview.pt:42
 msgid "label_clikclose"
 msgstr "^ Haz clic aquí para cerrar la ventana de selección"
 
 #. Default: "Select Projects by Manager or Tag"
-#: ../browser/templates/folderprojview.pt:30
+#: ../browser/templates/folderprojview.pt:38
 msgid "label_collapsibleHeader"
 msgstr "Seleccione por el Administrador de Proyectos o Etiqueta"
 
@@ -270,17 +290,17 @@ msgid "label_complete"
 msgstr "% Completado"
 
 #. Default: "Create New Project"
-#: ../browser/templates/folderprojview.pt:20
+#: ../browser/templates/folderprojview.pt:25
 msgid "label_createnewproject"
 msgstr "Crear un Proyecto"
 
 #. Default: "Create New Proposal"
-#: ../browser/templates/folderprojview.pt:21
+#: ../browser/templates/folderprojview.pt:20
 msgid "label_createnewproposal"
 msgstr "Crear una Propuesta"
 
 #. Default: "End Date"
-#: ../browser/templates/folderprojview.pt:112
+#: ../browser/templates/folderprojview.pt:120
 #: ../browser/templates/projectview.pt:70
 msgid "label_enddate"
 msgstr "Fecha de Finalización"
@@ -291,7 +311,7 @@ msgid "label_estimatebud"
 msgstr "Presupuesto Estimado"
 
 #. Default: "Name Project"
-#: ../browser/templates/folderprojview.pt:107
+#: ../browser/templates/folderprojview.pt:115
 msgid "label_nameproj"
 msgstr "Nombre del Proyecto"
 
@@ -301,7 +321,7 @@ msgid "label_navigation_porlet"
 msgstr "Portlet de Navegación"
 
 #. Default: "projects"
-#: ../browser/templates/folderprojview.pt:72
+#: ../browser/templates/folderprojview.pt:80
 msgid "label_project"
 msgstr "Proyecto"
 
@@ -311,12 +331,12 @@ msgid "label_projectmanager"
 msgstr "Administrador del Proyecto"
 
 #. Default: "Project Manager"
-#: ../browser/templates/folderprojview.pt:108
+#: ../browser/templates/folderprojview.pt:116
 msgid "label_projmanager"
 msgstr "Administrador del Proyecto"
 
 #. Default: "proposals"
-#: ../browser/templates/folderprojview.pt:73
+#: ../browser/templates/folderprojview.pt:81
 msgid "label_proposal"
 msgstr "Propuesta"
 
@@ -336,7 +356,7 @@ msgid "label_proposaltype"
 msgstr "Seleccione el tipo de Propuesta"
 
 #. Default: "Schedule Status"
-#: ../browser/templates/folderprojview.pt:109
+#: ../browser/templates/folderprojview.pt:117
 #: ../browser/templates/projectview.pt:52
 msgid "label_schesatatus"
 msgstr "Lista de Estado"
@@ -347,29 +367,29 @@ msgid "label_selectgroup"
 msgstr "Seleccione el Grupo"
 
 #. Default: "Select By Manager"
-#: ../browser/templates/folderprojview.pt:42
+#: ../browser/templates/folderprojview.pt:50
 msgid "label_selectmanager"
 msgstr "Seleccionar por Administrador"
 
 #. Default: "Select By Tag"
-#: ../browser/templates/folderprojview.pt:43
+#: ../browser/templates/folderprojview.pt:51
 msgid "label_selecttags"
 msgstr "Seleccionar por Etiqueta"
 
 #. Default: "Suscribers"
-#: ../browser/templates/folderprojview.pt:113
+#: ../browser/templates/folderprojview.pt:121
 #: ../browser/templates/projectview.pt:125
 msgid "label_suscribers"
 msgstr "Suscriptores"
 
 #. Default: "Tags"
-#: ../browser/templates/folderprojview.pt:114
+#: ../browser/templates/folderprojview.pt:122
 #: ../browser/templates/projectview.pt:117
 msgid "label_tags"
 msgstr "Etiquetas"
 
 #. Default: "Show Projects by Manager/Tag"
-#: ../browser/templates/folderprojview.pt:84
+#: ../browser/templates/folderprojview.pt:92
 msgid "label_titlebottonsearch"
 msgstr "Mostrar Proyectos por Administrador / Etiquetas"
 
@@ -389,7 +409,7 @@ msgid "label_valuebottonnext"
 msgstr "Siguiente"
 
 #. Default: "Search"
-#: ../browser/templates/folderprojview.pt:84
+#: ../browser/templates/folderprojview.pt:92
 msgid "label_valuebottonsearch"
 msgstr "Búsqueda"
 
