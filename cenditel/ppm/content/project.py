@@ -6,7 +6,6 @@ from DateTime.DateTime import *
 from zope.interface import implements
 
 from Products.Archetypes import atapi
-from Products.Archetypes.utils import DisplayList
 
 from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
@@ -18,15 +17,16 @@ from Products.DataGridField.Column import Column
 from Products.DataGridField.SelectColumn import SelectColumn
 
 from Products.validation.validators.RegexValidator import RegexValidator 
-from Products.validation import validation 
+from Products.validation import validation
 
 from cenditel.ppm import ppmMessageFactory as _
-from cenditel.ppm.config import PROJECTNAME
+from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT
 from cenditel.ppm.interfaces import Iproject
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
+
     atapi.StringField(
         name='manager',
         widget=atapi.SelectionWidget(
@@ -75,25 +75,25 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
     atapi.StringField(
         name='completed',
         schemata='Project',
-	storage=atapi.AnnotationStorage(),
-	widget=atapi.StringWidget( 
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
             label=_(u"% Completed"),
-	    descrption=_(u"project % completed"),
+            descrption=_(u"project % completed"),
         ),
     ),
     atapi.StringField(
         name='est_budget',
-	schemata='Project',
-	widget=atapi.StringWidget(
+        schemata='Project',
+        widget=atapi.StringWidget(
             label=_(u"Buget estimate"),
-	    descrption=_(u"Estimate Budget of the project"),
+            descrption=_(u"Estimate Budget of the project"),
         ),
     ),
 
     atapi.StringField(
         name='act_budget',
         schemata='Project',
-	widget=atapi.StringWidget(
+        widget=atapi.StringWidget(
             label=_(u"Actual Budget"),
             descrption=_(u"Actual Budget of the project"),
         ),
@@ -113,31 +113,31 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
     atapi.StringField(
         name='assumptions',
         schemata='Project',
-	widget=atapi.LinesWidget(
+        widget=atapi.LinesWidget(
             label=_(u'Assumptions'),
             description=_(u'Assumptions of project'),
-	    size=5
+            size=5
         ) 
     ),
 
     atapi.StringField(
         name='tags',
         schemata='Project',
-	searchable=True,
-	widget=atapi.LinesWidget(
+        searchable=True,
+        widget=atapi.LinesWidget(
             label=_(u'Tags'),
             description=_(u'Tags of projects'),
-	    size=5
+            size=5
         )
     ),
 
     atapi.LinesField(
         name='suscribers',
         schemata='Project',
-	widget=atapi.LinesWidget(
+        widget=atapi.LinesWidget(
             label=_(u'Suscribers'),
-	    description=_(u'Suscribers of projects'),
-	    size=5
+            description=_(u'Suscribers of projects'),
+            size=5
         )
     ),
 	        
@@ -149,7 +149,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             description=_(u"Enter the names of sub-folders to create by default for each project created."),
             columns={
                      'title'   : Column('Title'),
-                     'type'    : SelectColumn('Type', vocabulary="getSampleVocabulary"),
+                     'type'    : SelectColumn('Type', vocabulary="getTypeSubFoldersProject"),
             },
         ),
         vocabulary_factory="cenditel.ppm.getLocalSubFolderVocabulary",
@@ -190,12 +190,10 @@ class project(folder.ATFolder):
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
-    
-    def getSampleVocabulary(self):
-         return DisplayList(
-         (("Folder", "Folder",),
-         ("Ploneboard", "Ploneboard",),
-         ("PoiTracker", "PoiTracker",),
-         ("Weblog", "Weblog",),))
+
+    # -*- Your ATSchema to Python Property Bridges Here ... -*-
+
+    def getTypeSubFoldersProject(self):
+         return TYPE_SUBFOLDER_PROJECT
 
 atapi.registerType(project, PROJECTNAME)
