@@ -14,6 +14,7 @@ ADD_PERMISSIONS = {
 }
 
 TYPE_SUBFOLDER_PROJECT = DisplayList((
+    ("Events", _(u"Events/Activities")),
     ("Folder", _(u"Folder")),
     ("Ploneboard", _(u"Discussions board")),
     ("PoiTracker", _(u"Demands")),
