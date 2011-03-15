@@ -12,8 +12,10 @@ from cenditel.ppm import ppmMessageFactory as _
 ValidatorsList=[]
 
 class GroupsValidator:
-    """Validator for empty fields are not in groups within
-       the portfolio of projects"""
+    """
+       Validator for empty fields are not in groups within
+       the portfolio of projects
+    """
 
     __implements__ = IValidator
 
