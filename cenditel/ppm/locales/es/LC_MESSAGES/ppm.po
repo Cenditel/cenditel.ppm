@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-14 14:20+0000\n"
-"PO-Revision-Date: 2011-03-14 09:50-0400\n"
+"POT-Creation-Date: 2011-03-14 15:02+0000\n"
+"PO-Revision-Date: 2011-03-14 10:37-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgstr "Supuestos del Proyecto"
 msgid "Begin Date"
 msgstr "Fecha de inicio"
 
-#: ../config.py:20
+#: ../config.py:21
 msgid "Blog"
 msgstr "Bitácora/Blog"
 
@@ -84,7 +84,7 @@ msgstr "Crear propuestas de futuros proyectos para esta cartera de proyectos"
 msgid "Delayed"
 msgstr "Tardío"
 
-#: ../config.py:19
+#: ../config.py:20
 msgid "Demands"
 msgstr "Solicitudes"
 
@@ -92,15 +92,15 @@ msgstr "Solicitudes"
 msgid "Description"
 msgstr "Descripción"
 
-#: ../content/project.py:158
+#: ../content/project.py:157
 msgid "Discussion"
 msgstr "Discusiones"
 
-#: ../config.py:18
+#: ../config.py:19
 msgid "Discussions board"
-msgstr "Discusiones/Debates"
+msgstr "Discusiones / Debates"
 
-#: ../content/project.py:157
+#: ../content/project.py:156
 msgid "Documents"
 msgstr "Documentos"
 
@@ -110,7 +110,7 @@ msgstr "Fecha de Finalización"
 
 #: ../content/folderproj.py:24
 msgid "Enter a list of groups (departments / communities / sections) within this portfolio."
-msgstr "Ingrese la lista de los Grupos (Departamentos/comunidades/Secciones) para este portafolio"
+msgstr "Ingrese la lista de los grupos (Departamentos / Comunidades / Secciones) para este portafolio"
 
 #: ../content/project.py:149
 msgid "Enter the names of sub-folders to create by default for each project created."
@@ -120,15 +120,19 @@ msgstr "Escriba los nombres de sub-carpetas para crear de forma predeterminada."
 msgid "Estimate Budget of the project"
 msgstr "Presupuesto estimado del Proyecto"
 
-#: ../content/project.py:156
+#: ../content/project.py:155
 msgid "Events"
 msgstr "Eventos"
 
 #: ../config.py:17
+msgid "Events/Activities"
+msgstr "Eventos / Actividades"
+
+#: ../config.py:18
 msgid "Folder"
 msgstr "Carpeta"
 
-#: ../content/project.py:159
+#: ../content/project.py:158
 msgid "Forms"
 msgstr "Formas"
 
@@ -160,11 +164,11 @@ msgstr "En el Presupuesto"
 msgid "Over Budget"
 msgstr "Sobre el Presupuesto"
 
-#: ../content/project.py:160
+#: ../content/project.py:159
 msgid "Plans"
 msgstr "Planes"
 
-#: ../content/project.py:161
+#: ../content/project.py:160
 msgid "PoiTracker"
 msgstr "Seguidor de incidencias"
 
@@ -216,11 +220,15 @@ msgstr "Tiempo estimado"
 msgid "Title"
 msgstr "Titulo"
 
+#: ../content/project.py:152
+msgid "Type"
+msgstr "Tipo"
+
 #: ../content/project.py:110
 msgid "Under Budget"
 msgstr "Por debajo del Presupuesto"
 
-#: ../content/project.py:162
+#: ../content/project.py:161
 msgid "Weblog"
 msgstr "Bitácora"
 
@@ -436,8 +444,4 @@ msgstr "Propuestas"
 #: ../content/proposals.py:23
 msgid "template of the proposal"
 msgstr "Plantilla de la propuesta"
-
-#: ../content/project.py:165
-msgid "type"
-msgstr "Tipo"
 
