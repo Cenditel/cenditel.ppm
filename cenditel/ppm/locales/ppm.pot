@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-14 14:20+0000\n"
+"POT-Creation-Date: 2011-03-14 15:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Begin Date"
 msgstr ""
 
-#: ../config.py:20
+#: ../config.py:21
 msgid "Blog"
 msgstr ""
 
@@ -85,7 +85,7 @@ msgstr ""
 msgid "Delayed"
 msgstr ""
 
-#: ../config.py:19
+#: ../config.py:20
 msgid "Demands"
 msgstr ""
 
@@ -93,15 +93,15 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: ../content/project.py:158
+#: ../content/project.py:157
 msgid "Discussion"
 msgstr ""
 
-#: ../config.py:18
+#: ../config.py:19
 msgid "Discussions board"
 msgstr ""
 
-#: ../content/project.py:157
+#: ../content/project.py:156
 msgid "Documents"
 msgstr ""
 
@@ -121,15 +121,19 @@ msgstr ""
 msgid "Estimate Budget of the project"
 msgstr ""
 
-#: ../content/project.py:156
+#: ../content/project.py:155
 msgid "Events"
 msgstr ""
 
 #: ../config.py:17
+msgid "Events/Activities"
+msgstr ""
+
+#: ../config.py:18
 msgid "Folder"
 msgstr ""
 
-#: ../content/project.py:159
+#: ../content/project.py:158
 msgid "Forms"
 msgstr ""
 
@@ -161,11 +165,11 @@ msgstr ""
 msgid "Over Budget"
 msgstr ""
 
-#: ../content/project.py:160
+#: ../content/project.py:159
 msgid "Plans"
 msgstr ""
 
-#: ../content/project.py:161
+#: ../content/project.py:160
 msgid "PoiTracker"
 msgstr ""
 
@@ -217,11 +221,15 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
+#: ../content/project.py:152
+msgid "Type"
+msgstr ""
+
 #: ../content/project.py:110
 msgid "Under Budget"
 msgstr ""
 
-#: ../content/project.py:162
+#: ../content/project.py:161
 msgid "Weblog"
 msgstr ""
 
@@ -436,9 +444,5 @@ msgstr ""
 
 #: ../content/proposals.py:23
 msgid "template of the proposal"
-msgstr ""
-
-#: ../content/project.py:165
-msgid "type"
 msgstr ""
 

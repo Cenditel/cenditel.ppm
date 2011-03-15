@@ -19,12 +19,12 @@ msgstr ""
 
 #. Default: "Groups"
 #: ../content/folderproj.py:
-msgid "groups"
+msgid "Groups"
 msgstr ""
 
 #. Default: "Project"
 #: ../content/project.py:
-msgid "project"
+msgid "Project"
 msgstr ""
 
 #. Default: "Base View"
