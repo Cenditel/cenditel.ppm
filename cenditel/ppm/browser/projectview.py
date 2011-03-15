@@ -2,7 +2,7 @@ from zope.interface import implements, Interface
 	
 from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.utils import _createObjectByType
+#from Products.CMFPlone.utils import _createObjectByType
 	
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm import createSubFolder
