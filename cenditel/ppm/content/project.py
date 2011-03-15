@@ -149,11 +149,10 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             description=_(u"Enter the names of sub-folders to create by default for each project created."),
             columns={
                      'title'   : Column('Title'),
-                     'type'    : SelectColumn('Type', vocabulary="getTypeSubFoldersProject"),
+                     'type'    : SelectColumn(_(u'Type'), vocabulary="getTypeSubFoldersProject"),
             },
         ),
-        vocabulary_factory="cenditel.ppm.getLocalSubFolderVocabulary",
-        default=({'title' : _(u'Events'),         'type' : 'Folder'},
+        default=({'title' : _(u'Events'),         'type' : 'Event'},
                  {'title' : _(u'Documents'),      'type' : 'Folder'},
                  {'title' : _(u'Discussion'),     'type' : 'Ploneboard'},
                  {'title' : _(u'Forms'),          'type' : 'Folder'},
@@ -161,8 +160,9 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
                  {'title' : _(u'PoiTracker'),     'type' : 'PoiTracker'},
                  {'title' : _(u'Weblog'),         'type' : 'Weblog'},
         ),
+        vocabulary_factory="cenditel.ppm.getLocalSubFolderVocabulary", #TODO verificar si existe
         required=True,
-        columns=('title', _(u'type'),),
+        columns=('title', 'type',),
      ),
 
 ))
