@@ -1,14 +1,15 @@
 <dl class="portlet" i18n:domain="ppm">
-  <dt class="portletHeader" i18n:translate='label_navigation_porlet'>
-   Navigation Portlet
-  </dt>
+
+ <dt class="portletHeader" i18n:translate='label_navigation_porlet'>Navigation Portlet</dt>
+
  <dd class="portletItem">
- 
- <ul tal:define="objets python:view.title()">
-   <li tal:repeat="objet objets"><a href="" 
-      tal:attributes="href python:objet.values()[0]" tal:content="python:objet.keys()[0]"></a></li>
- </ul>
- 
+  <ul tal:define="objets python:view.title()">
+   <li tal:repeat="objet objets">
+    <a href="" tal:attributes="href python:objet.values()[0]" 
+               tal:content="python:objet.keys()[0]"></a>
+   </li>
+  </ul>
  </dd>
+
 </dl>
 
