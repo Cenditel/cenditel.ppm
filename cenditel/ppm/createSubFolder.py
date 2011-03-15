@@ -1,6 +1,7 @@
-from Products.CMFCore.utils import getToolByName
-from Products.CMFPlone.utils import _createObjectByType
-from AccessControl import ClassSecurityInfo, getSecurityManager
+#from Products.CMFCore.utils import getToolByName
+#from Products.CMFPlone.utils import _createObjectByType
+#from AccessControl import ClassSecurityInfo, getSecurityManager
+from AccessControl import ClassSecurityInfo
 from zope.interface import implements
 from plone.contentrules.rule.interfaces import IExecutable
 
@@ -9,8 +10,8 @@ import Globals
 class CreatefolderActionExecutor(object):
     """ This application is used to create all sub-folders 
         inside of the projects"""
-    security = ClassSecurityInfo()
 
+    security = ClassSecurityInfo()
     implements(IExecutable)
     def __init__(self, context):
         self.context = context
@@ -28,7 +29,7 @@ class CreatefolderActionExecutor(object):
                 if type == 'Ploneboard' and title=='Discussion':
                     type == 'Discussion'
                 if type == 'Weblog' and title== 'Weblog':
-                    type=='Blog Entry'
+                    type == 'Blog Entry'
                 try:
                     self.context.invokeFactory(type, title=title, id=title)
                 except:
