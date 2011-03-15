@@ -1,16 +1,19 @@
-from Products.Archetypes.utils import DisplayList
+#from Products.CMFCore.utils import getToolByName
+#from cenditel.ppm.interfaces import Iproject
 from zope.interface import directlyProvides
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
-from cenditel.ppm.interfaces import Iproject
-from Products.CMFCore.utils import getToolByName
 
 def userVocabularyFactory(context):
     """Vocabulary factory to find all registered users
+    
+    @param context: application context
+    
+    @return: values
     """
     users = context.acl_users.getUserIds()
     i = 0
-    lista = []
+    #lista = []
     items = []
     for user in users:
         if len(users)==1:
@@ -19,8 +22,8 @@ def userVocabularyFactory(context):
             i+=1
 
             items.append((user,user))
-    tuplaitems = tuple(items)
-    values = SimpleVocabulary.fromItems(tuplaitems)    
+    tuple_items = tuple(items)
+    values = SimpleVocabulary.fromItems(tuple_items)    
     return values
 
 directlyProvides(userVocabularyFactory, IVocabularyFactory)
