@@ -15,7 +15,14 @@
    title="navigation"
    description="A portlet navigation of the project."
    i18n:attributes="title;
-                    description"
-   />
+                    description" />
+<!--
+ <portlet 
+   addview="ppm.select_project"
+   title="projects"
+   description="A portlet for displays a form for select some criteria and find quickly projects registered based on those criteria."
+   i18n:attributes="title;
+                    description" />
+-->
         
 </portlets>
