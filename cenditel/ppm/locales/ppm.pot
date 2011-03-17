@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 00:20+0000\n"
+"POT-Creation-Date: 2011-03-17 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,6 +152,10 @@ msgstr ""
 
 #: ../content/project.py:112
 msgid "Over Budget"
+msgstr ""
+
+#: ../profiles/default/portlets.xml
+msgid "PPM Project Navigation"
 msgstr ""
 
 #: ../content/project.py:112
@@ -475,10 +479,6 @@ msgstr ""
 #: ../browser/templates/folderprojview.pt:92
 #: ../browser/templates/proposals_dashboard.pt:96
 msgid "label_valuebottonsearch"
-msgstr ""
-
-#: ../profiles/default/portlets.xml
-msgid "navigation"
 msgstr ""
 
 #: ../profiles/default/types/project.xml
