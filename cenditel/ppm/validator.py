@@ -54,7 +54,7 @@ class UsersValidator:
     	  Dic=value[0]
     	  value = str(value)
     	  if Dic['Title']=='':
-    	      return (_(u'Users required, please correct.'))
+    	      return (_(u'A user required to select, please correct.'))
        
 ValidatorsList.append(UsersValidator('areThereUsers', title='', description=''))
 
