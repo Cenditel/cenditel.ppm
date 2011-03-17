@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 03:12+0000\n"
+"POT-Creation-Date: 2011-03-17 03:33+0000\n"
 "PO-Revision-Date: 2011-03-16 22:41-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
@@ -39,6 +39,10 @@ msgstr "Presupuesto actual"
 #: ../portlets/navigation.py:35
 msgid "Add Portlet"
 msgstr "Agregar Portlet"
+
+#: ../portlets/select_proposal.py:142
+msgid "Add Project Proposals Portlet"
+msgstr ""
 
 #: ../portlets/select_project.py:142
 msgid "Add Projects Portlet"
@@ -210,7 +214,11 @@ msgstr "Sub-carpetas del Proyecto"
 msgid "Project Manager"
 msgstr "Administrador del Proyecto"
 
-#: ../content/project.py:47
+#: ../portlets/select_proposal.py:21
+msgid "Project Proposals Dashboard"
+msgstr ""
+
+#: ../content/project.py:49
 msgid "Project Status"
 msgstr "Estatus del Proyecto"
 
@@ -254,6 +262,10 @@ msgstr "Suscriptores"
 #: ../content/project.py:140
 msgid "Tags"
 msgstr "Etiquetas"
+
+#: ../portlets/select_proposal.py:143
+msgid "This portlet displays a form for select some criteria and find quickly project proposal registered based on those criteria."
+msgstr ""
 
 #: ../portlets/select_project.py:143
 msgid "This portlet displays a form for select some criteria and find quickly projects registered based on those criteria."
