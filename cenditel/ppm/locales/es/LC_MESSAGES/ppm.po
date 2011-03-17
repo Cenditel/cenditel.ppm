@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 00:20+0000\n"
-"PO-Revision-Date: 2011-03-16 18:30-0400\n"
+"POT-Creation-Date: 2011-03-17 02:33+0000\n"
+"PO-Revision-Date: 2011-03-16 22:03-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -152,6 +152,10 @@ msgstr "En el Presupuesto"
 #: ../content/project.py:112
 msgid "Over Budget"
 msgstr "Sobre el Presupuesto"
+
+#: ../profiles/default/portlets.xml
+msgid "PPM Project Navigation"
+msgstr "Navegación de Proyectos de PPM"
 
 #: ../content/project.py:112
 msgid "Pending"
@@ -475,10 +479,6 @@ msgstr "Siguiente"
 #: ../browser/templates/proposals_dashboard.pt:96
 msgid "label_valuebottonsearch"
 msgstr "Búsqueda"
-
-#: ../profiles/default/portlets.xml
-msgid "navigation"
-msgstr "navegación"
 
 #: ../profiles/default/types/project.xml
 msgid "project"
