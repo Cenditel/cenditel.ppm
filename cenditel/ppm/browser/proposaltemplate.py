@@ -53,8 +53,8 @@ class proposaltemplateview(BrowserView):
             Titlep = child.Title()
             listT.append((Titlep, Titlep))
         
-        tuple = tuple(listT)
-        LIST = DisplayList(tuple)
+        tupleT = tupleT(listT)
+        LIST = DisplayList(tupleT)
         
         return LIST
         
