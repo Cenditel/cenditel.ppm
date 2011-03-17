@@ -1,54 +1,55 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-03-17 00:20+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: cenditel.ppm\n"
+"POT-Creation-Date: 2011-03-17 01:40+0000\n"
+"PO-Revision-Date: 2011-03-16 21:11-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: DOMAIN\n"
+"Domain: plone\n"
+"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "- Used in conjunction with the Community workflow. - Has no pending state. - Allows owner to publish the folder without approval."
-msgstr ""
+msgid "Approved"
+msgstr "Aprovado"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved by City Council"
-msgstr ""
+msgstr "Aprobado por el Alcalde"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved by City Manager"
-msgstr ""
+msgstr "Aprobado por el Director ejecutivo"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved by ITSC"
-msgstr ""
+msgstr "Aprobado por el ITSC"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Being Reviewed"
-msgstr ""
+msgstr "Inicio revisión"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Deferred"
-msgstr ""
+msgstr "Diferida"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Information Needed"
-msgstr ""
+msgstr "Información necesaria"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "Information needed, means that this item is back again for add the information needed to be accept this proposal like a begin reviewed."
-msgstr ""
+msgid "Information needed, means that this proposal is back again for add the information complementary, for later send it again to be reviewed."
+msgstr "Información necesaria, significa que esta propuesta está de vuelta otra vez para añadir la información complementaria, para después enviarla de nuevo para ser revisada."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Initiated a review of the project proposal."
-msgstr ""
+msgstr "Iniciada una revisión de la propuesta de proyecto."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Making an item submitted means that it will not be editable to anyone but the owner and the site administrator."
@@ -56,41 +57,49 @@ msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Prioritized"
-msgstr ""
+msgstr "Priorizada"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Proposals PPM Workflow"
-msgstr ""
+msgstr "Flujo de trabajo de las propuesta en el Project Portfolio Management"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Public draft"
-msgstr ""
+msgstr "Publicar borrador"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Submitted"
-msgstr ""
+msgstr "Suministrado"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "This project proposal is approved by  City Council."
-msgstr ""
+msgid "This allows owner to sending a project proposal to be review it and to be accept like a project of the organization/community."
+msgstr "Este le permite al dueño de una propuesta de proyecto envíarla para ser revisada y aceptada como un proyecto de la organización o la comunidad."
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal is approved by City Council."
+msgstr "Esta propuesta de proyecto es aprobada por el Alcalde."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "This project proposal is approved by City Manager."
-msgstr ""
+msgstr "Esta propuesta de proyecto es aprobada por el Director ejecutivo."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "This project proposal is approved by ITSC."
-msgstr ""
+msgstr "Esta propuesta de proyecto es aprobada por el ITSC."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "This project proposal is deferred."
-msgstr ""
+msgstr "Esta propuesta de proyecto es diferida."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "This project proposal is prioritized."
-msgstr ""
+msgstr "Esta propuesta de proyecto es priorizada."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Waiting to be approved this project proposal, by different departments."
+msgstr "Esperando ser aprobado por los diferentes departamentos de la organización."
 
