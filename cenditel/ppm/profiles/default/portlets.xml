@@ -12,7 +12,7 @@
 
  <portlet 
    addview="ppm.navigation"
-   title="navigation"
+   title="PPM Project Navigation"
    description="A portlet navigation of the project."
    i18n:attributes="title;
                     description" />
