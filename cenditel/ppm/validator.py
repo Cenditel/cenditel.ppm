@@ -35,5 +35,28 @@ class GroupsValidator:
        
 ValidatorsList.append(GroupsValidator('isGroups', title='', description=''))
 
+class UsersValidator:
+    """
+       Validator for empty fields are not in users within projects
+    """
+
+    __implements__ = IValidator
+
+    def __init__(self,
+        name,
+        title='Users validator',
+        description='Your users will fail'):
+            self.name = name
+            self.title = title or name
+            self.description = description
+
+    def __call__(self, value, *args, **kwargs):
+    	  Dic=value[0]
+    	  value = str(value)
+    	  if Dic['Title']=='':
+    	      return (_(u'Users required, please correct.'))
+       
+ValidatorsList.append(UsersValidator('areThereUsers', title='', description=''))
+
 for validador in ValidatorsList:
          validation.register(validador)

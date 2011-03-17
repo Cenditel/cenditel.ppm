@@ -22,6 +22,7 @@ from Products.validation import validation
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT
 from cenditel.ppm.interfaces import Iproject
+#from cenditel.ppm.validator import UsersValidator
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
@@ -37,6 +38,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         required=True,
         searchable=True,
         vocabulary_factory="cenditel.ppm.user",
+#        validators=('areThereUsers',), 
     ),
     
     atapi.StringField( 
