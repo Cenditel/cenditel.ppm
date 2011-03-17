@@ -17,7 +17,8 @@
       addview=".navigation.AddForm"
       />
 
-  <!--  
+<!--
+
   <plone:portlet
       name="ppm.select_project"
       interface=".select_project.IProjectsDashboardPortlet"
@@ -25,6 +26,16 @@
       renderer=".select_project.Renderer"
       addview=".select_project.AddForm"
       />
-  -->
+
+
+  <plone:portlet
+      name="ppm.select_proposal"
+      interface=".select_proposal.IProjectProposalsDashboardPortlet"
+      assignment=".select_proposal.Assignment"
+      renderer=".select_proposal.Renderer"
+      addview=".select_proposal.AddForm"
+      />
+
+-->
 
 </configure>
