@@ -30,8 +30,6 @@
     </div>
 
     <br />
-
-    <div tal:replace="structure provider:plone.belowcontentbody" />
       
     <dl id="completedProposals" class="collapsible inline "> 
 
@@ -149,6 +147,8 @@
       </dd>
 
     </dl> 
+
+   <div tal:replace="structure provider:plone.belowcontentbody" /> 
 
    </div>  
 
