@@ -3,9 +3,7 @@
              i18n:domain="plone"
              workflow_id="proposal_workflow"
              title="Proposals PPM Workflow"
-             description="- Used in conjunction with the Community workflow.
-- Has no pending state.
-- Allows owner to publish the folder without approval."
+             description="This allows owner to sending a project proposal to be review it and to be accept like a project of the organization/community."
              state_variable="review_state"
              initial_state="draft"
              i18n:attributes="title; description">
@@ -15,90 +13,11 @@
  <permission>Modify portal content</permission>
  <permission>View</permission>
 
- <state state_id="pending" title="Pending review">
-  <description>Waiting to be reviewed, not editable by the owner.</description>
-  <exit-transition transition_id="hide"/>
-  <exit-transition transition_id="publish"/>
-  <exit-transition transition_id="reject"/>
-  <exit-transition transition_id="retract"/>
-  <permission-map name="Access contents information"
-                  acquired="False">
-   <permission-role>Anonymous</permission-role>
-  </permission-map>
-  <permission-map name="Change portal events"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Reviewer</permission-role>
-  </permission-map>
-  <permission-map name="Modify portal content"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Reviewer</permission-role>
-  </permission-map>
-  <permission-map name="View" acquired="False">
-   <permission-role>Anonymous</permission-role>
-  </permission-map>
- </state>
-
- <state state_id="private" title="Private">
-  <description>Can only be seen and edited by the owner.</description>
-  <exit-transition transition_id="show"/>
-  <permission-map name="Access contents information"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Owner</permission-role>
-   <permission-role>Reader</permission-role>
-   <permission-role>Editor</permission-role>
-   <permission-role>Contributor</permission-role>
-  </permission-map>
-  <permission-map name="Change portal events"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Owner</permission-role>
-   <permission-role>Editor</permission-role>
-  </permission-map>
-  <permission-map name="Modify portal content"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Owner</permission-role>
-   <permission-role>Editor</permission-role>
-  </permission-map>
-  <permission-map name="View" acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Owner</permission-role>
-   <permission-role>Reader</permission-role>
-   <permission-role>Editor</permission-role>
-   <permission-role>Contributor</permission-role>
-  </permission-map>
- </state>
-
- <state state_id="published" title="Published">
-  <description>Visible to everyone, not editable by the owner.</description>
-  <exit-transition transition_id="reject"/>
-  <exit-transition transition_id="retract"/>
-  <permission-map name="Access contents information"
-                  acquired="False">
-   <permission-role>Anonymous</permission-role>
-  </permission-map>
-  <permission-map name="Change portal events"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-  </permission-map>
-  <permission-map name="Modify portal content"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-  </permission-map>
-  <permission-map name="View" acquired="False">
-   <permission-role>Anonymous</permission-role>
-  </permission-map>
- </state>
-
  <state state_id="draft" title="Public draft" i18n:attributes="title">
   <description i18n:translate="">Visible to everyone, but not approved by the reviewers.</description>
 
-  <exit-transition transition_id="hide"/>
-  <exit-transition transition_id="publish"/>
-  <exit-transition transition_id="submit"/>
+  <exit-transition transition_id="submitted"/>
+  <exit-transition transition_id="information_needed"/>
 
   <permission-map name="Access contents information"
                   acquired="False">
@@ -123,14 +42,75 @@
    <permission-role>Anonymous</permission-role>
   </permission-map>
 
+ </state>
+
+ <state state_id="being_reviewed" title="Being Reviewed" i18n:attributes="title">
+  <description i18n:translate="">Initiated a review of the project proposal.</description>
+
+  <exit-transition transition_id="prioritized"/>
+  <exit-transition transition_id="deferred"/>
+
+  <permission-map name="Access contents information"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+   <permission-role>Reader</permission-role>
+   <permission-role>Editor</permission-role>
+   <permission-role>Contributor</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+   <permission-role>Editor</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+   <permission-role>Editor</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+   <permission-role>Reader</permission-role>
+   <permission-role>Editor</permission-role>
+   <permission-role>Contributor</permission-role>
+  </permission-map>
+ </state>
+
+ <state state_id="approved" title="Approved" i18n:attributes="title">
+  <description i18n:translate="">Waiting to be approved this project proposal, by different departments.</description>
+
+  <exit-transition transition_id="approved_by_itsc"/>
+  <exit-transition transition_id="approved_by_city_manager"/>
+  <exit-transition transition_id="approved_by_city_council"/>
+
+  <permission-map name="Access contents information"
+                  acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
  </state>
 
  <transition transition_id="submitted"
              title="Submitted" i18n:attributes="title"
-             new_state="private" trigger="USER"
+             new_state="draft" trigger="USER"
              before_script="" after_script="">
   <description i18n:translate="">Making an item submitted means that it will not be editable to anyone but the owner and the site administrator.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=hide">Make private</action>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=submitted">Submit</action>
   <guard>
    <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -140,19 +120,8 @@
              title="Information Needed" i18n:attributes="title"
              new_state="draft" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">Information needed, means that this item is back again for add the information needed to be accept this proposal like a begin reviewed.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=publish">Publish</action>
-  <guard>
-   <guard-permission>Review portal content</guard-permission>
-  </guard>
- </transition>
-
- <transition transition_id="complete"
-             title="Being Reviewed" i18n:attributes="title"
-             new_state="draft" trigger="USER"
-             before_script="" after_script="">
-  <description i18n:translate="">Initiated a review of the project proposal.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=reject">Send back</action>
+  <description i18n:translate="">Information needed, means that this proposal is back again for add the information complementary, for later send it again to be reviewed.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=information_needed">Information Needed</action>
   <guard>
    <guard-permission>Review portal content</guard-permission>
   </guard>
@@ -160,10 +129,10 @@
 
  <transition transition_id="prioritized"
              title="Prioritized" i18n:attributes="title"
-             new_state="draft" trigger="USER"
+             new_state="being_reviewed" trigger="USER"
              before_script="" after_script="">
   <description i18n:translate="">This project proposal is prioritized.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=retract">Retract</action>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=prioritized">Prioritized</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
@@ -171,10 +140,10 @@
 
  <transition transition_id="deferred"
              title="Deferred" i18n:attributes="title"
-             new_state="draft" trigger="USER"
+             new_state="being_reviewed" trigger="USER"
              before_script="" after_script="">
   <description i18n:translate="">This project proposal is deferred.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=show">Promote to Draft</action>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=deferred">Deferred</action>
   <guard>
    <guard-permission>Modify portal content</guard-permission>
   </guard>
@@ -182,10 +151,10 @@
 
  <transition transition_id="approved_by_itsc"
              title="Approved by ITSC" i18n:attributes="title"
-             new_state="pending" trigger="USER"
+             new_state="approved" trigger="USER"
              before_script="" after_script="">
   <description i18n:translate="">This project proposal is approved by ITSC.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=submit">Submit for publication</action>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approved_by_itsc">Approved by ITSC</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
@@ -193,10 +162,10 @@
 
  <transition transition_id="approved_by_city_manager"
              title="Approved by City Manager" i18n:attributes="title"
-             new_state="pending" trigger="USER"
+             new_state="approved" trigger="USER"
              before_script="" after_script="">
   <description i18n:translate="">This project proposal is approved by City Manager.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=submit">Submit for publication</action>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approved_by_city_manager">Approved by City Manager</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
@@ -204,23 +173,14 @@
 
  <transition transition_id="approved_by_city_council"
              title="Approved by City Council" i18n:attributes="title"
-             new_state="pending" trigger="USER"
+             new_state="approved" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">This project proposal is approved by  City Council.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=submit">Submit for publication</action>
+  <description i18n:translate="">This project proposal is approved by City Council.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approved_by_city_council">Approved by City Council</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
  </transition>
-
- <worklist worklist_id="reviewer_queue" title="">
-  <description>Reviewer tasks</description>
-  <action category="global" url="%(portal_url)s/search?review_state=pending">Pending (%(count)d)</action>
-  <guard>
-   <guard-permission>Review portal content</guard-permission>
-  </guard>
-  <match name="review_state" values="pending"/>
- </worklist>
 
  <variable variable_id="action" for_catalog="False"
            for_status="True" update_always="True">
