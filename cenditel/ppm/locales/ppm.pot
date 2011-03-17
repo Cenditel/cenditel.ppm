@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 03:12+0000\n"
+"POT-Creation-Date: 2011-03-17 03:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,10 @@ msgstr ""
 
 #: ../portlets/navigation.py:35
 msgid "Add Portlet"
+msgstr ""
+
+#: ../portlets/select_proposal.py:142
+msgid "Add Project Proposals Portlet"
 msgstr ""
 
 #: ../portlets/select_project.py:142
@@ -260,8 +264,8 @@ msgstr ""
 msgid "Tags"
 msgstr ""
 
-#: ../content/project.py:138
-msgid "Tags"
+#: ../portlets/select_proposal.py:143
+msgid "This portlet displays a form for select some criteria and find quickly project proposal registered based on those criteria."
 msgstr ""
 
 #: ../portlets/select_project.py:143
