@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-03-17 00:20+0000\n"
+"POT-Creation-Date: 2011-03-17 01:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Domain: plone\n"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "- Used in conjunction with the Community workflow. - Has no pending state. - Allows owner to publish the folder without approval."
+msgid "Approved"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
@@ -46,7 +46,7 @@ msgid "Information Needed"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "Information needed, means that this item is back again for add the information needed to be accept this proposal like a begin reviewed."
+msgid "Information needed, means that this proposal is back again for add the information complementary, for later send it again to be reviewed."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
@@ -74,7 +74,11 @@ msgid "Submitted"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "This project proposal is approved by  City Council."
+msgid "This allows owner to sending a project proposal to be review it and to be accept like a project of the organization/community."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal is approved by City Council."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
@@ -95,5 +99,9 @@ msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Waiting to be approved this project proposal, by different departments."
 msgstr ""
 
