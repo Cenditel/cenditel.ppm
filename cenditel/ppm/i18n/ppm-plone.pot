@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-03-17 01:40+0000\n"
+"POT-Creation-Date: 2011-03-17 02:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,7 +54,7 @@ msgid "Initiated a review of the project proposal."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "Making an item submitted means that it will not be editable to anyone but the owner and the site administrator."
+msgid "Making an project proposal submitted means that it will not be editable to anyone but the owner and the site administrator."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
