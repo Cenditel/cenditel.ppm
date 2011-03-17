@@ -22,7 +22,7 @@ from Products.validation.validators.RegexValidator import RegexValidator
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT
 from cenditel.ppm.interfaces import Iproject
-#from cenditel.ppm.validator import UsersValidator
+from cenditel.ppm.validator import UsersValidator
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
@@ -38,7 +38,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         required=True,
         searchable=True,
         vocabulary_factory="cenditel.ppm.user",
-#        validators=('areThereUsers',), 
+        validators=('areThereUsers',), 
     ),
     
     atapi.StringField( 
@@ -151,8 +151,8 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u'Suscribers'),
             description=_(u"Enter every email address for the suscribers of projects, please everyone preceded by prefix 'mailto:'"),
             size=5
-        )
-#        validators=('isEmail','isMailTo',), 
+        ),
+        validators=('isEmail','isMailTo',), 
     ),
 	        
      DataGridField(
