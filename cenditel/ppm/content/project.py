@@ -16,8 +16,8 @@ from Products.DataGridField import DataGridField, DataGridWidget
 from Products.DataGridField.Column import Column
 from Products.DataGridField.SelectColumn import SelectColumn
 
-from Products.validation.validators.RegexValidator import RegexValidator 
 from Products.validation import validation
+from Products.validation.validators.RegexValidator import RegexValidator
 
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT
@@ -149,9 +149,10 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         schemata='Project',
         widget=atapi.LinesWidget(
             label=_(u'Suscribers'),
-            description=_(u'Suscribers of projects'),
+            description=_(u"Enter every email address for the suscribers of projects, please everyone preceded by prefix 'mailto:'"),
             size=5
         )
+#        validators=('isEmail','isMailTo',), 
     ),
 	        
      DataGridField(
