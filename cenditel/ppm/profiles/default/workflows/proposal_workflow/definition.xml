@@ -107,9 +107,9 @@
 
  <transition transition_id="submitted"
              title="Submitted" i18n:attributes="title"
-             new_state="draft" trigger="USER"
+             new_state="being_reviewed" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">Making an item submitted means that it will not be editable to anyone but the owner and the site administrator.</description>
+  <description i18n:translate="">Making an project proposal submitted means that it will not be editable to anyone but the owner and the site administrator.</description>
   <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=submitted">Submit</action>
   <guard>
    <guard-permission>Modify portal content</guard-permission>
@@ -129,7 +129,7 @@
 
  <transition transition_id="prioritized"
              title="Prioritized" i18n:attributes="title"
-             new_state="being_reviewed" trigger="USER"
+             new_state="approved" trigger="USER"
              before_script="" after_script="">
   <description i18n:translate="">This project proposal is prioritized.</description>
   <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=prioritized">Prioritized</action>
