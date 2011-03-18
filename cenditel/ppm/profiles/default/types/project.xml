@@ -15,6 +15,7 @@
 
   <property name="allowed_content_types">
      <element value="Folder"/>
+     <element value="Event"/>
      <element value="Ploneboard"/>
      <element value="PoiTracker"/>
      <element value="Weblog"/>
