@@ -3,8 +3,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 03:33+0000\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-03-17 14:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -178,11 +178,6 @@ msgstr ""
 msgid "Plans"
 msgstr ""
 
-#. Default: "Project"
-#: ../content/project.py:
-msgid "Project"
-msgstr ""
-
 #: ../content/project.py:84
 msgid "Project % completed"
 msgstr ""
@@ -290,10 +285,6 @@ msgstr ""
 
 #: ../content/project.py:175
 msgid "Weblog"
-msgstr ""
-
-#. Default: "Base View"
-msgid "base_view"
 msgstr ""
 
 #: ../profiles/default/types/folderproj.xml
