@@ -11,20 +11,20 @@
   <div metal:fill-slot="main">
    
   <tal:main-macro metal:define-macro="main"
-      tal:define="Assumptions here/assumptions;
-                  createfol view/subfol;
+      tal:define="createfol view/subfol;
                   roles view/roles;
-                  suscribers here/getSuscribers;
-                  tags here/getTags;
-                  bud_status here/getBud_status;
-                  act_budget here/getAct_budget;
-                  est_budget here/getEst_budget;
-                  status here/getStatus;
-                  completed here/getCompleted;
-                  end_date here/getEnd_date;                
+                  manager here/getManager;
+                  status here/getStatus;         
                   begin_date here/getBegin_date;
-                  Blog view/blog;
-                  manager here/getManager">  
+                  end_date here/getEnd_date;
+                  completed here/getCompleted;
+                  est_budget here/getEst_budget;
+                  act_budget here/getAct_budget;
+                  bud_status here/getBud_status;
+                  Assumptions python:context.getAssumptions();
+                  tags here/getTags;
+                  suscribers here/getSuscribers;
+                  Blog view/blog;">  
 	   
     <div>
      <p tal:content="createfol"></p>
@@ -108,7 +108,9 @@
         <tr> 
          <span> 
           <th i18n:translate='label_assumtions' align="left">Assumptions</th> 
-          <td><p tal:replace="Assumptions"></p></td> 
+          <td>
+           <span tal:content="structure Assumptions" />
+          </td> 
          </span> 
         </tr> 
         
@@ -116,6 +118,12 @@
          <span> 
           <th i18n:translate='label_tags' align="left">Tags</th> 
           <td><strong tal:content="tags" />
+           <!--<span tal:repeat="subject tags">
+            <strong>
+             <a tal:define="link string:search?SearchableText=${subject/tags}"
+	        tal:attributes="href link" tal:content="string:${subject/keyword} (${subject/size})">Tags Links</a>
+            </strong>
+           </span>--> 
           </td> 
          </span> 
         </tr> 
