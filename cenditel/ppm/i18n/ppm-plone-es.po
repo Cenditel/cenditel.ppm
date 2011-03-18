@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 02:01+0000\n"
-"PO-Revision-Date: 2011-03-16 21:33-0400\n"
+"POT-Creation-Date: 2011-03-17 14:50+0000\n"
+"PO-Revision-Date: 2011-03-17 10:21-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved"
-msgstr "Aprovado"
+msgstr "Aprobado"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved by City Council"
@@ -39,6 +39,11 @@ msgstr "Inicio revisión"
 msgid "Deferred"
 msgstr "Diferida"
 
+#. Default: "Groups"
+#: ../content/folderproj.py:
+msgid "Groups"
+msgstr "Grupos"
+
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Information Needed"
 msgstr "Información necesaria"
@@ -58,6 +63,11 @@ msgstr "Hacer a una propuesta de proyecto enviada significa que no sera editada 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Prioritized"
 msgstr "Priorizada"
+
+#. Default: "Project"
+#: ../content/project.py:
+msgid "Project"
+msgstr "Proyecto"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Proposals PPM Workflow"
@@ -102,4 +112,9 @@ msgstr "Visible por todos, pero no esta aprobada por los revisores."
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Waiting to be approved this project proposal, by different departments."
 msgstr "Esperando ser aprobado por los diferentes departamentos de la organización."
+
+#. Default: "Base View"
+#: dynamic view name template base_view on type proposals
+msgid "base_view"
+msgstr "Vista base"
 
