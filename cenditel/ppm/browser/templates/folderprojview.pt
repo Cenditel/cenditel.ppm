@@ -125,10 +125,15 @@
     
          <tr tal:repeat="projectTitle python:Element">  
           <span tal:define="link projectTitle/absolute_url">
-           <td><a href="" tal:attributes="href link"><span tal:content="projectTitle/Title"></span></a></td> 
+           <td><a href="" tal:attributes="href link"><span tal:content="projectTitle/Title" /></a></td> 
            <td tal:content="projectTitle/manager"></td> 
-           <td tal:define="status projectTitle/status; py_color python:(status == 'Time Stimated' and 'White') or (status == 'Delayed' and 'Red') or (status == 'Completed' and 'Green') or (status != 'Completed' and 'White')" tal:attributes="bgcolor string:$py_color" tal:content="status"></td> 
-           <td tal:define="bud_status projectTitle/bud_status ; py_budcolor python:(bud_status == 'On Budget' and 'Yellow') or (bud_status == 'Over Budget' and 'Red') or (bud_status == 'Under Budget' and 'Green') or (bud_status != 'Under Budget' and 'White')" tal:attributes="bgcolor string:$py_budcolor" tal:content="bud_status"></td>  
+           <td tal:define="status projectTitle/status; 
+                           py_color python:(status == 'Time Stimated' and 'White') or (status == 'Delayed' and 'Red') or (status == 'Completed' and 'Green') or (status != 'Completed' and 'White')" 
+               tal:attributes="bgcolor string:$py_color" 
+               tal:content="status"></td> 
+           <td tal:define="bud_status projectTitle/bud_status ; py_budcolor python:(bud_status == 'On Budget' and 'Yellow') or (bud_status == 'Over Budget' and 'Red') or (bud_status == 'Under Budget' and 'Green') or (bud_status != 'Under Budget' and 'White')"
+               tal:attributes="bgcolor string:$py_budcolor"
+               tal:content="bud_status"></td>  
            <td tal:content="projectTitle/begin_date"></td> 
            <td tal:content="projectTitle/end_date" bgcolor="White"><a href=""><br /></a></td> 
            <td tal:content="projectTitle/suscribers" bgcolor="White"></td> 
