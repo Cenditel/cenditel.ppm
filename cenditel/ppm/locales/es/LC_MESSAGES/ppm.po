@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 03:33+0000\n"
-"PO-Revision-Date: 2011-03-16 22:41-0400\n"
+"POT-Creation-Date: 2011-03-17 14:50+0000\n"
+"PO-Revision-Date: 2011-03-18 14:41-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -139,7 +139,7 @@ msgstr "Formas"
 
 #: ../validator.py:34
 msgid "Group required, please correct."
-msgstr "Grupo es requerido, por favor corrija."
+msgstr "Debe definir al menos un grupo de trabajo que trabajará en las propuestas de proyectos para este Portafolio, por favor, defina sus grupos."
 
 #: ../content/folderproj.py:23
 msgid "Groups"
@@ -176,11 +176,6 @@ msgstr "Pendiente"
 #: ../content/project.py:173
 msgid "Plans"
 msgstr "Planes"
-
-#. Default: "Project"
-#: ../content/project.py:
-msgid "Project"
-msgstr "Proyecto"
 
 #: ../content/project.py:84
 msgid "Project % completed"
@@ -290,10 +285,6 @@ msgstr "Por debajo del Presupuesto"
 #: ../content/project.py:175
 msgid "Weblog"
 msgstr "Bitácora"
-
-#. Default: "Base View"
-msgid "base_view"
-msgstr "Vista base"
 
 #: ../profiles/default/types/folderproj.xml
 msgid "folderproj"
