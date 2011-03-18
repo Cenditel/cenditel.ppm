@@ -1,8 +1,10 @@
-#from Products.CMFCore.utils import getToolByName
-#from cenditel.ppm.interfaces import Iproject
 from zope.interface import directlyProvides
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
+
+from Products.CMFCore.utils import getToolByName
+
+from cenditel.ppm.interfaces import Iproject
 
 def userVocabularyFactory(context):
     """Vocabulary factory to find all registered users
