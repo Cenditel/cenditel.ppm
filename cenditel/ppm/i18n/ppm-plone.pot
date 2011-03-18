@@ -3,8 +3,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-03-17 02:01+0000\n"
+"Project-Id-Version: cenditel.ppm\n"
+"POT-Creation-Date: 2011-03-17 14:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: plone\n"
+"Domain: ppm\n"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved"
@@ -41,6 +41,11 @@ msgstr ""
 msgid "Deferred"
 msgstr ""
 
+#. Default: "Groups"
+#: ../content/folderproj.py:
+msgid "Groups"
+msgstr ""
+
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Information Needed"
 msgstr ""
@@ -59,6 +64,11 @@ msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Prioritized"
+msgstr ""
+
+#. Default: "Project"
+#: ../content/project.py:
+msgid "Project"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
@@ -103,5 +113,10 @@ msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Waiting to be approved this project proposal, by different departments."
+msgstr ""
+
+#. Default: "Base View"
+#: dynamic view name template base_view on type proposals
+msgid "base_view"
 msgstr ""
 
