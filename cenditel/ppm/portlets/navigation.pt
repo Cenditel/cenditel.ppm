@@ -1,6 +1,7 @@
 <dl class="portlet" i18n:domain="ppm">
 
- <dt class="portletHeader" i18n:translate='label_navigation_porlet'>Navigation Portlet</dt>
+ <dt class="portletHeader" 
+     i18n:translate='label_navigation_porlet'>Navigation Portlet</dt>
 
  <dd class="portletItem">
   <ul tal:define="objets python:view.title()">

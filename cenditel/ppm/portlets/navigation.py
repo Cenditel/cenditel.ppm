@@ -1,8 +1,11 @@
+from zope.formlib import form
+from zope.interface import implements
+from zope.component import getMultiAdapter
+
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
-from zope.interface import implements
+
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope.formlib import form
 
 from cenditel.ppm import ppmMessageFactory as _
 
@@ -24,7 +27,7 @@ class Renderer(base.Renderer):
         
     def title (self):
     	list=[]
-    	holder=self.context
+    	holder = self.context
     	for child in holder.getChildNodes(): 
     	    list.append({child.Title():child.absolute_url()})
         return list
