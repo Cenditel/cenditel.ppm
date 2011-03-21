@@ -18,20 +18,15 @@ proposalsSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
     # -*- Your Archetypes field definitions here ... -*-
     atapi.TextField(
         name='templatest',
+        allowable_content_types=('text/html',),
         widget=atapi.RichWidget(
             label=_(u"Summary"),
             description=_(u"Proposal summary of a future project"),
-            allow_file_upload=False,
-            rows="10",
         ),
-        allowable_content_types=('text/html',),
-        default_content_type = 'text/html',
-        default_output_type = 'text/x-html-safe',
-        storage=atapi.AnnotationStorage(),
-        validators=('isTidyHtmlWithCleanup',), 
-        searchable=True,
-        required=False
+        default_content_type="text/html",
+        default_output_type="text/html",
     ),
+
 
 ))
 
