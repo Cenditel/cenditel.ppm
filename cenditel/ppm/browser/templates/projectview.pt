@@ -36,79 +36,74 @@
       </p> 
       <p></p> 
  
-      <table>
+      <table cellpadding="5">
        <tbody> 
        
         <tr> 
          <span>
-          <th i18n:translate='label_projectmanager' align="left">Project Manager</th>  
-          <td><strong tal:content="manager" />
+          <th i18n:translate='label_projectmanager' align="left" width="20%">Project Manager</th>  
+          <td width="80%"><strong tal:content="manager" />
           </td> 
          </span> 
         </tr> 
         
         <tr> 
          <span> 
-          <th i18n:translate='label_schesatatus' align="left">Schedule Status</th>
-          <td> 
-           <p tal:replace="status">
-           </p>
+          <th i18n:translate='label_schesatatus' align="left" width="20%">Schedule Status</th>
+          <td width="80%"> 
+           <p tal:replace="status"></p>
           </td> 
          </span> 
         </tr> 
         
         <tr> 
          <span> 
-          <th  i18n:translate='label_begindate' align="left">Begin Date</th> 
-          <td><p tal:replace="begin_date"></p></td> 
-          <td></td> 
+          <th  i18n:translate='label_begindate' align="left" width="20%">Begin Date</th> 
+          <td width="80%"><p tal:replace="begin_date"></p></td> 
          </span> 
         </tr> 
         
         <tr> 
          <span> 
-          <th i18n:translate='label_enddate' align="left">End Date</th> 
-          <td><p tal:replace="end_date"></p></td> 
-          <td></td> 
+          <th i18n:translate='label_enddate' align="left" width="20%">End Date</th> 
+          <td width="80%"><p tal:replace="end_date"></p></td> 
          </span> 
         </tr> 
         
         <tr> 
          <span> 
-          <th i18n:translate='label_complete' align="left">% Complete</th> 
-          <td>
-           <p tal:replace="completed">
-           </p>%
+          <th i18n:translate='label_complete' align="left" width="20%">% Complete</th> 
+          <td width="80%">
+           <p tal:replace="completed"></p>%
           </td> 
          </span> 
         </tr> 
         
         <tr> 
          <span> 
-          <th i18n:translate='label_estimatebud' align="left">Estimated Budget</th> 
-            <td>$ <p tal:replace="est_budget"></p></td>  
+          <th i18n:translate='label_estimatebud' align="left" width="20%">Estimated Budget</th> 
+          <td width="80%">$ <p tal:replace="est_budget"></p></td>  
          </span> 
         </tr> 
         
         <tr> 
          <span>  
-          <th i18n:translate='label_actualbud' align="left">Actual Budget</th> 
-            <td>$ <p tal:replace="act_budget"></p></td>  
+          <th i18n:translate='label_actualbud' align="left" width="20%">Actual Budget</th> 
+          <td width="80%">$ <p tal:replace="act_budget"></p></td>  
          </span> 
         </tr> 
         
         <tr> 
          <span> 
-          <th  i18n:translate='label_budgetstatus' align="left">Budget Status</th> 
-            <td><p tal:replace="bud_status"></p></td>  
-          <td></td> 
+          <th  i18n:translate='label_budgetstatus' align="left" width="20%">Budget Status</th> 
+          <td width="80%"><p tal:replace="bud_status"></p></td>  
          </span> 
         </tr> 
         
         <tr> 
          <span> 
-          <th i18n:translate='label_assumtions' align="left">Assumptions</th> 
-          <td>
+          <th i18n:translate='label_assumtions' align="left" width="20%">Assumptions</th> 
+          <td width="80%">
            <span tal:content="structure Assumptions" />
           </td> 
          </span> 
@@ -116,8 +111,8 @@
         
         <tr> 
          <span> 
-          <th i18n:translate='label_tags' align="left">Tags</th> 
-          <td><strong tal:content="tags" />
+          <th i18n:translate='label_tags' align="left" width="20%">Tags</th> 
+          <td width="80%"><strong tal:content="tags" />
            <!--<span tal:repeat="subject tags">
             <strong>
              <a tal:define="link string:search?SearchableText=${subject/tags}"
@@ -130,8 +125,8 @@
         
         <tr> 
          <span> 
-          <th i18n:translate='label_suscribers' align="left">Suscribers</th> 
-          <td>
+          <th i18n:translate='label_suscribers' align="left" width="20%">Suscribers</th> 
+          <td width="80%">
            <fieldset>
             <table>
              <tbody>
