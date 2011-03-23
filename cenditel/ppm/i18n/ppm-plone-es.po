@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 14:50+0000\n"
-"PO-Revision-Date: 2011-03-17 10:21-0400\n"
+"POT-Creation-Date: 2011-03-23 21:45+0000\n"
+"PO-Revision-Date: 2011-03-23 17:17-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +14,18 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
 "X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by City Council"
+msgstr "Aprobar por el Alcalde"
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by City Manager"
+msgstr "Aprobar por el Director ejecutivo"
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by ITSC"
+msgstr "Aprobar por el ITSC"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved"
@@ -104,6 +116,18 @@ msgstr "Esta propuesta de proyecto es diferida."
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "This project proposal is prioritized."
 msgstr "Esta propuesta de proyecto es priorizada."
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by City Council."
+msgstr "Esta propuesta de proyecto será aprobada por el Alcalde."
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by City Manager."
+msgstr "Esta propuesta de proyecto será aprobada por el Director ejecutivo."
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by ITSC."
+msgstr "Esta propuesta de proyecto será aprobada por el ITSC."
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."

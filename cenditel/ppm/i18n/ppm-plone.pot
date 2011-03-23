@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-17 14:50+0000\n"
+"POT-Creation-Date: 2011-03-23 21:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,18 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ppm\n"
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by City Council"
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by City Manager"
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by ITSC"
+msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approved"
@@ -105,6 +117,18 @@ msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "This project proposal is prioritized."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by City Council."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by City Manager."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by ITSC."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
