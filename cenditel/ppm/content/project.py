@@ -20,7 +20,7 @@ from Products.validation import validation
 from Products.validation.validators.RegexValidator import RegexValidator
 
 from cenditel.ppm import ppmMessageFactory as _
-from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT
+from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT, SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
 from cenditel.ppm.interfaces import Iproject
 #from cenditel.ppm.validator import UsersValidator
 
@@ -32,7 +32,8 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         name='manager',
         widget=atapi.SelectionWidget(
             label=_(u"Manager"),
-            description=_(u"Project Manager")
+            description=_(u"Project Manager"),
+            format='select',
         ),
         schemata='Project',
         required=True,
@@ -49,7 +50,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             description=_(u"Project Status"),
         ),
         schemata='Project',
-        vocabulary=[_(u"Time estimated"), _(u"Delayed"), _(u"Completed")] 
+        vocabulary=SCHEDULE_STATUS_PROJECT,
     ),
 
     atapi.DateTimeField(
@@ -80,7 +81,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         name='completed',
         widget=atapi.StringWidget(
             label=_(u"% Completed"),
-            descrption=_(u"Project % completed"),
+            description=_(u"Project % completed"),
         ),
         schemata='Project',
         storage=atapi.AnnotationStorage(),
@@ -89,7 +90,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         name='est_budget',
         widget=atapi.StringWidget(
             label=_(u"Estimated Budget"),
-            descrption=_(u"Project Estimated Budget"),
+            description=_(u"Project Estimated Budget"),
         ),
         schemata='Project',
     ),
@@ -98,7 +99,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         name='act_budget',
         widget=atapi.StringWidget(
             label=_(u"Actual Budget"),
-            descrption=_(u"Project Actual Budget"),
+            description=_(u"Project Actual Budget"),
         ),
         schemata='Project',
     ),
@@ -111,7 +112,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             description=_(u"Project Status Budget"),           
         ),
         schemata='Project',
-        vocabulary=[_(u"On Budget"), _(u"Under Budget"), _(u"Over Budget"), _(u"Pending")] 
+        vocabulary=BUDGET_STATUS_PROJECT,
     ), 
 
     atapi.TextField(
@@ -121,7 +122,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             description=_(u'Project Assumptions'),
             allow_file_upload=False,
             rows=5,
-            cols=20,
+            cols=40,
         ),
         schemata='Project',
         allowable_content_types=('text/html',),
@@ -167,7 +168,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             },
         ),
         columns=('title', 'type',),
-        default=({'title' : _(u'Events'),         'type' : 'Event'},
+        default=({'title' : _(u'Events'),         'type' : 'Folder'},
                  {'title' : _(u'Documents'),      'type' : 'Folder'},
                  {'title' : _(u'Discussions'),    'type' : 'Ploneboard'},
                  {'title' : _(u'Forms'),          'type' : 'Folder'},
