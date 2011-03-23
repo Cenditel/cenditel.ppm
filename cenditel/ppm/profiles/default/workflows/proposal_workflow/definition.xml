@@ -49,6 +49,7 @@
 
   <exit-transition transition_id="prioritized"/>
   <exit-transition transition_id="deferred"/>
+  <exit-transition transition_id="information_needed"/>
 
   <permission-map name="Access contents information"
                   acquired="False">
@@ -79,12 +80,84 @@
   </permission-map>
  </state>
 
+ <state state_id="approved_by_itsc" title="Approved by ITSC" i18n:attributes="title">
+  <description i18n:translate="">This project proposal is approved by ITSC.</description>
+
+  <exit-transition transition_id="approve_by_itsc"/>
+
+  <permission-map name="Access contents information"
+                  acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+ </state>
+
+ <state state_id="approved_by_city_manager" title="Approved by City Manager" i18n:attributes="title">
+  <description i18n:translate="">This project proposal is approved by City Manager.</description>
+
+  <exit-transition transition_id="approve_by_city_manager"/>
+
+  <permission-map name="Access contents information"
+                  acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+ </state>
+
+ <state state_id="approved_by_city_council" title="Approved by City Council" i18n:attributes="title">
+  <description i18n:translate="">This project proposal is approved by City Council.</description>
+
+  <exit-transition transition_id="approve_by_city_council"/>
+
+  <permission-map name="Access contents information"
+                  acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+ </state>
+
  <state state_id="approved" title="Approved" i18n:attributes="title">
   <description i18n:translate="">Waiting to be approved this project proposal, by different departments.</description>
 
-  <exit-transition transition_id="approved_by_itsc"/>
-  <exit-transition transition_id="approved_by_city_manager"/>
-  <exit-transition transition_id="approved_by_city_council"/>
+  <exit-transition transition_id="approve_by_itsc"/>
+  <exit-transition transition_id="approve_by_city_manager"/>
+  <exit-transition transition_id="approve_by_city_council"/>
 
   <permission-map name="Access contents information"
                   acquired="False">
@@ -127,17 +200,6 @@
   </guard>
  </transition>
 
- <transition transition_id="prioritized"
-             title="Prioritized" i18n:attributes="title"
-             new_state="approved" trigger="USER"
-             before_script="" after_script="">
-  <description i18n:translate="">This project proposal is prioritized.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=prioritized">Prioritized</action>
-  <guard>
-   <guard-permission>Request review</guard-permission>
-  </guard>
- </transition>
-
  <transition transition_id="deferred"
              title="Deferred" i18n:attributes="title"
              new_state="being_reviewed" trigger="USER"
@@ -149,34 +211,45 @@
   </guard>
  </transition>
 
- <transition transition_id="approved_by_itsc"
-             title="Approved by ITSC" i18n:attributes="title"
-             new_state="approved" trigger="USER"
+ <transition transition_id="prioritized"
+             title="Prioritized" i18n:attributes="title"
+             new_state="approved_by_itsc" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">This project proposal is approved by ITSC.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approved_by_itsc">Approved by ITSC</action>
+  <description i18n:translate="">This project proposal is prioritized.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=prioritized">Prioritized</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
  </transition>
 
- <transition transition_id="approved_by_city_manager"
-             title="Approved by City Manager" i18n:attributes="title"
-             new_state="approved" trigger="USER"
+ <transition transition_id="approve_by_itsc"
+             title="Approve by ITSC" i18n:attributes="title"
+             new_state="approved_by_city_manager" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">This project proposal is approved by City Manager.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approved_by_city_manager">Approved by City Manager</action>
+  <description i18n:translate="">This project proposal will be approved by ITSC.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_itsc">Approve by ITSC</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
  </transition>
 
- <transition transition_id="approved_by_city_council"
-             title="Approved by City Council" i18n:attributes="title"
+ <transition transition_id="approve_by_city_manager"
+             title="Approve by City Manager" i18n:attributes="title"
+             new_state="approved_by_city_council" trigger="USER"
+             before_script="" after_script="">
+  <description i18n:translate="">This project proposal will be approved by City Manager.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_city_manager">Approve by City Manager</action>
+  <guard>
+   <guard-permission>Request review</guard-permission>
+  </guard>
+ </transition>
+
+ <transition transition_id="approve_by_city_council"
+             title="Approve by City Council" i18n:attributes="title"
              new_state="approved" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">This project proposal is approved by City Council.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approved_by_city_council">Approved by City Council</action>
+  <description i18n:translate="">This project proposal will be approved by City Council.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_city_council">Approve by City Council</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
