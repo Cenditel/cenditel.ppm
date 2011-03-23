@@ -158,6 +158,7 @@
   <exit-transition transition_id="approve_by_itsc"/>
   <exit-transition transition_id="approve_by_city_manager"/>
   <exit-transition transition_id="approve_by_city_council"/>
+  <exit-transition transition_id="deferred"/>
 
   <permission-map name="Access contents information"
                   acquired="False">
