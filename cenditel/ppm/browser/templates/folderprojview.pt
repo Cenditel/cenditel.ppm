@@ -14,7 +14,7 @@
         tal:define="createfolder view/createfol;
                     Element view/searching;
                     GettingTags view/GetTags">
-	   
+	<!---   
     <div>
      <p tal:content="createfolder"></p>
      <img src="++resource++cenditel.ppm.images/proposal.gif" alt="Create New Proposal" 
@@ -28,7 +28,7 @@
         i18n:attributes="title label_createnewproject" i18n:translate="label_createnewproject">Create New Project</a>
      <br /><br />
     </div>
-
+     -->
     <br />
       
     <dl id="completedProposals" class="collapsible inline "> 
