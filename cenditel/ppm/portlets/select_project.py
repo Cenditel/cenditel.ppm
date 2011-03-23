@@ -7,7 +7,7 @@ from zope.formlib import form
 from zope.interface import implements
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
+from cenditel.ppm import search
 from cenditel.ppm import ppmMessageFactory as _
 
 class IProjectsDashboardPortlet(IPortletDataProvider):
@@ -27,6 +27,24 @@ class Renderer(base.Renderer):
         base.Renderer.__init__(self, context, request, view, manager, data)
         
     def title (self):
+        return "hola"
+
+    def searching(self):
+        z=search.searching()
+        result=z.searching(self.context)
+        return result        
+        
+    def GetTags(self):
+        """
+        the tag list that are within the portfolio of projects
+        """
+        tagsList=[]
+    	for element in self.result:
+    	    tagsList.extend(element.getTags())
+        return tagsList
+    
+"""        
+    def title (self):
         list=[]
         holder=self.context
         for child in holder.getChildNodes(): 
@@ -35,7 +53,7 @@ class Renderer(base.Renderer):
 
     @property
     def getMemberProfile(self):
-        """Get Member Profile Name from Form"""
+        
         
         text = profile.text()
         parms = {}
@@ -76,7 +94,7 @@ class Renderer(base.Renderer):
 
     @property
     def getPPMUrl(self):
-        """Get PPM Url"""
+      
         
         folder = context
           
@@ -96,8 +114,7 @@ class Renderer(base.Renderer):
 
     @property
     def getFormTags(self):
-        """Get PPM Tag used on projects. 
-           Also convert parms from list to dictionary"""
+       
         
         request = container.REQUEST
         
@@ -135,7 +152,7 @@ class Renderer(base.Renderer):
                 return {}
             else:
                 return ''
-
+"""
 
 class AddForm(base.NullAddForm):
     form_fields = form.Fields(IProjectsDashboardPortlet)
