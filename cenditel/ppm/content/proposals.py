@@ -17,7 +17,25 @@ from Products.DataGridField import DataGridField, DataGridWidget
 
 proposalsSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
-    # -*- Your Archetypes field definitions here ... -*-
+    # -*- Your Archetypes field definitions here ... -*-    
+    
+    atapi.TextField(
+        name='templatest',
+        widget=atapi.RichWidget(
+            label=_(u"Summary"),
+            description=_(u"Proposal summary of a future project"),
+            allow_file_upload=False,
+            rows=5,
+            cols=40,
+        ),
+        allowable_content_types = ('text/html',),
+        default_content_type = 'text/html',
+        default_output_type = 'text/x-html-safe',
+        storage=atapi.AnnotationStorage(),
+        validators=('isTidyHtmlWithCleanup',), 
+        searchable=True,
+        required=False
+    ),
     
     DataGridField(
         name='group',
@@ -35,18 +53,6 @@ proposalsSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
             },
         ),
         columns=(_(u'Title'),_(u'Description'))
-    ),    
-    
-    
-    atapi.TextField(
-        name='templatest',
-        allowable_content_types=('text/html',),
-        widget=atapi.RichWidget(
-            label=_(u"Summary"),
-            description=_(u"Proposal summary of a future project"),
-        ),
-        default_content_type="text/html",
-        default_output_type="text/html",
     ),
 
 
