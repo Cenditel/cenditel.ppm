@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-23 21:45+0000\n"
+"POT-Creation-Date: 2011-03-23 23:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,38 +18,65 @@ msgstr ""
 "Domain: ppm\n"
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by Chief of department"
+msgstr ""
+
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Approve by City Council"
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Approve by City Manager"
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Approve by ITSC"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by Organization Manager"
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approve by Organization President"
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Approved"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approved by Chief of department"
+msgstr ""
+
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Approved by City Council"
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Approved by City Manager"
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Approved by ITSC"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approved by Organization Manager"
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "Approved by Organization President"
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Being Reviewed"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Deferred"
 msgstr ""
 
@@ -59,22 +86,31 @@ msgid "Groups"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Information Needed"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Information needed, means that this proposal is back again for add the information complementary, for later send it again to be reviewed."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Initiated a review of the project proposal."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Making an project proposal submitted means that it will not be editable to anyone but the owner and the site administrator."
 msgstr ""
 
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
+msgid "Open E-gov Projects Proposals Workflow"
+msgstr ""
+
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Prioritized"
 msgstr ""
 
@@ -84,15 +120,21 @@ msgid "Project"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
-msgid "Proposals PPM Workflow"
+msgid "Projects Proposals Workflow"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Public draft"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Submitted"
+msgstr ""
+
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
+msgid "This allows owner to sending a project proposal to be review it and to be accept like a project of the organization/community into Open E-gov iniciative."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
@@ -100,42 +142,70 @@ msgid "This allows owner to sending a project proposal to be review it and to be
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal is approved by Chief of department."
+msgstr ""
+
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal is approved by City Council."
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal is approved by City Manager."
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal is approved by ITSC."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal is approved by Organization Manager."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal is approved by Organization President."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal is deferred."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal is prioritized."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by Chief of department."
+msgstr ""
+
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal will be approved by City Council."
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal will be approved by City Manager."
 msgstr ""
 
-#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "This project proposal will be approved by ITSC."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by Organization Manager."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+msgid "This project proposal will be approved by Organization President."
+msgstr ""
+
+#: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Visible to everyone, but not approved by the reviewers."
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
+#: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Waiting to be approved this project proposal, by different departments."
 msgstr ""
 
