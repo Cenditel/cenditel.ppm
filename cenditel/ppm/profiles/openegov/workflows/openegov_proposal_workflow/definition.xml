@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
              i18n:domain="plone"
-             workflow_id="proposal_workflow"
-             title="Projects Proposals Workflow"
-             description="This allows owner to sending a project proposal to be review it and to be accept like a project of the organization/community."
+             workflow_id="openegov_proposal_workflow"
+             title="Open E-gov Projects Proposals Workflow"
+             description="This allows owner to sending a project proposal to be review it and to be accept like a project of the organization/community into Open E-gov iniciative."
              state_variable="review_state"
              initial_state="draft"
              i18n:attributes="title; description">
@@ -80,34 +80,10 @@
   </permission-map>
  </state>
 
- <state state_id="approved_by_chief_of_department" title="Approved by Chief of department" i18n:attributes="title">
-  <description i18n:translate="">This project proposal is approved by Chief of department.</description>
+ <state state_id="approved_by_itsc" title="Approved by ITSC" i18n:attributes="title">
+  <description i18n:translate="">This project proposal is approved by ITSC.</description>
 
-  <exit-transition transition_id="approve_by_chief_of_department"/>
-
-  <permission-map name="Access contents information"
-                  acquired="False">
-   <permission-role>Anonymous</permission-role>
-  </permission-map>
-  <permission-map name="Change portal events"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Reviewer</permission-role>
-  </permission-map>
-  <permission-map name="Modify portal content"
-                  acquired="False">
-   <permission-role>Manager</permission-role>
-   <permission-role>Reviewer</permission-role>
-  </permission-map>
-  <permission-map name="View" acquired="False">
-   <permission-role>Anonymous</permission-role>
-  </permission-map>
- </state>
-
- <state state_id="approved_by_organization_manager" title="Approved by Organization Manager" i18n:attributes="title">
-  <description i18n:translate="">This project proposal is approved by Organization Manager.</description>
-
-  <exit-transition transition_id="approve_by_organization_manager"/>
+  <exit-transition transition_id="approve_by_itsc"/>
 
   <permission-map name="Access contents information"
                   acquired="False">
@@ -128,10 +104,34 @@
   </permission-map>
  </state>
 
- <state state_id="approved_by_organization_council" title="Approved by Organization President" i18n:attributes="title">
-  <description i18n:translate="">This project proposal is approved by Organization President.</description>
+ <state state_id="approved_by_city_manager" title="Approved by City Manager" i18n:attributes="title">
+  <description i18n:translate="">This project proposal is approved by City Manager.</description>
 
-  <exit-transition transition_id="approve_by_organization_council"/>
+  <exit-transition transition_id="approve_by_city_manager"/>
+
+  <permission-map name="Access contents information"
+                  acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+  <permission-map name="Change portal events"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content"
+                  acquired="False">
+   <permission-role>Manager</permission-role>
+   <permission-role>Reviewer</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Anonymous</permission-role>
+  </permission-map>
+ </state>
+
+ <state state_id="approved_by_city_council" title="Approved by City Council" i18n:attributes="title">
+  <description i18n:translate="">This project proposal is approved by City Council.</description>
+
+  <exit-transition transition_id="approve_by_city_council"/>
 
   <permission-map name="Access contents information"
                   acquired="False">
@@ -155,9 +155,9 @@
  <state state_id="approved" title="Approved" i18n:attributes="title">
   <description i18n:translate="">Waiting to be approved this project proposal, by different departments.</description>
 
-  <exit-transition transition_id="approve_by_chief_of_department"/>
-  <exit-transition transition_id="approve_by_organization_manager"/>
-  <exit-transition transition_id="approve_by_organization_council"/>
+  <exit-transition transition_id="approve_by_itsc"/>
+  <exit-transition transition_id="approve_by_city_manager"/>
+  <exit-transition transition_id="approve_by_city_council"/>
   <exit-transition transition_id="deferred"/>
 
   <permission-map name="Access contents information"
@@ -214,7 +214,7 @@
 
  <transition transition_id="prioritized"
              title="Prioritized" i18n:attributes="title"
-             new_state="approved_by_chief_of_department" trigger="USER"
+             new_state="approved_by_itsc" trigger="USER"
              before_script="" after_script="">
   <description i18n:translate="">This project proposal is prioritized.</description>
   <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=prioritized">Prioritized</action>
@@ -223,34 +223,34 @@
   </guard>
  </transition>
 
- <transition transition_id="approve_by_chief_of_department"
-             title="Approve by Chief of department" i18n:attributes="title"
-             new_state="approved_by_organization_manager" trigger="USER"
+ <transition transition_id="approve_by_itsc"
+             title="Approve by ITSC" i18n:attributes="title"
+             new_state="approved_by_city_manager" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">This project proposal will be approved by Chief of department.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_chief_of_department">Approve by Chief of department</action>
+  <description i18n:translate="">This project proposal will be approved by ITSC.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_itsc">Approve by ITSC</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
  </transition>
 
- <transition transition_id="approve_by_organization_manager"
-             title="Approve by Organization Manager" i18n:attributes="title"
-             new_state="approved_by_organization_council" trigger="USER"
+ <transition transition_id="approve_by_city_manager"
+             title="Approve by City Manager" i18n:attributes="title"
+             new_state="approved_by_city_council" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">This project proposal will be approved by Organization Manager.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_organization_manager">Approve by Organization Manager</action>
+  <description i18n:translate="">This project proposal will be approved by City Manager.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_city_manager">Approve by City Manager</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>
  </transition>
 
- <transition transition_id="approve_by_organization_council"
-             title="Approve by Organization President" i18n:attributes="title"
+ <transition transition_id="approve_by_city_council"
+             title="Approve by City Council" i18n:attributes="title"
              new_state="approved" trigger="USER"
              before_script="" after_script="">
-  <description i18n:translate="">This project proposal will be approved by Organization President.</description>
-  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_organization_council">Approve by Organization President</action>
+  <description i18n:translate="">This project proposal will be approved by City Council.</description>
+  <action category="workflow" url="%(content_url)s/content_status_modify?workflow_action=approve_by_city_council">Approve by City Council</action>
   <guard>
    <guard-permission>Request review</guard-permission>
   </guard>

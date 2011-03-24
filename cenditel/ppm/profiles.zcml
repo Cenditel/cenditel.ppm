@@ -14,5 +14,16 @@
       i18n:attributes="title gs_profiles_default_title;
                        description gs_profiles_default_description;"
       />
+  
+  <!-- Register the installation GenericSetup extension profile -->
+  <genericsetup:registerProfile
+      name="openegov"
+      title="Open E-gov iniciative profile for Project Portfolio Management Framework NG"
+      directory="profiles/openegov"
+      description="Open E-gov iniciative profile for PPM."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      i18n:attributes="title gs_profiles_openegov_title;
+                       description gs_profiles_openegov_description;"
+      />
 
 </configure>
