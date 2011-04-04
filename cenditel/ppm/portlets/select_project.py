@@ -31,8 +31,8 @@ class Renderer(base.Renderer):
 
     def searching(self):
         z=search.searching()
-        result=z.searching(self.context)
-        return result        
+        self.result=z.searching(self.context)
+        return self.result        
         
     def GetTags(self):
         """
