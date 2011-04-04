@@ -5,7 +5,8 @@
 
   <dd class="portletItem">
    <ul tal:define="objets python:view.title();
-                   Element view/searching;">
+                   Element view/searching;
+                   Tags view/GetTags;">
   
   <form name="searchform" action="search" tal:define="action view/searching"> 
    
