@@ -6,7 +6,7 @@
   <dd class="portletItem">
    <ul tal:define="objets python:view.title();
                    Element view/searching;
-                   Tags view/GetTags;">
+                   GettingTags view/GetTags;">
   
   <form name="searchform" action="search" tal:define="action view/searching"> 
    
@@ -15,10 +15,14 @@
    
       <label for="pm" i18n:translate="">By Manager</label>
        
+     <input type="hidden" id="Type" name="Type" value="project"/>
+       <label i18n:translate="label_project" value="project">projects</label>   
+     
+       
      <select id="manager" name="manager">
       <option i18n:translate="label_managers" value="">All Managers</option>
        <span tal:repeat="projectTitle python:Element">
-       <option tal:content="projectTitle/manager"></option> 
+        <option tal:content="projectTitle/manager"></option> 
        </span>       
 
      </select>
@@ -26,7 +30,10 @@
        
     <label for="tag" i18n:translate="">By Tag</label>
      <select id="tag" name="tag" multiple="multiple">
-      <option i18n:translate="label_altags" value="">All Tags</option> 
+      <option i18n:translate="label_altags" value="">All Tags</option>
+      <span tal:repeat="MyTag python:GettingTags">
+      <option tal:content="MyTag"><tal:comment replace="nothing">"tags"</tal:comment></option>
+      </span>
               
      </select>
      
