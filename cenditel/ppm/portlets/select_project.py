@@ -7,7 +7,7 @@ from zope.formlib import form
 from zope.interface import implements
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from cenditel.ppm import search
+from cenditel.ppm import searchportlet
 from cenditel.ppm import ppmMessageFactory as _
 
 class IProjectsDashboardPortlet(IPortletDataProvider):
@@ -30,7 +30,7 @@ class Renderer(base.Renderer):
         return "hola"
 
     def searching(self):
-        z=search.searching()
+        z=searchportlet.searching()
         self.result=z.searching(self.context)
         return self.result        
         
