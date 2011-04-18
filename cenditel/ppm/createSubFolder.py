@@ -45,35 +45,35 @@ class CreatefolderActionExecutor(object):
                     if type == 'Folder' and title=='Events':
                         self.context.invokeFactory(type, title=title, id=title)
                         # Enable contstraining
-                        self.context.setConstrainTypesMode(constraintypes.ENABLED)
+                        #self.context.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check
-                        self.context.setLocallyAllowedTypes(['Event'])
+                        #self.context.setLocallyAllowedTypes(['Event'])
                         # Add new... menu  listing
                         #folder.setImmediatelyAddableTypes(["Event"])
                         # Object reindex for enabled to search
-                        self.context.reindexObject()
+                        #self.context.reindexObject()
 
                     elif type == 'Folder' and title=='Documents':
                         self.context.invokeFactory(type, title=title, id=title)
                         # Enable contstraining
-                        self.context.setConstrainTypesMode(constraintypes.ENABLED)
+                        #self.context.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check
-                        self.context.setLocallyAllowedTypes(['File'])
+                        #self.context.setLocallyAllowedTypes(['File'])
                         # Add new... menu  listing
                         #folder.setImmediatelyAddableTypes(["File"])
                         # Object reindex for enabled to search
-                        self.context.reindexObject()
+                        #self.context.reindexObject()
 
                     elif type == 'Folder' and title=='Plans':
                         self.context.invokeFactory(type, title=title, id=title)
                         # Enable contstraining
-                        self.context.setConstrainTypesMode(constraintypes.ENABLED)
+                        #self.context.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check
-                        self.context.setLocallyAllowedTypes(['File','Image','Document'])
+                        #self.context.setLocallyAllowedTypes(['File','Image','Document'])
                         # Add new... menu  listing
                         #folder.setImmediatelyAddableTypes(['File','Image','Document'])
                         # Object reindex for enabled to search
-                        self.context.reindexObject()
+                        #self.context.reindexObject()
 
                     if type != 'Folder':
                         self.context.invokeFactory(type, title=title, id=title)
