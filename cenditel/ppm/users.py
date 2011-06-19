@@ -19,9 +19,10 @@ def userVocabularyFactory(context):
     items = []
     for user in users:
         if len(users)==1:
+            items.append((user,user))
             break
         else:
-            i+=1
+            #i+=1
 
             items.append((user,user))
     tuple_items = tuple(items)
