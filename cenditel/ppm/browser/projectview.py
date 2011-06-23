@@ -6,6 +6,7 @@ from Products.CMFCore.utils import getToolByName
 	
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm import createSubFolder
+from cenditel.ppm.config import SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
 	
 class Iprojectview(Interface):
     """
@@ -52,6 +53,20 @@ class projectview(BrowserView):
         roles = self.context.get_local_roles()
         self.context.manage_setLocalRoles(member, ['Owner'])
         return "."
+		
+    def GetStatus(self):
+        RealStatus={}
+        for TupleStatus in SCHEDULE_STATUS_PROJECT.items():
+            RealStatus[TupleStatus[0]]=self.context.translate(SCHEDULE_STATUS_PROJECT.getMsgId(TupleStatus[0]))
+        #import pdb; pdb.set_trace()
+        return RealStatus
+	
+    def GetBud(self):
+        RealBud={}
+        for TupleBud in BUDGET_STATUS_PROJECT.items():
+            RealBud[TupleBud[0]]=self.context.translate(BUDGET_STATUS_PROJECT.getMsgId(TupleBud[0]))
+        #import pdb; pdb.set_trace()
+        return RealBud
         
     def blog(self):
         
@@ -74,6 +89,4 @@ class projectview(BrowserView):
                 ListA.append(obj)
             return ListA
         except:
-            return ""
-        
-
+            return ""			

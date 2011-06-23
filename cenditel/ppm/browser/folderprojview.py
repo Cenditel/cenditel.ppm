@@ -7,6 +7,7 @@ from Products.ATContentTypes.lib import constraintypes
 	
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm import search
+from cenditel.ppm.config import SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
 	
 class Ifolderprojview(Interface):
     """
@@ -40,8 +41,21 @@ class folderprojview(BrowserView, object):
         z=search.searching()
         self.result=z.searching(self.context)
         return self.result
-    
-	
+
+    def GetStatus(self):
+        RealStatus={}
+        for TupleStatus in SCHEDULE_STATUS_PROJECT.items():
+            RealStatus[TupleStatus[0]]=self.context.translate(SCHEDULE_STATUS_PROJECT.getMsgId(TupleStatus[0]))
+        #import pdb; pdb.set_trace()
+        return RealStatus
+
+    def GetBud(self):
+        RealBud={}
+        for TupleBud in BUDGET_STATUS_PROJECT.items():
+            RealBud[TupleBud[0]]=self.context.translate(BUDGET_STATUS_PROJECT.getMsgId(TupleBud[0]))
+        #import pdb; pdb.set_trace()
+        return RealBud
+
     def GetTags(self):
         """
         the tag list that are within the portfolio of projects

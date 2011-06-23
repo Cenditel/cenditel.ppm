@@ -11,7 +11,9 @@
   <div metal:fill-slot="main">
    
   <tal:main-macro metal:define-macro="main"
-      tal:define="createfol view/subfol;
+      tal:define="RealStatus view/GetStatus;
+	              RealBud view/GetBud;
+				  createfol view/subfol;
                   roles view/roles;
                   manager here/getManager;
                   status here/getStatus;         
@@ -24,7 +26,7 @@
                   Assumptions python:context.getAssumptions();
                   tags here/getTags;
                   suscribers here/getSuscribers;
-                  Blog view/blog;">  
+                  Blog view/blog">  
 	   
     <div>
      <p tal:content="createfol"></p>
@@ -50,8 +52,9 @@
         <tr> 
          <span> 
           <th i18n:translate='label_schesatatus' align="left" width="20%">Schedule Status</th>
-          <td width="80%"> 
-           <p tal:replace="status"></p>
+          <td width="80%">
+		  <p tal:define="realstatus python: RealStatus[status]"
+		     tal:replace="realstatus"></p>
           </td> 
          </span> 
         </tr> 
@@ -96,7 +99,9 @@
         <tr> 
          <span> 
           <th  i18n:translate='label_budgetstatus' align="left" width="20%">Budget Status</th> 
-          <td width="80%"><p tal:replace="bud_status"></p></td>  
+          <td width="80%">		  
+		  <p tal:define="realbud python: RealBud[bud_status]"
+		     tal:replace="realbud"></p></td>  
          </span> 
         </tr> 
         
