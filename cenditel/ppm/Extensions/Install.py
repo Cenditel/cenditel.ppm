@@ -32,7 +32,7 @@ def install(self,reinstall=False):
     logger = obj.getLogger("cenditel.ppm")
     outch = logging.StreamHandler(out)
     logger.addHandler(outch)
-    import pdb; pdb.set_trace()
+    #import pdb; pdb.set_trace()
     if reinstall:
         for product in PRODUCT_DEPENDENCIES:
             
@@ -40,7 +40,7 @@ def install(self,reinstall=False):
                 portal_quickinstaller.installProduct(product)
                 transaction.savepoint()
         for product in PRODUCT_DEPENDENCIES:
-            import pdb; pdb.set_trace()
+            #import pdb; pdb.set_trace()
             if portal_quickinstaller.isProductInstalled(product):
                 portal_quickinstaller.reinstallProducts([product])
                 transaction.savepoint()
@@ -53,7 +53,7 @@ def install(self,reinstall=False):
                logger.info("Installing missing product: %s" % product)
                portal_quickinstaller.installProduct(product)
                transaction.savepoint()
-    print "Hola victor"           
+               
     for extension_id in EXTENSION_PROFILES:
         portal_setup.runAllImportStepsFromProfile('profile-%s' % extension_id, purge_old=False)
         product_name = extension_id.split(':')[0]
