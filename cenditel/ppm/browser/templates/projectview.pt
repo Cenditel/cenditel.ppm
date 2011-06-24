@@ -26,6 +26,7 @@
                   Assumptions python:context.getAssumptions();
                   tags here/getTags;
                   suscribers here/getSuscribers;
+				  Validator view/validator;
                   Blog view/blog">  
 	   
     <div>

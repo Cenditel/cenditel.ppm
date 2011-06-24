@@ -81,7 +81,7 @@ msgstr ""
 msgid "Actual Budget"
 msgstr ""
 
-#: ../portlets/navigation.py:43
+#: ../portlets/navigation.py:38
 msgid "Add Portlet"
 msgstr ""
 
@@ -109,7 +109,7 @@ msgstr ""
 msgid "Budget Status"
 msgstr ""
 
-#: ../portlets/select_project.pt:15
+#: ../portlets/select_project.pt:17
 msgid "By Manager"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Demands"
 msgstr ""
 
-#: ../content/proposals.py:37
+#: ../content/proposals.py:55
 msgid "Description"
 msgstr ""
 
@@ -198,7 +198,7 @@ msgstr ""
 msgid "Group required, please correct."
 msgstr ""
 
-#: ../content/proposals.py:25
+#: ../content/proposals.py:43
 msgid "Groups"
 msgstr ""
 
@@ -306,13 +306,16 @@ msgstr ""
 msgid "Projects Dashboard"
 msgstr ""
 
-#: ../browser/templates/folderprojview.pt:107
-#: ../browser/templates/proposals_dashboard.pt:114
+#: ../browser/templates/folderprojview.pt:108
 msgid "Projects:"
 msgstr ""
 
 #: ../content/proposals.py:46
 msgid "Proposal summary of a future project"
+msgstr ""
+
+#: ../profiles/default/actions.xml
+msgid "Search Project"
 msgstr ""
 
 #: ../profiles/default/actions.xml
@@ -339,7 +342,7 @@ msgstr ""
 msgid "This portlet displays a form for select some criteria and find quickly project proposal registered based on those criteria."
 msgstr ""
 
-#: ../portlets/select_project.py:161
+#: ../portlets/select_project.py:171
 msgid "This portlet displays a form for select some criteria and find quickly projects registered based on those criteria."
 msgstr ""
 
@@ -369,8 +372,7 @@ msgid "label_actualbud"
 msgstr ""
 
 #. Default: "All Managers"
-#: ../browser/templates/folderprojview.pt:56
-#: ../browser/templates/proposals_dashboard.pt:62
+#: ../browser/templates/folderprojview.pt:57
 msgid "label_allmanagers"
 msgstr ""
 
@@ -381,8 +383,7 @@ msgid "label_allprojects"
 msgstr ""
 
 #. Default: "All Tags"
-#: ../browser/templates/folderprojview.pt:68
-#: ../browser/templates/proposals_dashboard.pt:74
+#: ../browser/templates/folderprojview.pt:69
 msgid "label_alltags"
 msgstr ""
 

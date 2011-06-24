@@ -44,6 +44,11 @@ class CreatefolderActionExecutor(object):
 
                     if type == 'Folder' and title=='Events':
                         self.context.invokeFactory(type, title=title, id=title)
+                        holder=self.context
+                        folder=getattr(holder, title)
+                        folder.setConstrainTypesMode(constraintypes.ENABLED)
+                        folder.setLocallyAllowedTypes(['Event'])
+                        #import pdb; pdb.set_trace()
                         # Enable contstraining
                         #self.context.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check
@@ -55,6 +60,10 @@ class CreatefolderActionExecutor(object):
 
                     elif type == 'Folder' and title=='Documents':
                         self.context.invokeFactory(type, title=title, id=title)
+                        holder=self.context
+                        folder=getattr(holder, title)
+                        folder.setConstrainTypesMode(constraintypes.ENABLED)
+                        folder.setLocallyAllowedTypes(['File'])
                         # Enable contstraining
                         #self.context.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check
@@ -66,6 +75,10 @@ class CreatefolderActionExecutor(object):
 
                     elif type == 'Folder' and title=='Plans':
                         self.context.invokeFactory(type, title=title, id=title)
+                        holder=self.context
+                        folder=getattr(holder, title)
+                        folder.setConstrainTypesMode(constraintypes.ENABLED)
+                        folder.setLocallyAllowedTypes(['File','Image','Document'])
                         # Enable contstraining
                         #self.context.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check

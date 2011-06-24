@@ -64,3 +64,12 @@ PROPOSAL_RATINGS_COLOR_SCHEME = DisplayList((
     ("4.5", "#6FEF00"), # 
     ("5.0", "#6FFF00"), # 
     ))
+    
+PRODUCT_DEPENDENCIES = (
+    "Products.CMFPlacefulWorkflow",
+    "Products.Quills",
+    "Products.AddRemoveWidget",
+    "Products.DataGridField",
+    "Products.Poi",
+    "Products.Ploneboard",
+     )
