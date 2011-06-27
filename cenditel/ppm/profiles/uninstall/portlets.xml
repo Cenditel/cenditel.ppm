@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<portlets
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="ppm">
+
+<!-- This file is used to register new types of portlets. It can also
+     be used to register completely new column types. See CMFPlone's version
+     of this file for more information.
+  -->
+ 
+ <!-- Portlet type registrations -->
+
+ <portlet 
+   addview="ppm.navigation"
+   title="PPM Project Navigation"
+   description="A portlet navigation of the project."
+   i18n:attributes="title;
+                    description" />
+
+ <portlet 
+   addview="ppm.select_project"
+   title="projects"
+   description="A portlet for displays a form for select some criteria and find quickly projects registered based on those criteria."
+   i18n:attributes="title;
+                    description" />
+<!--
+ <portlet 
+   addview="ppm.select_proposal"
+   title="projects"
+   description="A portlet for displays a form for select some criteria and find quickly  project proposals registered based on those criteria."
+   i18n:attributes="title;
+                    description" />
+
+-->
+        
+ <!-- Portlet assignments -->
+
+ <assignment
+     name="ppm-navigation"
+     category="context"
+     key="/"
+     manager="plone.leftcolumn"
+     type="cenditel.ppm.portlets.navigation"
+     purge="False" />
+
+ <assignment
+     name="ppm-select-project"
+     category="context"
+     key="/"
+     manager="plone.leftcolumn"
+     type="cenditel.ppm.portlets.select_project"
+     purge="False" />
+
+ <assignment
+     name="ppm-select-proposal"
+     category="context"
+     key="/"
+     manager="plone.leftcolumn"
+     type="cenditel.ppm.portlets.select_proposal"
+     purge="False" />
+
+</portlets>

@@ -15,7 +15,20 @@
                        description gs_profiles_default_description;"
       />
   
-  <!-- Register the installation GenericSetup extension profile -->
+  <!-- Register the uninstallation GenericSetup extension profile 
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Project Portfolio Management Framework NG Uninstall Profile"
+      directory="profiles/uninstall"
+      description="Removes Project Portfolio Management Framework NG."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      i18n:attributes="title gs_profiles_uninstall_title;
+                       description gs_profiles_uninstall_description;"
+      />
+  --> 
+
+  <!-- Register the installation GenericSetup extension Open E-gov iniciative profile -->
   <genericsetup:registerProfile
       name="openegov"
       title="Open E-gov iniciative profile for Project Portfolio Management Framework NG"
