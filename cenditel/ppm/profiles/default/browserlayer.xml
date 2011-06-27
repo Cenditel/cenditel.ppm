@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <layers>  
+  <!-- TODO verificar los nombres de las capas son iguales -->
   <layer name="cenditel.ppm"
          interface="cenditel.ppm.interfaces.folderproj.IfolderprojSpecific" />
   <layer name="cenditel.ppm"
