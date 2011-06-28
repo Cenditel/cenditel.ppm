@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step
+    id="PPM-setup_INSTALL"
+    handler="cenditel.ppm.setuphandlers.importVarious"
+    title="cenditel.ppm portal_transforms setup"
+    version="1.0">
+    <dependency step="plone-final"/>
+  </import-step>
+</import-steps>
