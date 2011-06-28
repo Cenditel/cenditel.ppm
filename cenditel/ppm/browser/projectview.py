@@ -44,15 +44,55 @@ class projectview(BrowserView):
         m = createSubFolder.CreatefolderActionExecutor(self.context)
         m.sub()
         return 
+        
+    def GetBeginDate(self):
+        (Y,m,d)=str(self.context.getBegin_date()).split('/')
+        Date=(d,m,Y)
+        beginDate='/'.join(Date)
+        return beginDate
+        
+    def GetEndDate(self):
+        (Y,m,d)=str(self.context.getEnd_date()).split('/')
+        Date=(d,m,Y)
+        endDate='/'.join(Date)
+        return endDate
+        
  
     def roles(self):
         """
         assigned the role of Owner the selected user
         """
-        member = str(self.context.getManager())
+        members = list(self.context.getManager())
         roles = self.context.get_local_roles()
-        self.context.manage_setLocalRoles(member, ['Owner'])
-        return "."
+        list_all_users=members
+        userwithroles=[]
+        for i in range(len(roles)):
+            userwithroles.append(roles[i][0])
+        #import pdb; pdb.set_trace()
+        list_all_users.extend(userwithroles)
+        for member in list_all_users:
+            
+            if member in userwithroles:
+                pass
+            else:
+                self.context.manage_setLocalRoles(member, ['Owner'])
+            if not member in (self.context.getManager()):
+                self.context.manage_delLocalRoles([member,])
+        return None
+		
+    def validator(self):
+        holder = self.context
+        value1=holder.getCompleted()
+        value2=holder.est_budget
+        value3=holder.act_budget
+        if value1 == "":
+            holder.setCompleted("0")
+        if value2 == "":
+            holder.setEst_budget("0")
+        if value3 == "":
+            holder.setAct_budget("0")
+        
+        return None
 		
     def GetStatus(self):
         RealStatus={}
@@ -67,6 +107,7 @@ class projectview(BrowserView):
             RealBud[TupleBud[0]]=self.context.translate(BUDGET_STATUS_PROJECT.getMsgId(TupleBud[0]))
         #import pdb; pdb.set_trace()
         return RealBud
+		
         
     def blog(self):
         
