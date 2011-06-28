@@ -15,4 +15,19 @@
   <include package=".portlets" />
   <include file="profiles.zcml" />
   
+  #
+ <subscriber
+
+  for="cenditel.ppm.interfaces.Iproject
+  Products.Archetypes.interfaces.IObjectInitializedEvent"
+  handler="cenditel.ppm.events.SavedElement"
+ />
+
+ <subscriber
+
+  for="cenditel.ppm.interfaces.Iproject
+  Products.Archetypes.interfaces.IObjectEditedEvent"
+  handler="cenditel.ppm.events.SavedElement"
+ />
+  
 </configure>

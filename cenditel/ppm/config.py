@@ -72,4 +72,5 @@ PRODUCT_DEPENDENCIES = (
     "Products.DataGridField",
     "Products.Poi",
     "Products.Ploneboard",
+    "Products.Calendaring",
      )
