@@ -3,7 +3,7 @@
 
 from DateTime.DateTime import *
 
-from zope.interface import implements
+from zope.interface import implements, classImplements
 
 from Products.Archetypes import atapi
 
@@ -23,23 +23,28 @@ from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT, SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
 from cenditel.ppm.interfaces import Iproject
 #from cenditel.ppm.validator import UsersValidator
+from Products.Archetypes.atapi import InAndOutWidget
+from Products.AddRemoveWidget import AddRemoveWidget
+from Products.Archetypes.interfaces import IMultiPageSchema
+from collective.calendarwidget.widget import CalendarWidget
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
-    atapi.StringField(
+    atapi.LinesField(
         name='manager',
-        widget=atapi.SelectionWidget(
-            label=_(u"Manager"),
-            description=_(u"Project Manager"),
-            format='select',
-        ),
-        schemata='Project',
+		schemata='Project',
         required=True,
         searchable=True,
-        vocabulary_factory="cenditel.ppm.user",
-#        validators=('areThereUsers',), 
+		storage = atapi.AnnotationStorage(),
+		vocabulary_factory="cenditel.ppm.user",
+        widget=InAndOutWidget(
+		    size = 10,
+            label=_(u"Manager"),
+            description=_(u"Project Manager"),
+        ),
+        
     ),
     
     atapi.StringField( 
@@ -55,20 +60,20 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     atapi.DateTimeField(
         name='begin_date', 
-        widget = atapi.CalendarWidget(
-            format=('%Y;%m;%d;%H;%M'),  
+        widget =CalendarWidget(
+            #format=('%d.%m.%Y.%H.%M'),  
             label=_(u'Begin Date'),
             description=_(u"Project Begin Date"),
         ),
-        schemata='Project', 
+        schemata='Project',
         required=True, 
         validators = ('isValidDate'), 
     ), 
 
     atapi.DateTimeField(
         name='end_date',
-        widget = atapi.CalendarWidget(
-            format=('%Y;%m;%d;%H;%M'),
+        widget = CalendarWidget(
+            #format=('%Y;%m;%d;%H;%M'),
             label=_(u'End Date'),
             description=_(u"Project End Date"),
         ),
