@@ -42,6 +42,32 @@ class Renderer(base.Renderer):
     	for element in self.result:
     	    tagsList.extend(element.getTags())
         return tagsList
+        
+    def GetManagers(self):
+        Manag=[]
+        NewListManag=[]
+        for NM in self.result:
+            managerobject= NM.getManager()
+            Manag.extend(managerobject)
+            
+        for x in Manag:
+            if not x in NewListManag:
+                NewListManag.append(x)
+            else:
+                pass
+        return NewListManag 
+
+        
+    def gosearch(self):
+        holder=self.context
+        if self.request.form.has_key('form.button.Search'):
+            C_url=holder.absolute_url()
+            Urls= C_url + "/@@SearchPro"
+            manager=self.request.form["manager"]
+            tag=self.request.form["tag"]
+            import pdb; pdb.set_trace()
+            return self.request.RESPONSE.redirect(Urls)
+            
     
 """        
     def title (self):

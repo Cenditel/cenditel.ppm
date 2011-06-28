@@ -15,6 +15,7 @@
                     Element view/searching;
                     GettingTags view/GetTags;
                     RealStatus view/GetStatus;
+                    ListManager view/GetManagers;
                     RealBud view/GetBud">
 	<!---   
     <div>
@@ -54,11 +55,11 @@
         <tr>  
 
          <td valign="top" align="center"> 
-          <select id="manager" name="manager">
+          <select id="SearchableText" name="SearchableText">
            <option i18n:translate="label_allmanagers" value="">All Managers</option>
            
-           <span tal:repeat="projectTitle python:Element">
-           <option tal:content="projectTitle/manager"></option> 
+           <span tal:repeat="managers python:ListManager">
+           <option tal:content="managers"></option> 
            </span> 
           
           </select> 
@@ -66,7 +67,7 @@
 
          <td valign="top" align="center"> 
 
-          <select id="SearchableText" name="SearchableText" multiple="multiple">
+          <select id="tags" name="tags" multiple="multiple">
             <option i18n:translate="label_alltags" value="">All Tags</option> 
             <span tal:repeat="MyTag python:GettingTags">
             <option tal:content="MyTag"><tal:comment replace="nothing">"tags"</tal:comment></option>
@@ -128,7 +129,7 @@
          <tr tal:repeat="projectTitle python:Element">  
           <span tal:define="link projectTitle/absolute_url">
            <td><a href="" tal:attributes="href link"><span tal:content="projectTitle/Title" /></a></td> 
-           <td tal:content="projectTitle/manager"></td> 
+           <td tal:content="projectTitle/getManager"></td> 
            
            <td tal:define="status projectTitle/status; 
                            realstatus python: RealStatus[status];

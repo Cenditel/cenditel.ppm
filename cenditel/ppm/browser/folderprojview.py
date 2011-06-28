@@ -41,6 +41,22 @@ class folderprojview(BrowserView, object):
         z=search.searching()
         self.result=z.searching(self.context)
         return self.result
+        
+    def GetManagers(self):
+        Manag=[]
+        NewListManag=[]
+        for NM in self.result:
+            managerobject= NM.getManager()
+            Manag.extend(managerobject)
+            
+        for x in Manag:
+            if not x in NewListManag:
+                NewListManag.append(x)
+            else:
+                pass
+        return NewListManag
+       
+       
 
     def GetStatus(self):
         RealStatus={}
@@ -112,7 +128,8 @@ contents with the information you want collected.
             self.context.invokeFactory("Folder", title="Proposal Templates", id="Templates")
             
             foldert=getattr(holder, "Templates")
-            
+            foldert.setConstrainTypesMode(constraintypes.ENABLED)
+            foldert.setLocallyAllowedTypes(['FCKTemplate'])
             foldert.invokeFactory("FCKTemplate", title="Example", id="example")
             
             example=getattr(foldert, "example")
