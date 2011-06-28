@@ -73,4 +73,8 @@ PRODUCT_DEPENDENCIES = (
     "Products.Poi",
     "Products.Ploneboard",
     "Products.Calendaring",
+    "collective.calendarwidget",
+    "Products.FCKeditor",
+    "CPFCKTemplates",
      )
+     
