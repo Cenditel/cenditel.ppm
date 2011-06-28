@@ -17,8 +17,6 @@
                   roles view/roles;
                   manager here/getManager;
                   status here/getStatus;         
-                  begin_date here/getBegin_date;
-                  end_date here/getEnd_date;
                   completed here/getCompleted;
                   est_budget here/getEst_budget;
                   act_budget here/getAct_budget;
@@ -27,11 +25,12 @@
                   tags here/getTags;
                   suscribers here/getSuscribers;
 				  Validator view/validator;
+				  BeginDate view/GetBeginDate;
+				  EndDate view/GetEndDate;
                   Blog view/blog">  
 	   
     <div>
      <p tal:content="createfol"></p>
-     <p tal:content="string:$roles"></p>
      <h1 tal:content="context/Title"></h1>
     </div>
       <p> 
@@ -63,14 +62,14 @@
         <tr> 
          <span> 
           <th  i18n:translate='label_begindate' align="left" width="20%">Begin Date</th> 
-          <td width="80%"><p tal:replace="begin_date"></p></td> 
+          <td width="80%"><p tal:replace="BeginDate"></p></td> 
          </span> 
         </tr> 
         
         <tr> 
          <span> 
           <th i18n:translate='label_enddate' align="left" width="20%">End Date</th> 
-          <td width="80%"><p tal:replace="end_date"></p></td> 
+          <td width="80%"><p tal:replace="EndDate"></p></td> 
          </span> 
         </tr> 
         
