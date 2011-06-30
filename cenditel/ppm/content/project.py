@@ -27,6 +27,7 @@ from Products.Archetypes.atapi import InAndOutWidget
 from Products.AddRemoveWidget import AddRemoveWidget
 from Products.Archetypes.interfaces import IMultiPageSchema
 from collective.calendarwidget.widget import CalendarWidget
+from cenditel.ppm.validator import SuscriberValidator
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
@@ -159,7 +160,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             size=5,
         ),
         schemata='Project',
-#        validators=('isEmail',), 
+        validators=('areSuscribers',), 
     ),
 	        
      DataGridField(
