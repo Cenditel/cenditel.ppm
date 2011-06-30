@@ -60,7 +60,7 @@ def SendEmail(object, evt):
     else:
         #import pdb; pdb.set_trace()
         try:
-            import pdb; pdb.set_trace()
+            #import pdb; pdb.set_trace()
             host.secureSend(message, ToList, From,subject=Subject, subtype='plain', charset='UTF-8')
          
         except MailHostError:
