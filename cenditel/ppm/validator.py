@@ -1,3 +1,5 @@
+from Products.CMFDefault.utils import checkEmailAddress
+from Products.CMFDefault.exceptions import EmailAddressInvalid
 from Products.validation.config import validation
 try:
     from Products.validation.interfaces.IValidator import IValidator
@@ -58,5 +60,48 @@ class UsersValidator:
        
 ValidatorsList.append(UsersValidator('areThereUsers', title='', description=''))
 
+class SuscriberValidator:
+	
+    """
+       Validator adress email
+    """
+
+    __implements__ = IValidator
+    
+    def __init__(self,
+        name,
+        title='Suscribers Validator',
+        description='Your suscribers will fail'):
+            self.name = name
+            self.title = title or name
+            self.description = description
+       
+    def __call__(self, value, *args, **kwargs):
+        #for email in self.suscribers:
+        #value = str(value)
+        Wrongs=[]
+        for email in value:
+            
+            try:
+                checkEmailAddress(email)
+            except EmailAddressInvalid:
+                #raise InvalidEmailAddress(email)
+                Wrongs.append(email)
+        if len(Wrongs)==1:
+            return _(u"The next email address is invalid: %s") % (Wrongs[0])
+        elif len(Wrongs)>1:
+            spanWrong=", ".join(Wrongs)
+            return _(u"The nexts email addresses are invalid: %s ") % (spanWrong)
+        else:
+            pass
+
+ValidatorsList.append(SuscriberValidator('areSuscribers', title='', description=''))
+
+    
+
 for validador in ValidatorsList:
          validation.register(validador)
+         
+         
+         
+    
