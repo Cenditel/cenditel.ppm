@@ -66,13 +66,13 @@ PROPOSAL_RATINGS_COLOR_SCHEME = DisplayList((
     ))
     
 PRODUCT_DEPENDENCIES = (
-    "Products.CMFPlacefulWorkflow",
-    "Products.Quills",
+    "CMFPlacefulWorkflow",
+    "Quills",
     "AddRemoveWidget",
-    "Products.DataGridField",
-    "Products.Poi",
-    "Products.Ploneboard",
-    "Products.Calendaring",
+    "DataGridField",
+    "Poi",
+    "Ploneboard",
+    "Calendaring",
     "collective.calendarwidget",
     "Products.FCKeditor",
     "CPFCKTemplates",
