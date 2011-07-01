@@ -14,6 +14,7 @@ from cenditel.ppm.config import PROJECTNAME
 from cenditel.ppm.interfaces import Iproposals
 from cenditel.ppm.validator import GroupsValidator
 from Products.DataGridField import DataGridField, DataGridWidget
+from Products.FCKeditor.FckWidget import FckWidget
 
 proposalsSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 
@@ -21,7 +22,7 @@ proposalsSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
     
     atapi.TextField(
         name='templatest',
-        widget=atapi.RichWidget(
+        widget=FckWidget(
             label=_(u"Summary"),
             description=_(u"Proposal summary of a future project"),
             allow_file_upload=False,

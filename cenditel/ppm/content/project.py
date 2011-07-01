@@ -28,6 +28,8 @@ from Products.AddRemoveWidget import AddRemoveWidget
 from Products.Archetypes.interfaces import IMultiPageSchema
 from collective.calendarwidget.widget import CalendarWidget
 from cenditel.ppm.validator import SuscriberValidator
+from Products.FCKeditor.FckWidget import FckWidget
+
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
@@ -123,7 +125,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     atapi.TextField(
         name='assumptions',
-        widget=atapi.RichWidget(
+        widget=FckWidget(
             label=_(u'Assumptions'),
             description=_(u'Project Assumptions'),
             allow_file_upload=False,
