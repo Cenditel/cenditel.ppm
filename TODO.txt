@@ -3,7 +3,7 @@ En Plone 3.3.5
 Sobre las dependencias
  **- Congelar la versión de producto DataGridField que soporta traducciones al español y funciona en plone 3.3.5
  **- Congelar la versión de producto Ploneboard que soporta en mayor medida más traducciones al español y funciona en plone 3.3.5
- - Congelar la versión de producto Poi que soporta en mayor medida más traducciones al español y funciona en plone 3.3.5
+ **- Congelar la versión de producto Poi que soporta en mayor medida más traducciones al español y funciona en plone 3.3.5
  **- Congelar la versión de producto Quills que soporta en mayor medida más traducciones al español y funciona en plone 3.3.5
 
 Sobre los Portlet
@@ -12,13 +12,13 @@ Sobre los Portlet
  **- Al agregar un PPM debería agregar el Portlet de "Navegación PPM" local al PPM
  - El "Navegación PPM" debe verificarse su funcionalidad con respecto al portlet de navegación por defecto de Plone
  - Al agregar un portlet desde el manager portlet aparece "PPM Project Navigation" en ves de "Navegación PPM"
- - Al agregar un portlet desde el manager portlet aparece "projects" en ves de "Project de la página de inicio de Proyectos"
+ **- Al agregar un portlet desde el manager portlet aparece "projects" en ves de "Project de la página de inicio de Proyectos"
 
 
 Al Agregar un PPM
  - Debe bloquear automáticamente los portlets globales y habilitar los locales
  **- Debe instalar el producto cenditel.ppm debe instalar las dependencias automáticamente
- - Cambiar de folderproj a PPM en nombre de la clase y del archivo
+ **- Cambiar de folderproj a PPM en nombre de la clase y del archivo
  - Cambiar los nombres de los content types a Capitales tanto en el código como en los nombres de archivos dentro content/, profiles/default/types
  **- En la carpeta "Proposal Templates" dentro el PPM debe restringirse los tipos de contenidos a solamente "FCKTemplate"
  **- Al instalar "FCKTemplate" debería cambiar la configuración por defecto de editor solo para contexto de PPM, Propuestas, Proyecto
@@ -35,7 +35,7 @@ Al Agregar Proyecto la segunda pestaña sale en ingles "Project" deben estar tra
    para esto recomiendo usar en producto https://svn.plone.org/svn/archetypes/MoreFieldsAndWidgets/UserAndGroupSelectionWidget/trunk/
  **- Los N usuarios con rol de administrador de proyecto deben estar definidos también en la pestaña "Propietario".
  **- Varias opciones de la lista de selección de "Estatus del Proyecto", no están traducidas, verificar eso.
- - Al editar un proyecto debería aparecer el botón de navegación "siguiente" y "anterior" justo al lado del botón "Guardar" y "Cancelar", esto hace mas fácil la navegación entre las pestañas de proyecto, para ejemplo de esto consultar el tipo de contenido de Person dentro del producto FacultyStaffDirectory.
+ **- Al editar un proyecto debería aparecer el botón de navegación "siguiente" y "anterior" justo al lado del botón "Guardar" y "Cancelar", esto hace mas fácil la navegación entre las pestañas de proyecto, para ejemplo de esto consultar el tipo de contenido de Person dentro del producto FacultyStaffDirectory.
  ** La subcarpeta del proyecto "Eventos" debería contener solo eventos, es decir, restringir los tipos de contenidos a Eventos. y mostrar una vista de calendario de eventos, para esto revisar los productos que usa cyn.in como por ejemplo "Plone4ArtistsCalendar" o "Calendaring"
  - En el campo "Etiquetas" tiene la misma funcionalidad del campo "Categorías" en la pestaña "Categorización", creo que seria conveniente o deshabilitar la pestaña "Categorización" o validar que el campo "Categorías" en la pestaña "Categorización" como obligatorio y verificar que su descripción explique como debe ingresar la etiquetas.
  - En la vista de "proyectos" debe cambiar:
