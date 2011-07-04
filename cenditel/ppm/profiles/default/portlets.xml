@@ -19,7 +19,7 @@
 
  <portlet 
    addview="ppm.select_project"
-   title="projects"
+   title="Projects"
    description="A portlet for displays a form for select some criteria and find quickly projects registered based on those criteria."
    i18n:attributes="title;
                     description" />
