@@ -7,8 +7,9 @@ from zope.interface import implements, classImplements
 
 from Products.Archetypes import atapi
 
-from Products.ATContentTypes.content import folder
+#from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
+from Products.ATContentTypes.content import base
 
 from Products.CMFCore.utils import getToolByName
 
@@ -31,13 +32,13 @@ from cenditel.ppm.validator import SuscriberValidator
 from Products.FCKeditor.FckWidget import FckWidget
 
 
-projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
+projectSchema = schemata.ATContentTypeSchema.copy() +  atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
     atapi.LinesField(
         name='manager',
-		schemata='Project',
+		
         required=True,
         searchable=True,
 		storage = atapi.AnnotationStorage(),
@@ -47,6 +48,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u"Manager"),
             description=_(u"Project Manager"),
         ),
+        #schemata='Project',
         
     ),
     
@@ -57,8 +59,8 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u"Status"),
             description=_(u"Project Status"),
         ),
-        schemata='Project',
         vocabulary=SCHEDULE_STATUS_PROJECT,
+        schemata='Project',
     ),
 
     atapi.DateTimeField(
@@ -68,9 +70,10 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u'Begin Date'),
             description=_(u"Project Begin Date"),
         ),
-        schemata='Project',
+        validators = ('isValidDate'),
         required=True, 
-        validators = ('isValidDate'), 
+        #schemata='Project',
+         
     ), 
 
     atapi.DateTimeField(
@@ -80,9 +83,10 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u'End Date'),
             description=_(u"Project End Date"),
         ),
-        schemata='Project',
-        required=True,
         validators = ('isValidDate'),
+        required=True,
+        #schemata='Project',
+        
     ), 
 
     atapi.StringField(
@@ -91,8 +95,9 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u"% Completed"),
             description=_(u"Project % completed"),
         ),
-        schemata='Project',
+        
         storage=atapi.AnnotationStorage(),
+        schemata='Project',
     ),
     atapi.StringField(
         name='est_budget',
@@ -119,8 +124,9 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u"Budget Status"),
             description=_(u"Project Status Budget"),           
         ),
-        schemata='Project',
+        
         vocabulary=BUDGET_STATUS_PROJECT,
+        schemata='Project',
     ), 
 
     atapi.TextField(
@@ -132,14 +138,15 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             rows=5,
             cols=40,
         ),
-        schemata='Project',
+        validators=('isTidyHtmlWithCleanup',),
         allowable_content_types=('text/html',),
         default_content_type="text/html",
         default_output_type="text/x-html-safe", 
         storage=atapi.AnnotationStorage(),
-        validators=('isTidyHtmlWithCleanup',),
+        
         searchable=True,
         required=False,
+        schemata='Project',
     ),
 
     atapi.StringField(
@@ -148,9 +155,9 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u'Tags'),
             description=_(u'Project Tags'),
             size=5
-        ),
-        schemata='Project',
+        ),  
         searchable=True,
+        schemata='Project',
     ),
 
     atapi.LinesField(
@@ -161,8 +168,9 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             description=_(u"Enter every email address for the suscribers of projects, please everyone preceded by prefix 'mailto:'"),
             size=5,
         ),
-        schemata='Project',
-        validators=('areSuscribers',), 
+        validators=('areSuscribers',),
+        #schemata='Project',
+         
     ),
 	        
      DataGridField(
@@ -204,11 +212,11 @@ schemata.finalizeATCTSchema(
 )
 
 
-class project(folder.ATFolder):
+class Project(base.ATCTContent):
     """Create projects for a project portfolio"""
 
-    implements(Iproject)
-
+    #implements(Iproject)
+    implements(Iproject, IMultiPageSchema)
     meta_type = "project"
     schema = projectSchema
 
@@ -220,4 +228,5 @@ class project(folder.ATFolder):
     def getTypeSubFoldersProject(self):
          return TYPE_SUBFOLDER_PROJECT
 
-atapi.registerType(project, PROJECTNAME)
+
+atapi.registerType(Project, PROJECTNAME)

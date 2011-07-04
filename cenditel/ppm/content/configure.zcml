@@ -13,7 +13,7 @@
         />
   </class>
 
-  <class class=".project.project">
+  <class class=".project.Project">
     <require
         permission="zope2.View"
         interface="..interfaces.Iproject"
