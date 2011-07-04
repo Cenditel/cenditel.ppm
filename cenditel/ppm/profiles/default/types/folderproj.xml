@@ -15,7 +15,7 @@
 
   <property name="allowed_content_types">
    <element value="proposals"/>
-   <element value="project"/>
+   <element value="Project"/>
    <element value="Folder"/>
   </property>
 

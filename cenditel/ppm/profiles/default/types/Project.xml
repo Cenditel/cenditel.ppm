@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<object name="project"
+<object name="Project"
    meta_type="Factory-based Type Information with dynamic views"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="ppm">
 
   <property name="title" i18n:translate="">project</property>
   <property name="description" i18n:translate="">Create projects for a project portfolio</property>
-  <property name="content_meta_type">project</property>
+  <property name="content_meta_type">Project</property>
   <property name="content_icon">++resource++cenditel.ppm.images/project.gif</property>
   <property name="product">cenditel.ppm</property>
-  <property name="factory">addproject</property>
+  <property name="factory">addProject</property>
   <property name="immediate_view">atct_edit</property>
   <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>
