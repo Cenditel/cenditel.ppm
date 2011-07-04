@@ -10,7 +10,7 @@
       <role name="Manager" />
       <role name="Contributor" />
     </permission>
-    <permission name="cenditel.ppm: Add folderproj" acquire="False">
+    <permission name="cenditel.ppm: Add PPM" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
     </permission>

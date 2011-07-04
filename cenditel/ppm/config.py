@@ -9,7 +9,7 @@ from cenditel.ppm import ppmMessageFactory as _
 PROJECTNAME = 'cenditel.ppm'
 
 ADD_PERMISSIONS = {
-    'folderproj': 'cenditel.ppm: Add folderproj',
+    'PPM': 'cenditel.ppm: Add PPM',
     'proposals': 'cenditel.ppm: Add proposals',
     'Project': 'cenditel.ppm: Add Project',
 }

@@ -10,10 +10,10 @@ from Products.ATContentTypes.content import schemata
 
 from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm.config import PROJECTNAME
-from cenditel.ppm.interfaces import Ifolderproj
+from cenditel.ppm.interfaces import IPPM
 #from cenditel.ppm.validator import GroupsValidator
 
-folderprojSchema = folder.ATFolderSchema.copy() + atapi.Schema((
+PPMSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
@@ -23,25 +23,25 @@ folderprojSchema = folder.ATFolderSchema.copy() + atapi.Schema((
 # Set storage on fields copied from ATFolderSchema, making sure
 # they work well with the python bridge properties.
 
-folderprojSchema['title'].storage = atapi.AnnotationStorage()
-folderprojSchema['description'].storage = atapi.AnnotationStorage()
+PPMSchema['title'].storage = atapi.AnnotationStorage()
+PPMSchema['description'].storage = atapi.AnnotationStorage()
 
 schemata.finalizeATCTSchema(
-    folderprojSchema,
+    PPMSchema,
     folderish=True,
     moveDiscussion=False
 )
 
-class folderproj(folder.ATFolder):
+class PPM(folder.ATFolder):
     """A Folder dedicate to proposals and projects"""
-    implements(Ifolderproj)
+    implements(IPPM)
 
-    meta_type = "folderproj"
-    schema = folderprojSchema
+    meta_type = "PPM"
+    schema = PPMSchema
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
 
     # -*- Your ATSchema to Python Property Bridges Here ... -*-
 
-atapi.registerType(folderproj, PROJECTNAME)
+atapi.registerType(PPM, PROJECTNAME)

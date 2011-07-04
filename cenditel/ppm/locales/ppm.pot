@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-03-23 23:20+0000\n"
+"POT-Creation-Date: 2011-07-04 20:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,51 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ppm\n"
 
-#: ../content/project.py:83
+#: ../content/project.py:95
 msgid "% Completed"
 msgstr ""
 
-#: ../config.py:44
+#: ../config.py:45
 msgid "1.0: All Low Ratings"
 msgstr ""
 
-#: ../config.py:45
+#: ../config.py:46
 msgid "1.5: Many Low Ratings"
 msgstr ""
 
-#: ../config.py:43
+#: ../config.py:44
 msgid "1: No Ratings"
 msgstr ""
 
-#: ../config.py:46
+#: ../config.py:47
 msgid "2.0: Low Ratings"
 msgstr ""
 
-#: ../config.py:47
+#: ../config.py:48
 msgid "2.5: Below Average Ratings"
 msgstr ""
 
-#: ../config.py:48
+#: ../config.py:49
 msgid "3.0: Average Ratings"
 msgstr ""
 
-#: ../config.py:49
+#: ../config.py:50
 msgid "3.5: Above Average Ratings"
 msgstr ""
 
-#: ../config.py:50
+#: ../config.py:51
 msgid "4.0: High Ratings"
 msgstr ""
 
-#: ../config.py:51
+#: ../config.py:52
 msgid "4.5: Many High Ratings"
 msgstr ""
 
-#: ../config.py:52
+#: ../config.py:53
 msgid "5.0: All High Ratings"
 msgstr ""
 
-#: ../profiles/default/types/folderproj.xml
+#: ../profiles/default/types/PPM.xml
 msgid "A Folder dedicate to proposals and projects"
 msgstr ""
 
@@ -73,11 +73,11 @@ msgstr ""
 msgid "A portlet navigation of the project."
 msgstr ""
 
-#: ../validator.py:57
+#: ../validator.py:59
 msgid "A user required to select, please correct."
 msgstr ""
 
-#: ../content/project.py:101
+#: ../content/project.py:114
 msgid "Actual Budget"
 msgstr ""
 
@@ -89,43 +89,43 @@ msgstr ""
 msgid "Add Project Proposals Portlet"
 msgstr ""
 
-#: ../portlets/select_project.py:160
+#: ../portlets/select_project.py:185
 msgid "Add Projects Portlet"
 msgstr ""
 
-#: ../content/project.py:121
+#: ../content/project.py:135
 msgid "Assumptions"
 msgstr ""
 
-#: ../content/project.py:60
+#: ../content/project.py:70
 msgid "Begin Date"
 msgstr ""
 
-#: ../config.py:21
+#: ../config.py:22
 msgid "Blog"
 msgstr ""
 
-#: ../content/project.py:111
+#: ../content/project.py:124
 msgid "Budget Status"
 msgstr ""
 
-#: ../portlets/select_project.pt:17
+#: ../portlets/select_project.pt:18
 msgid "By Manager"
 msgstr ""
 
-#: ../portlets/select_project.pt:26
+#: ../portlets/select_project.pt:33
 msgid "By Tag"
 msgstr ""
 
-#: ../config.py:26
+#: ../config.py:27
 msgid "Committed"
 msgstr ""
 
-#: ../config.py:32
+#: ../config.py:33
 msgid "Completed"
 msgstr ""
 
-#: ../profiles/default/types/project.xml
+#: ../profiles/default/types/Project.xml
 msgid "Create projects for a project portfolio"
 msgstr ""
 
@@ -133,156 +133,164 @@ msgstr ""
 msgid "Create proposals of future projects for a project portfolio"
 msgstr ""
 
-#: ../config.py:20
-#: ../content/project.py:176
+#: ../config.py:21
+#: ../content/project.py:192
 msgid "Demands"
 msgstr ""
 
-#: ../content/proposals.py:55
+#: ../content/proposals.py:56
 msgid "Description"
 msgstr ""
 
-#: ../content/project.py:173
+#: ../content/project.py:189
 msgid "Discussions"
 msgstr ""
 
-#: ../config.py:19
+#: ../config.py:20
 msgid "Discussions board"
 msgstr ""
 
-#: ../content/project.py:172
+#: ../content/project.py:188
 msgid "Documents"
 msgstr ""
 
-#: ../content/project.py:72
+#: ../content/project.py:83
 msgid "End Date"
 msgstr ""
 
-#: ../content/proposals.py:26
+#: ../content/proposals.py:45
 msgid "Enter a list of groups (departments / communities / sections) within this portfolio."
 msgstr ""
 
-#: ../content/project.py:153
+#: ../content/project.py:168
 msgid "Enter every email address for the suscribers of projects, please everyone preceded by prefix 'mailto:'"
 msgstr ""
 
-#: ../content/project.py:164
+#: ../content/project.py:180
 msgid "Enter the names of sub-folders to create by default for each project created."
 msgstr ""
 
-#: ../config.py:25
+#: ../config.py:26
 msgid "Estimated"
 msgstr ""
 
-#: ../content/project.py:92
+#: ../content/project.py:105
 msgid "Estimated Budget"
 msgstr ""
 
-#: ../content/project.py:171
+#: ../content/project.py:187
 msgid "Events"
 msgstr ""
 
-#: ../config.py:17
+#: ../config.py:18
 msgid "Events/Activities"
 msgstr ""
 
-#: ../config.py:18
+#: ../config.py:19
 msgid "Folder"
 msgstr ""
 
-#: ../content/project.py:174
+#: ../content/project.py:190
 msgid "Forms"
 msgstr ""
 
-#: ../validator.py:34
+#: ../validator.py:36
 msgid "Group required, please correct."
 msgstr ""
 
-#: ../content/proposals.py:43
+#: ../content/proposals.py:44
 msgid "Groups"
 msgstr ""
 
-#: ../config.py:27
+#: ../config.py:28
 msgid "In Planning"
 msgstr ""
 
-#: ../config.py:29
+#: ../config.py:30
 msgid "In Process - Ahead of Schedule"
 msgstr ""
 
-#: ../config.py:30
+#: ../config.py:31
 msgid "In Process - Begin Schedule"
 msgstr ""
 
-#: ../config.py:31
+#: ../config.py:32
 msgid "In Process - On Schedule"
 msgstr ""
 
-#: ../content/project.py:34
+#: ../content/project.py:48
 msgid "Manager"
+msgstr ""
+
+#: ../events.py:57
+msgid "Modified Content %s"
 msgstr ""
 
 #: ../portlets/navigation.py:20
 msgid "Navigation PPM"
 msgstr ""
 
-#: ../portlets/navigation.py:44
+#: ../portlets/navigation.py:39
 msgid "Navigation PPM Portlet"
 msgstr ""
 
-#: ../config.py:36
+#: ../config.py:37
 msgid "On Budget"
 msgstr ""
 
-#: ../config.py:28
+#: ../config.py:29
 msgid "On Hold"
 msgstr ""
 
-#: ../config.py:38
+#: ../config.py:39
 msgid "Over Budget"
+msgstr ""
+
+#: ../profiles/default/types/PPM.xml
+msgid "PPM"
 msgstr ""
 
 #: ../profiles/default/portlets.xml
 msgid "PPM Project Navigation"
 msgstr ""
 
-#: ../config.py:39
+#: ../config.py:40
 msgid "Pending"
 msgstr ""
 
-#: ../content/project.py:175
+#: ../content/project.py:191
 msgid "Plans"
 msgstr ""
 
-#: ../content/project.py:84
+#: ../content/project.py:96
 msgid "Project % completed"
 msgstr ""
 
-#: ../content/project.py:102
+#: ../content/project.py:115
 msgid "Project Actual Budget"
 msgstr ""
 
-#: ../content/project.py:122
+#: ../content/project.py:136
 msgid "Project Assumptions"
 msgstr ""
 
-#: ../content/project.py:61
+#: ../content/project.py:71
 msgid "Project Begin Date"
 msgstr ""
 
-#: ../content/project.py:73
+#: ../content/project.py:84
 msgid "Project End Date"
 msgstr ""
 
-#: ../content/project.py:93
+#: ../content/project.py:106
 msgid "Project Estimated Budget"
 msgstr ""
 
-#: ../content/project.py:163
+#: ../content/project.py:179
 msgid "Project Folders"
 msgstr ""
 
-#: ../content/project.py:35
+#: ../content/project.py:49
 msgid "Project Manager"
 msgstr ""
 
@@ -290,27 +298,31 @@ msgstr ""
 msgid "Project Proposals Dashboard"
 msgstr ""
 
-#: ../content/project.py:50
+#: ../content/project.py:60
 msgid "Project Status"
 msgstr ""
 
-#: ../content/project.py:112
+#: ../content/project.py:125
 msgid "Project Status Budget"
 msgstr ""
 
-#: ../content/project.py:141
+#: ../content/project.py:156
 msgid "Project Tags"
+msgstr ""
+
+#: ../profiles/default/portlets.xml
+msgid "Projects"
 msgstr ""
 
 #: ../portlets/select_project.py:21
 msgid "Projects Dashboard"
 msgstr ""
 
-#: ../browser/templates/folderprojview.pt:108
+#: ../browser/templates/folderprojview.pt:110
 msgid "Projects:"
 msgstr ""
 
-#: ../content/proposals.py:46
+#: ../content/proposals.py:27
 msgid "Proposal summary of a future project"
 msgstr ""
 
@@ -322,142 +334,134 @@ msgstr ""
 msgid "Select Template"
 msgstr ""
 
-#: ../content/project.py:49
+#: ../content/project.py:59
 msgid "Status"
 msgstr ""
 
-#: ../content/proposals.py:45
+#: ../content/proposals.py:26
 msgid "Summary"
 msgstr ""
 
-#: ../content/project.py:152
+#: ../content/project.py:167
 msgid "Suscribers"
 msgstr ""
 
-#: ../content/project.py:140
+#: ../content/project.py:155
 msgid "Tags"
+msgstr ""
+
+#: ../validator.py:91
+msgid "The next email address is invalid: %s"
+msgstr ""
+
+#: ../validator.py:94
+msgid "The nexts email addresses are invalid: %s "
+msgstr ""
+
+#: ../events.py:53
+msgid "The project entitle %s to which you are subscribed has been modified
+    you can see it in %s "
 msgstr ""
 
 #: ../portlets/select_proposal.py:143
 msgid "This portlet displays a form for select some criteria and find quickly project proposal registered based on those criteria."
 msgstr ""
 
-#: ../portlets/select_project.py:171
+#: ../portlets/select_project.py:186
 msgid "This portlet displays a form for select some criteria and find quickly projects registered based on those criteria."
 msgstr ""
 
-#: ../content/proposals.py:37
+#: ../content/proposals.py:56
 msgid "Title"
 msgstr ""
 
-#: ../content/project.py:167
+#: ../content/project.py:183
 msgid "Type"
 msgstr ""
 
-#: ../config.py:37
+#: ../config.py:38
 msgid "Under Budget"
 msgstr ""
 
-#: ../content/project.py:177
+#: ../content/project.py:193
 msgid "Weblog"
 msgstr ""
 
-#: ../profiles/default/types/folderproj.xml
-msgid "folderproj"
-msgstr ""
-
 #. Default: "Actual Budget"
-#: ../browser/templates/projectview.pt:91
+#: ../browser/templates/projectview.pt:94
 msgid "label_actualbud"
 msgstr ""
 
 #. Default: "All Managers"
-#: ../browser/templates/folderprojview.pt:57
+#: ../browser/templates/folderprojview.pt:59
 msgid "label_allmanagers"
 msgstr ""
 
 #. Default: "All Projects"
-#: ../browser/templates/folderprojview.pt:103
-#: ../browser/templates/proposals_dashboard.pt:110
+#: ../browser/templates/folderprojview.pt:106
 msgid "label_allprojects"
 msgstr ""
 
 #. Default: "All Tags"
-#: ../browser/templates/folderprojview.pt:69
+#: ../browser/templates/folderprojview.pt:71
 msgid "label_alltags"
 msgstr ""
 
 #. Default: "All Tags"
-#: ../portlets/select_project.pt:28
+#: ../portlets/select_project.pt:35
 msgid "label_altags"
 msgstr ""
 
 #. Default: "Assumptions"
-#: ../browser/templates/projectview.pt:105
+#: ../browser/templates/projectview.pt:110
 msgid "label_assumtions"
 msgstr ""
 
 #. Default: "Begin Date"
-#: ../browser/templates/folderprojview.pt:117
-#: ../browser/templates/projectview.pt:61
-#: ../browser/templates/proposals_dashboard.pt:124
+#: ../browser/templates/folderprojview.pt:120
+#: ../browser/templates/projectview.pt:64
 msgid "label_begindate"
 msgstr ""
 
 #. Default: "Budget Status"
-#: ../browser/templates/folderprojview.pt:116
-#: ../browser/templates/projectview.pt:98
-#: ../browser/templates/proposals_dashboard.pt:123
+#: ../browser/templates/folderprojview.pt:119
+#: ../browser/templates/projectview.pt:101
 msgid "label_budgetstatus"
 msgstr ""
 
 #. Default: "^ Click above to close selection window"
-#: ../browser/templates/folderprojview.pt:40
-#: ../browser/templates/proposals_dashboard.pt:44
+#: ../browser/templates/folderprojview.pt:43
 msgid "label_clikclose"
 msgstr ""
 
 #. Default: "Select Projects by Manager or Tag"
-#: ../browser/templates/folderprojview.pt:36
-#: ../browser/templates/proposals_dashboard.pt:38
+#: ../browser/templates/folderprojview.pt:39
 msgid "label_collapsibleHeader"
 msgstr ""
 
 #. Default: "% Complete"
-#: ../browser/templates/projectview.pt:75
+#: ../browser/templates/projectview.pt:78
 msgid "label_complete"
 msgstr ""
 
-#. Default: "Create New Project"
-#: ../browser/templates/proposals_dashboard.pt:25
-msgid "label_createnewproject"
-msgstr ""
-
-#. Default: "Create New Proposal"
-#: ../browser/templates/proposals_dashboard.pt:20
-msgid "label_createnewproposal"
-msgstr ""
-
 #. Default: "End Date"
-#: ../browser/templates/folderprojview.pt:118
-#: ../browser/templates/projectview.pt:68
-#: ../browser/templates/proposals_dashboard.pt:125
+#: ../browser/templates/folderprojview.pt:121
+#: ../browser/templates/projectview.pt:71
 msgid "label_enddate"
 msgstr ""
 
 #. Default: "Estimated Budget"
-#: ../browser/templates/projectview.pt:84
+#: ../browser/templates/projectview.pt:87
 msgid "label_estimatebud"
 msgstr ""
 
 #. Default: "All Managers"
-#: ../portlets/select_project.pt:18
+#: ../portlets/select_project.pt:25
 msgid "label_managers"
 msgstr ""
 
 #. Default: "Name Project"
-#: ../browser/templates/folderprojview.pt:113
-#: ../browser/templates/proposals_dashboard.pt:120
+#: ../browser/templates/folderprojview.pt:116
 msgid "label_nameproj"
 msgstr ""
 
@@ -467,8 +471,8 @@ msgid "label_navigation_porlet"
 msgstr ""
 
 #. Default: "projects"
-#: ../browser/templates/folderprojview.pt:78
-#: ../browser/templates/proposals_dashboard.pt:84
+#: ../browser/templates/folderprojview.pt:81
+#: ../portlets/select_project.pt:21
 msgid "label_project"
 msgstr ""
 
@@ -478,19 +482,17 @@ msgid "label_project_porlet"
 msgstr ""
 
 #. Default: "Project Manager"
-#: ../browser/templates/projectview.pt:44
+#: ../browser/templates/projectview.pt:46
 msgid "label_projectmanager"
 msgstr ""
 
 #. Default: "Project Manager"
-#: ../browser/templates/folderprojview.pt:114
-#: ../browser/templates/proposals_dashboard.pt:121
+#: ../browser/templates/folderprojview.pt:117
 msgid "label_projmanager"
 msgstr ""
 
 #. Default: "proposals"
-#: ../browser/templates/folderprojview.pt:79
-#: ../browser/templates/proposals_dashboard.pt:85
+#: ../browser/templates/folderprojview.pt:82
 msgid "label_proposal"
 msgstr ""
 
@@ -510,9 +512,8 @@ msgid "label_proposaltype"
 msgstr ""
 
 #. Default: "Schedule Status"
-#: ../browser/templates/folderprojview.pt:115
-#: ../browser/templates/projectview.pt:52
-#: ../browser/templates/proposals_dashboard.pt:122
+#: ../browser/templates/folderprojview.pt:118
+#: ../browser/templates/projectview.pt:54
 msgid "label_schesatatus"
 msgstr ""
 
@@ -522,66 +523,59 @@ msgid "label_selectgroup"
 msgstr ""
 
 #. Default: "Select By Manager"
-#: ../browser/templates/folderprojview.pt:48
-#: ../browser/templates/proposals_dashboard.pt:54
+#: ../browser/templates/folderprojview.pt:51
 msgid "label_selectmanager"
 msgstr ""
 
 #. Default: "Select By Tag"
-#: ../browser/templates/folderprojview.pt:49
-#: ../browser/templates/proposals_dashboard.pt:55
+#: ../browser/templates/folderprojview.pt:52
 msgid "label_selecttags"
 msgstr ""
 
 #. Default: "Suscribers"
-#: ../browser/templates/folderprojview.pt:119
-#: ../browser/templates/projectview.pt:128
-#: ../browser/templates/proposals_dashboard.pt:126
+#: ../browser/templates/folderprojview.pt:122
+#: ../browser/templates/projectview.pt:133
 msgid "label_suscribers"
 msgstr ""
 
 #. Default: "Tags"
-#: ../browser/templates/folderprojview.pt:120
-#: ../browser/templates/projectview.pt:114
-#: ../browser/templates/proposals_dashboard.pt:127
+#: ../browser/templates/folderprojview.pt:123
+#: ../browser/templates/projectview.pt:119
 msgid "label_tags"
 msgstr ""
 
 #. Default: "Show Projects by Manager/Tag"
-#: ../browser/templates/folderprojview.pt:90
-#: ../browser/templates/proposals_dashboard.pt:96
-#: ../portlets/select_project.pt:40
+#: ../browser/templates/folderprojview.pt:93
+#: ../portlets/select_project.pt:50
 msgid "label_titlebottonsearch"
 msgstr ""
 
 #. Default: "Cancel"
+#: ../browser/templates/projectportlet.pt:29
 #: ../browser/templates/proposalselecttemplate.pt:89
 msgid "label_valuebottoncancel"
 msgstr ""
 
 #. Default: "create"
+#: ../browser/templates/projectportlet.pt:22
 #: ../browser/templates/proposalselecttemplate.pt:82
 msgid "label_valuebottoncreate"
 msgstr ""
 
 #. Default: "Next"
+#: ../browser/templates/projectportlet.pt:22
 #: ../browser/templates/proposalselecttemplate.pt:82
 msgid "label_valuebottonnext"
 msgstr ""
 
 #. Default: "Search"
-#: ../browser/templates/folderprojview.pt:90
-#: ../browser/templates/proposals_dashboard.pt:96
-#: ../portlets/select_project.pt:40
+#: ../browser/templates/folderprojview.pt:93
+#: ../portlets/select_project.pt:50
 msgid "label_valuebottonsearch"
 msgstr ""
 
-#: ../profiles/default/types/project.xml
+#: ../profiles/default/types/Project.xml
 msgid "project"
-msgstr ""
-
-#: ../profiles/default/portlets.xml
-msgid "projects"
 msgstr ""
 
 #: ../profiles/default/types/proposals.xml

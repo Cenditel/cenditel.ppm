@@ -6,12 +6,12 @@
   <include package="plone.app.contentmenu" />
 
   <browser:page
-      for="cenditel.ppm.interfaces.folderproj.Ifolderproj"
-      layer="cenditel.ppm.interfaces.folderproj.IfolderprojSpecific"
+      for="cenditel.ppm.interfaces.PPM.IPPM"
+      layer="cenditel.ppm.interfaces.PPM.IPPMSpecific"
       name="folderproj_view"
-      class=".folderprojview.folderprojview"
+      class=".folderprojview.PPMview"
       template="templates/folderprojview.pt"
-      allowed_interface=".folderprojview.Ifolderprojview"
+      allowed_interface=".folderprojview.IPPMview"
       permission="zope.Public"
       />
 
@@ -24,7 +24,7 @@
       />
 
   <browser:page
-      for="cenditel.ppm.interfaces.folderproj.Ifolderproj"
+      for="cenditel.ppm.interfaces.PPM.IPPM"
       name="newproposal"
       class=".proposaltemplate.proposaltemplateview"
       permission="cmf.AddPortalContent"
@@ -33,7 +33,7 @@
   <browser:resourceDirectory
       name="cenditel.ppm.images"
       directory="images"
-      layer="cenditel.ppm.interfaces.folderproj.IfolderprojSpecific"
+      layer="cenditel.ppm.interfaces.PPM.IPPMSpecific"
       />
 
 </configure>

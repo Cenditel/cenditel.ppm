@@ -1,4 +1,4 @@
 # -*- extra stuff goes here -*-
-from folderproj import Ifolderproj, IfolderprojSpecific
+from PPM import IPPM, IPPMSpecific
 from project import Iproject
 from proposals import Iproposals

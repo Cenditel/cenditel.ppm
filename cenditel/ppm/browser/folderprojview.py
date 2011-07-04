@@ -9,7 +9,7 @@ from cenditel.ppm import ppmMessageFactory as _
 from cenditel.ppm import search
 from cenditel.ppm.config import SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
 	
-class Ifolderprojview(Interface):
+class IPPMview(Interface):
     """
     proj view interface
     """
@@ -17,12 +17,12 @@ class Ifolderprojview(Interface):
     def test():
         """ test method """
     
-class folderprojview(BrowserView, object):
+class PPMview(BrowserView, object):
     """
     proj browser view
     """
 
-    implements(Ifolderprojview)
+    implements(IPPMview)
 	
     def __init__(self, context, request):
         self.context = context

@@ -24,14 +24,14 @@
         />
   </class>
 
-  <class class=".folderproj.folderproj">
+  <class class=".PPM.PPM">
     <require
         permission="zope2.View"
-        interface="..interfaces.Ifolderproj"
+        interface="..interfaces.IPPM"
         />
     <require
         permission="cmf.ModifyPortalContent"
-        set_schema="..interfaces.Ifolderproj"
+        set_schema="..interfaces.IPPM"
         />
   </class>
 
