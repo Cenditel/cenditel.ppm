@@ -16,6 +16,8 @@ from Acquisition import aq_inner, aq_parent, aq_base
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import _createObjectByType
 from AccessControl import Unauthorized
+from Products.CMFNotification.NotificationTool import ID as NTOOL_ID
+from Products.GenericSetup.context import Logger,SetupEnviron
 
 
 import transaction
@@ -33,6 +35,7 @@ from cenditel.ppm import config
 import string
 from random import choice
 import logging
+
 
 def MakeDefaultUser(context, username, title,):
     
@@ -68,6 +71,38 @@ def MakeDefaultUser(context, username, title,):
     except:
         logger.warning("We have a failure trying to create a user for cenditel.ppm product")
     return None
+    
+def configureCMFNotification(portal,logger):
+    """
+    TODO fix problem with zcatalog after launch this method
+    """
+    ntool = getToolByName(portal, NTOOL_ID)
+    changeProperty = lambda key, value: \
+            ntool.manage_changeProperties(**{key: value})
+    
+    if not ntool.isExtraSubscriptionsEnabled():
+        changeProperty('extra_subscriptions_enabled',True)
+    #enable notification on Item creation
+    
+    changeProperty('item_creation_notification_enabled', True)
+    changeProperty('on_item_creation_mail_template',['* :: string:creation_mail_notification'])
+    logger.info("On Item Creation Notification has been enabled.")
+    
+    #enable notification on Item modification
+    changeProperty('item_modification_notification_enabled', True)
+    changeProperty('on_item_modification_mail_template',['* :: string:modification_mail_notification'])
+    logger.info("On Item Modification Notification has been enabled.")
+    
+    #enable notification on Work Flow Transition
+    changeProperty('wf_transition_notification_enabled', True)
+    changeProperty('on_wf_transition_mail_template',['* :: string:workflow_mail_notification'])
+    logger.info("On Workflow transition Notification has been enabled.")
+    
+    #enable notification on Discussion Item Creation
+    changeProperty('discussion_item_creation_notification_enabled',True)
+    changeProperty('on_discussion_item_creation_mail_template',['* :: string:discussion_mail_notification'])
+    logger.info("On Discussion Item Creation Notification has been enabled.")   
+    
 
 def importVarious(context):
     """Miscellanous steps import handle
@@ -84,7 +119,9 @@ def importVarious(context):
     if context.readDataFile('cenditel.ppm.txt') is None:
         return
 
-    #portal = context.getSite()
-    MakeDefaultUser(context, username, title)   
-    
+    portal = context.getSite()
+    obj = SetupEnviron()   
+    logger = obj.getLogger("cenditel.ppm")
+    MakeDefaultUser(context, username, title)
+    #TODO configureCMFNotification(portal,logger)    
 
