@@ -16,7 +16,7 @@ from Acquisition import aq_inner, aq_parent, aq_base
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone.utils import _createObjectByType
 from AccessControl import Unauthorized
-from Products.CMFNotification.NotificationTool import ID as NTOOL_ID
+#from Products.CMFNotification.NotificationTool import ID as NTOOL_ID
 from Products.GenericSetup.context import Logger,SetupEnviron
 
 
