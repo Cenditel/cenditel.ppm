@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-03-23 23:53+0000\n"
+"POT-Creation-Date: 2011-07-04 22:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,14 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: ppm\n"
+
+#: ../profiles/default/portlets.xml
+msgid "A portlet for displays a form for select some criteria and find quickly projects registered based on those criteria."
+msgstr ""
+
+#: ../profiles/default/portlets.xml
+msgid "A portlet navigation of the project."
+msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 msgid "Approve by Chief of department"
@@ -109,6 +117,10 @@ msgstr ""
 msgid "Open E-gov Projects Proposals Workflow"
 msgstr ""
 
+#: ../profiles/default/portlets.xml
+msgid "PPM Project Navigation"
+msgstr ""
+
 #: ../profiles/default/workflows/proposal_workflow/definition.xml
 #: ../profiles/openegov/workflows/openegov_proposal_workflow/definition.xml
 msgid "Prioritized"
@@ -117,6 +129,10 @@ msgstr ""
 #. Default: "Project"
 #: ../content/project.py:
 msgid "Project"
+msgstr ""
+
+#: ../profiles/default/portlets.xml
+msgid "Projects"
 msgstr ""
 
 #: ../profiles/default/workflows/proposal_workflow/definition.xml

@@ -29,7 +29,7 @@ class searching:
     	for child in context.getChildNodes():
     		listH.append(child.getId())
     	
-    	result = catalog.searchResults(portal_type='project', review_state='published', getId = listH)
+    	result = catalog.searchResults(portal_type='Project', review_state='published', getId = listH)
     	self.listt = []
     	listm = []
     	dic = []

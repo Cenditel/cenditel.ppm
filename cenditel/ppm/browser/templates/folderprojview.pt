@@ -5,6 +5,13 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="ppm">
+<metal:slot fill-slot="style_slot">
+<style>
+	ul#ListTags {
+				 list-style:none;
+                }
+</style>
+</metal:slot>
 
  <body>
 
@@ -153,7 +160,7 @@
            <td tal:content="projectTitle/end_date" bgcolor="White"><a href=""><br /></a></td> 
            <td tal:content="projectTitle/suscribers" bgcolor="White"></td> 
            <td>
-            <ul style=list-style:none tal:define="objets projectTitle/tags">
+            <ul id="ListTags" tal:define="objets projectTitle/tags">
               <li tal:repeat="objet objets">
                 <span tal:content="objet"></span>
               </li>

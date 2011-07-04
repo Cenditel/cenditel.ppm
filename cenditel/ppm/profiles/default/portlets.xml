@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <portlets
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    i18n:domain="ppm">
+    i18n:domain="plone">
 
 <!-- This file is used to register new types of portlets. It can also
      be used to register completely new column types. See CMFPlone's version

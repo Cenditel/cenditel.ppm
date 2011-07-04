@@ -64,11 +64,11 @@ msgstr ""
 msgid "A Folder dedicate to proposals and projects"
 msgstr "Carpeta dedicada a Propuestas y Proyectos"
 
-#: ../profiles/default/portlets.xml
+#: ../profiles/uninstall/portlets.xml
 msgid "A portlet for displays a form for select some criteria and find quickly projects registered based on those criteria."
 msgstr ""
 
-#: ../profiles/default/portlets.xml
+#: ../profiles/uninstall/portlets.xml
 msgid "A portlet navigation of the project."
 msgstr ""
 
@@ -83,10 +83,6 @@ msgstr "Presupuesto actual"
 #: ../portlets/navigation.py:38
 msgid "Add Portlet"
 msgstr "Agregar Portlet"
-
-#: ../portlets/select_proposal.py:142
-msgid "Add Project Proposals Portlet"
-msgstr "Agregar portlet de Propuestas"
 
 #: ../portlets/select_project.py:185
 msgid "Add Projects Portlet"
@@ -249,7 +245,7 @@ msgstr "Sobre el Presupuesto"
 msgid "PPM"
 msgstr "Portafolio de Proyectos"
 
-#: ../profiles/default/portlets.xml
+#: ../profiles/uninstall/portlets.xml
 msgid "PPM Project Navigation"
 msgstr "PPM Navegacion de Proyecto"
 
@@ -293,10 +289,6 @@ msgstr "Sub-carpetas del Proyecto"
 msgid "Project Manager"
 msgstr "Administrador del Proyecto"
 
-#: ../portlets/select_proposal.py:21
-msgid "Project Proposals Dashboard"
-msgstr ""
-
 #: ../content/project.py:60
 msgid "Project Status"
 msgstr "Estatus del Proyecto"
@@ -309,15 +301,11 @@ msgstr "Estatus del presupuesto de Proyecto"
 msgid "Project Tags"
 msgstr "También conocidas como palabras clave o etiquetas, éstas le ayudan a categorizar su Proyecto"
 
-#: ../profiles/default/portlets.xml
-msgid "Projects"
-msgstr ""
-
 #: ../portlets/select_project.py:21
 msgid "Projects Dashboard"
 msgstr "Página de inicio de Proyectos"
 
-#: ../browser/templates/folderprojview.pt:110
+#: ../browser/templates/folderprojview.pt:117
 msgid "Projects:"
 msgstr "Proyectos:"
 
@@ -330,6 +318,7 @@ msgid "Search Project"
 msgstr ""
 
 #: ../profiles/default/actions.xml
+#: ../profiles/uninstall/actions.xml
 msgid "Select Template"
 msgstr "Seleccione la plantilla"
 
@@ -357,10 +346,6 @@ msgstr "El siguiente correo es invalido"
 msgid "The nexts email addresses are invalid: %s "
 msgstr "Los siguientes correos estan invalidos"
 
-#: ../portlets/select_proposal.py:143
-msgid "This portlet displays a form for select some criteria and find quickly project proposal registered based on those criteria."
-msgstr ""
-
 #: ../portlets/select_project.py:186
 msgid "This portlet displays a form for select some criteria and find quickly projects registered based on those criteria."
 msgstr "Este portlet muestra un formulario para seleccionas ciertos criterios en la búsqueda de proyectos registrados previamente."
@@ -387,17 +372,17 @@ msgid "label_actualbud"
 msgstr "Presupuesto Actual"
 
 #. Default: "All Managers"
-#: ../browser/templates/folderprojview.pt:59
+#: ../browser/templates/folderprojview.pt:66
 msgid "label_allmanagers"
 msgstr "Todos los Administradores"
 
 #. Default: "All Projects"
-#: ../browser/templates/folderprojview.pt:106
+#: ../browser/templates/folderprojview.pt:113
 msgid "label_allprojects"
 msgstr "Todos los Proyectos"
 
 #. Default: "All Tags"
-#: ../browser/templates/folderprojview.pt:71
+#: ../browser/templates/folderprojview.pt:78
 msgid "label_alltags"
 msgstr "Todas las Etiquetas"
 
@@ -412,24 +397,24 @@ msgid "label_assumtions"
 msgstr "Asunto"
 
 #. Default: "Begin Date"
-#: ../browser/templates/folderprojview.pt:120
+#: ../browser/templates/folderprojview.pt:127
 #: ../browser/templates/projectview.pt:64
 msgid "label_begindate"
 msgstr "Fecha de inicio"
 
 #. Default: "Budget Status"
-#: ../browser/templates/folderprojview.pt:119
+#: ../browser/templates/folderprojview.pt:126
 #: ../browser/templates/projectview.pt:101
 msgid "label_budgetstatus"
 msgstr "Estatus del Presupuesto"
 
 #. Default: "^ Click above to close selection window"
-#: ../browser/templates/folderprojview.pt:43
+#: ../browser/templates/folderprojview.pt:50
 msgid "label_clikclose"
 msgstr "^ Haz clic aquí para cerrar la ventana de selección"
 
 #. Default: "Select Projects by Manager or Tag"
-#: ../browser/templates/folderprojview.pt:39
+#: ../browser/templates/folderprojview.pt:46
 msgid "label_collapsibleHeader"
 msgstr "Seleccione por el Administrador de Proyectos o Etiqueta"
 
@@ -439,7 +424,7 @@ msgid "label_complete"
 msgstr "% Completado"
 
 #. Default: "End Date"
-#: ../browser/templates/folderprojview.pt:121
+#: ../browser/templates/folderprojview.pt:128
 #: ../browser/templates/projectview.pt:71
 msgid "label_enddate"
 msgstr "Fecha de Finalización"
@@ -455,7 +440,7 @@ msgid "label_managers"
 msgstr "Todos los administradores"
 
 #. Default: "Name Project"
-#: ../browser/templates/folderprojview.pt:116
+#: ../browser/templates/folderprojview.pt:123
 msgid "label_nameproj"
 msgstr "Nombre del Proyecto"
 
@@ -465,7 +450,7 @@ msgid "label_navigation_porlet"
 msgstr "Portlet de Navegación"
 
 #. Default: "projects"
-#: ../browser/templates/folderprojview.pt:81
+#: ../browser/templates/folderprojview.pt:88
 #: ../portlets/select_project.pt:21
 msgid "label_project"
 msgstr "Proyecto"
@@ -481,12 +466,12 @@ msgid "label_projectmanager"
 msgstr "Administrador del Proyecto"
 
 #. Default: "Project Manager"
-#: ../browser/templates/folderprojview.pt:117
+#: ../browser/templates/folderprojview.pt:124
 msgid "label_projmanager"
 msgstr "Administrador del Proyecto"
 
 #. Default: "proposals"
-#: ../browser/templates/folderprojview.pt:82
+#: ../browser/templates/folderprojview.pt:89
 msgid "label_proposal"
 msgstr "Propuesta"
 
@@ -506,7 +491,7 @@ msgid "label_proposaltype"
 msgstr "Seleccione el tipo de Propuesta"
 
 #. Default: "Schedule Status"
-#: ../browser/templates/folderprojview.pt:118
+#: ../browser/templates/folderprojview.pt:125
 #: ../browser/templates/projectview.pt:54
 msgid "label_schesatatus"
 msgstr "Estatus en base a lo planificado"
@@ -517,53 +502,50 @@ msgid "label_selectgroup"
 msgstr "Seleccione el Grupo"
 
 #. Default: "Select By Manager"
-#: ../browser/templates/folderprojview.pt:51
+#: ../browser/templates/folderprojview.pt:58
 msgid "label_selectmanager"
 msgstr "Seleccionar por Administrador"
 
 #. Default: "Select By Tag"
-#: ../browser/templates/folderprojview.pt:52
+#: ../browser/templates/folderprojview.pt:59
 msgid "label_selecttags"
 msgstr "Seleccionar por Etiqueta"
 
 #. Default: "Suscribers"
-#: ../browser/templates/folderprojview.pt:122
+#: ../browser/templates/folderprojview.pt:129
 #: ../browser/templates/projectview.pt:133
 msgid "label_suscribers"
 msgstr "Suscriptores"
 
 #. Default: "Tags"
-#: ../browser/templates/folderprojview.pt:123
+#: ../browser/templates/folderprojview.pt:130
 #: ../browser/templates/projectview.pt:119
 msgid "label_tags"
 msgstr "Etiquetas"
 
 #. Default: "Show Projects by Manager/Tag"
-#: ../browser/templates/folderprojview.pt:93
+#: ../browser/templates/folderprojview.pt:100
 #: ../portlets/select_project.pt:50
 msgid "label_titlebottonsearch"
 msgstr "Mostrar Proyectos por Administrador / Etiquetas"
 
 #. Default: "Cancel"
-#: ../browser/templates/projectportlet.pt:29
 #: ../browser/templates/proposalselecttemplate.pt:89
 msgid "label_valuebottoncancel"
 msgstr "Cancelar"
 
 #. Default: "create"
-#: ../browser/templates/projectportlet.pt:22
 #: ../browser/templates/proposalselecttemplate.pt:82
 msgid "label_valuebottoncreate"
 msgstr "Crear"
 
 #. Default: "Next"
-#: ../browser/templates/projectportlet.pt:22
 #: ../browser/templates/proposalselecttemplate.pt:82
 msgid "label_valuebottonnext"
 msgstr "Siguiente"
 
 #. Default: "Search"
-#: ../browser/templates/folderprojview.pt:93
+#: ../browser/templates/folderprojview.pt:100
 #: ../portlets/select_project.pt:50
 msgid "label_valuebottonsearch"
 msgstr "Búsqueda"
@@ -571,6 +553,10 @@ msgstr "Búsqueda"
 #: ../profiles/default/types/Project.xml
 msgid "project"
 msgstr "Proyecto"
+
+#: ../profiles/uninstall/portlets.xml
+msgid "projects"
+msgstr ""
 
 #: ../profiles/default/types/proposals.xml
 msgid "proposals"

@@ -7,7 +7,7 @@ from zope.interface import implements, classImplements
 
 from Products.Archetypes import atapi
 
-#from Products.ATContentTypes.content import folder
+from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 from Products.ATContentTypes.content import base
 
@@ -32,7 +32,7 @@ from cenditel.ppm.validator import SuscriberValidator
 from Products.FCKeditor.FckWidget import FckWidget
 
 
-projectSchema = schemata.ATContentTypeSchema.copy() +  atapi.Schema((
+projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
@@ -212,7 +212,7 @@ schemata.finalizeATCTSchema(
 )
 
 
-class Project(base.ATCTContent):
+class Project(folder.ATFolder):
     """Create projects for a project portfolio"""
 
     #implements(Iproject)
