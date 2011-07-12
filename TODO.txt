@@ -1,10 +1,15 @@
 En Plone 3.3.5
 
 Sobre las dependencias
- **- Congelar la versión de producto DataGridField que soporta traducciones al español y funciona en plone 3.3.5
+ - Congelar la versión de producto DataGridField que soporta traducciones al español y funciona en plone 3.3.5
  **- Congelar la versión de producto Ploneboard que soporta en mayor medida más traducciones al español y funciona en plone 3.3.5
  **- Congelar la versión de producto Poi que soporta en mayor medida más traducciones al español y funciona en plone 3.3.5
  **- Congelar la versión de producto Quills que soporta en mayor medida más traducciones al español y funciona en plone 3.3.5
+
+Sobre la Suscripción a eventos en el content type del PPM
+ - El usuario administrador o dueño del Proyecto debe esta asociado automáticamente al mecanismo de "Suscriptores" del producto.
+ - El usuario miembro del sistema puede suscribirse por el mecanismo de document action o action a su correo.
+
 
 Sobre los Portlet
  **- Al agregar un PPM debería agregar el "Project Portlet"
@@ -21,14 +26,23 @@ Al Agregar un PPM
  **- Cambiar de folderproj a PPM en nombre de la clase y del archivo
  - Cambiar los nombres de los content types a Capitales tanto en el código como en los nombres de archivos dentro content/, profiles/default/types
  **- En la carpeta "Proposal Templates" dentro el PPM debe restringirse los tipos de contenidos a solamente "FCKTemplate"
- **- Al instalar "FCKTemplate" debería cambiar la configuración por defecto de editor solo para contexto de PPM, Propuestas, Proyecto
+ **- Al instalar "FCKTemplate" debería cambiar la configuración por defecto de editor solo para contexto de PPM, Propuestas, Proyecto.
+ - Al Instalar el producto PPM crea un usuario para administración para el producto como miembro Plone, la idea es que restrinja los permisos a que solo pueda administrar ppm, propuestas y proyectos, ejemplo de esto es el caso del producto FacultyStaffDirectory que crea un rol "Personnel Manager" y le define permisos para agregar el contenido Persona del mismo.
+ - Al desglosar la vista "Todos los Proyectos" mejorar los siguientes campos:
+   - En la columna "Administrador del Proyecto" debe mostrar el nombre completo del usuario activando su respectivo vinculo hacia la pagina del perfil del estos usuarios por ejemplo http://localhost:8080/demo/ppm/author/PPM
+   - En la columna "Fecha de inicio" y "Fecha de Finalización" esta en formato ingles la fecha 2011/07/28 debe estar así 28/07/2012
+   - La columna "Suscriptores" no es necesaria mostrarla en la tabla, debido que las suscripciones se manejarán por parte de usuario as lo desea o por ser administrador del proyecto.
 
 Al Agregar Propuestas
  - la segunda pestaña sale en ingles "Groups", 
  - la validación de los grupos "Group required, please correct." deben estar traducidas 
+ - Las variables de la platilla $Date deben generarsea algo asi 06/06/2011 al usar en la plantilla de la propuesta.
+ - Revisar el formato en estilos de la platilla de la propuesta.
+ - A las N plantillas de propuestas creadas automaticamente cargar sus iconos, como referencia el perfil Test del productos PloneMeeting http://svn.communesplone.org/svn/communesplone/PloneMeeting/trunk/profiles/test/import_data.py
 
-Al Agregar Proyecto la segunda pestaña sale en ingles "Project" deben estar traducida
-
+Al Agregar Proyecto 
+ - El mecanismo para lista los usuarios de Plone en el proyecto muestra un mensaje en la consola como este 'DeprecationWarning: getUserIds is deprecated. Use the PAS methods instead' en la linea 18 del archivo cenditel.ppm/cenditel/ppm/users.py, la solución planteada esta expuesta aca http://plone.293351.n2.nabble.com/DeprecationWarning-getUserIds-is-deprecated-td331462.html
+ - la segunda pestaña sale en ingles "Project" deben estar traducida
  - En la segunda pestaña "Project" en el campo "Administrador del Proyecto" 
  **- por defecto no tiene agregado usuario con rol administrador definido
  **- La lista de selección simple solo me deja seleccionar un administrador por proyecto, a diferencia de la versión en plone 2.5, 
@@ -37,13 +51,14 @@ Al Agregar Proyecto la segunda pestaña sale en ingles "Project" deben estar tra
  **- Varias opciones de la lista de selección de "Estatus del Proyecto", no están traducidas, verificar eso.
  **- Al editar un proyecto debería aparecer el botón de navegación "siguiente" y "anterior" justo al lado del botón "Guardar" y "Cancelar", esto hace mas fácil la navegación entre las pestañas de proyecto, para ejemplo de esto consultar el tipo de contenido de Person dentro del producto FacultyStaffDirectory.
  ** La subcarpeta del proyecto "Eventos" debería contener solo eventos, es decir, restringir los tipos de contenidos a Eventos. y mostrar una vista de calendario de eventos, para esto revisar los productos que usa cyn.in como por ejemplo "Plone4ArtistsCalendar" o "Calendaring"
+ - Las subcarpetas de proyecto creadas automaticamente deben tener sus nombres o ID en Español, un ejemplo para hacer esto es el perfil example_it_config del producto TeleServices consultar default_config.py donde definen los vocabularios, en el import_steps.xml definen los pasos de importación que apuntan a Products.TeleServices.exportimport.addItalianExampleConfig donde se realiza la tarea.
  - En el campo "Etiquetas" tiene la misma funcionalidad del campo "Categorías" en la pestaña "Categorización", creo que seria conveniente o deshabilitar la pestaña "Categorización" o validar que el campo "Categorías" en la pestaña "Categorización" como obligatorio y verificar que su descripción explique como debe ingresar la etiquetas.
  - En la vista de "proyectos" debe cambiar:
    - En el campo "Etiquetas" debe mostrar las etiquetas o categorizaciones y que cada una tenga su enlace para filtrar su búsqueda
    **- En los campos "Estatus en base a lo planificado" y "Estatus del Presupuesto" debe mostrar la opción no el valor.
    **- Las "Fecha de inicio y Finalización" debe mostrar las fechas en formato Español, revisar la vista de el contenido Noticias
    **- En los campos "% Completado", "Presupuesto Estimado", "Presupuesto Actual" debe validar que si el valor es 0 o nulo muestre "0 %" o "0 $"
-   **- En el campo "Suscriptores" debe permitir al los usuario suscribirse con su correo para que les notifique a este cuando allá algún cambio, esto implica que debe configurarse el servidor de correo de Plone para que envié los correos, para esto recomiendo probar el producto CMFNotification http://plone.org/products/cmfnotification/ un ejemplo de implementación de esto son las suscripciones a correo en cada elemento o espacio en cyn.in
+   **- En el campo "Suscriptores" debe permitir a los usuario suscribirse con su correo para que les notifique a este cuando allá algún cambio, esto implica que debe configurarse el servidor de correo de Plone para que envié los correos, para esto recomiendo probar el producto CMFNotification http://plone.org/products/cmfnotification/ un ejemplo de implementación de esto son las suscripciones a correo en cada elemento o espacio en cyn.in usando document action o action como el de Imprimir o Enviar.
 
 
 
