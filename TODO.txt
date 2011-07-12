@@ -41,6 +41,7 @@ Al Agregar Propuestas
  - A las N plantillas de propuestas creadas automaticamente cargar sus iconos, como referencia el perfil Test del productos PloneMeeting http://svn.communesplone.org/svn/communesplone/PloneMeeting/trunk/profiles/test/import_data.py
 
 Al Agregar Proyecto 
+ - Los campos de costos usar el Widget del producto Products.FinanceFields para gestionar el tema del tipode moneda http://pypi.python.org/pypi/Products.FinanceFields/1.0
  - El mecanismo para lista los usuarios de Plone en el proyecto muestra un mensaje en la consola como este 'DeprecationWarning: getUserIds is deprecated. Use the PAS methods instead' en la linea 18 del archivo cenditel.ppm/cenditel/ppm/users.py, la solución planteada esta expuesta aca http://plone.293351.n2.nabble.com/DeprecationWarning-getUserIds-is-deprecated-td331462.html
  - la segunda pestaña sale en ingles "Project" deben estar traducida
  - En la segunda pestaña "Project" en el campo "Administrador del Proyecto" 
