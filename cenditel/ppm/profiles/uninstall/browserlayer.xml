@@ -2,7 +2,7 @@
 <layers>
   <!-- TODO verificar los nombres de las capas son iguales -->  
   <layer name="cenditel.ppm"
-         interface="cenditel.ppm.interfaces.folderproj.IfolderprojSpecific" />
+	 interface="cenditel.ppm.interfaces.PPM.IPPMSpecific" />
   <layer name="cenditel.ppm"
-         interface="cenditel.ppm.interfaces.project.IprojectSpecific" />
+         interface="cenditel.ppm.interfaces.Project.IProjectSpecific" />
 </layers>

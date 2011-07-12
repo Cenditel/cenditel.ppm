@@ -1,4 +1,4 @@
-"""Definition of the project content type
+"""Definition of the Project content type
 """
 
 from DateTime.DateTime import *
@@ -19,18 +19,17 @@ from Products.DataGridField.SelectColumn import SelectColumn
 
 from Products.validation import validation
 from Products.validation.validators.RegexValidator import RegexValidator
-
-from cenditel.ppm import ppmMessageFactory as _
-from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT, SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
-from cenditel.ppm.interfaces import Iproject
-#from cenditel.ppm.validator import UsersValidator
+from Products.Archetypes.interfaces import IMultiPageSchema
 from Products.Archetypes.atapi import InAndOutWidget
 from Products.AddRemoveWidget import AddRemoveWidget
-from Products.Archetypes.interfaces import IMultiPageSchema
-from collective.calendarwidget.widget import CalendarWidget
-from cenditel.ppm.validator import SuscriberValidator
 from Products.FCKeditor.FckWidget import FckWidget
+from collective.calendarwidget.widget import CalendarWidget
 
+from cenditel.ppm import CenditelPpmMF as _
+from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT, SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
+from cenditel.ppm.interfaces import IProject
+from cenditel.ppm.validator import SuscriberValidator
+#from cenditel.ppm.validator import UsersValidator
 
 projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
@@ -38,13 +37,12 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     atapi.LinesField(
         name='manager',
-		
         required=True,
         searchable=True,
-		storage = atapi.AnnotationStorage(),
-		vocabulary_factory="cenditel.ppm.user",
+        storage = atapi.AnnotationStorage(),
+        vocabulary_factory="cenditel.ppm.user",
         widget=InAndOutWidget(
-		    size = 10,
+            size = 10,
             label=_(u"Manager"),
             description=_(u"Project Manager"),
         ),
@@ -65,7 +63,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     atapi.DateTimeField(
         name='begin_date', 
-        widget =CalendarWidget(
+        widget=CalendarWidget(
             #format=('%d.%m.%Y.%H.%M'),  
             label=_(u'Begin Date'),
             description=_(u"Project Begin Date"),
@@ -78,7 +76,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
     atapi.DateTimeField(
         name='end_date',
-        widget = CalendarWidget(
+        widget=CalendarWidget(
             #format=('%Y;%m;%d;%H;%M'),
             label=_(u'End Date'),
             description=_(u"Project End Date"),
@@ -124,7 +122,6 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
             label=_(u"Budget Status"),
             description=_(u"Project Status Budget"),           
         ),
-        
         vocabulary=BUDGET_STATUS_PROJECT,
         schemata='Project',
     ), 
@@ -215,9 +212,9 @@ schemata.finalizeATCTSchema(
 class Project(folder.ATFolder):
     """Create projects for a project portfolio"""
 
-    #implements(Iproject)
-    implements(Iproject, IMultiPageSchema)
-    meta_type = "project"
+    #implements(IProject)
+    implements(IProject, IMultiPageSchema)
+    meta_type = "Project"
     schema = projectSchema
 
     title = atapi.ATFieldProperty('title')

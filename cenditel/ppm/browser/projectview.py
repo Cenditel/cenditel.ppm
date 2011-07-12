@@ -4,7 +4,7 @@ from Products.Five import BrowserView
 from Products.CMFCore.utils import getToolByName
 #from Products.CMFPlone.utils import _createObjectByType
 	
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 from cenditel.ppm import createSubFolder
 from cenditel.ppm.config import SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
 	

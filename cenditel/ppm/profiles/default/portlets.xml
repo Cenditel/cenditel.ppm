@@ -16,6 +16,15 @@
    description="A portlet navigation of the project."
    i18n:attributes="title;
                     description" />
+<!--
+ <portlet 
+   addview="ppm.select_proposal"
+   title="Proposals"
+   description="A portlet for displays a form for select some criteria and find quickly project proposals registered based on those criteria."
+   i18n:attributes="title;
+                    description" />
+
+-->
 
  <portlet 
    addview="ppm.select_project"
@@ -23,41 +32,41 @@
    description="A portlet for displays a form for select some criteria and find quickly projects registered based on those criteria."
    i18n:attributes="title;
                     description" />
-<!--
- <portlet 
-   addview="ppm.select_proposal"
-   title="projects"
-   description="A portlet for displays a form for select some criteria and find quickly  project proposals registered based on those criteria."
-   i18n:attributes="title;
-                    description" />
-
--->
         
  <!-- Portlet assignments
 
  <assignment
      name="ppm-navigation"
-     category="context"
-     key="/"
+     category="content_type"
+     key="PPM"
      manager="plone.leftcolumn"
-     type="cenditel.ppm.portlets.navigation"
+     type="ppm.navigation"
      purge="False" />
+
+ <assignment
+     name="ppm-project-navigation"
+     category="content_type"
+     key="Project"
+     manager="plone.leftcolumn"
+     type="ppm.navigation"
+     purge="False" />
+--> 
+ <!--
+ <assignment
+     name="ppm-select-proposal"
+     category="content_type"
+     key="Proposals"
+     manager="plone.leftcolumn"
+     type="ppm.select_proposal"
+     purge="False" />
+
 
  <assignment
      name="ppm-select-project"
-     category="context"
-     key="/"
+     category="content_type"
+     key="Project"
      manager="plone.leftcolumn"
-     type="cenditel.ppm.portlets.select_project"
+     type="ppm.select_project"
      purge="False" />
-
- <assignment
-     name="ppm-select-proposal"
-     category="context"
-     key="/"
-     manager="plone.leftcolumn"
-     type="cenditel.ppm.portlets.select_proposal"
-     purge="False" />
-  -->
-
+ --> 
 </portlets>

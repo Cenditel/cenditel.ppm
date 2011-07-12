@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<object name="proposals"
+<object name="Proposals"
    meta_type="Factory-based Type Information with dynamic views"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="ppm">
 
-  <property name="title" i18n:translate="">proposals</property>
+  <property name="title" i18n:translate="">Proposals</property>
   <property name="description" i18n:translate="">Create proposals of future projects for a project portfolio</property>
-  <property name="content_meta_type">proposals</property>
+  <property name="content_meta_type">Proposals</property>
   <property name="content_icon">++resource++cenditel.ppm.images/proposal.gif</property>
   <property name="product">cenditel.ppm</property>
-  <property name="factory">addproposals</property>
+  <property name="factory">addProposals</property>
   <property name="immediate_view">atct_edit</property>
   <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>

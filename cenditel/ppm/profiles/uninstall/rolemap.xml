@@ -2,17 +2,21 @@
 <rolemap>
   <permissions>
     <!-- -*- extra stuff goes here -*- -->
-    <permission name="cenditel.ppm: Add proposals" acquire="False">
+
+    <permission name="cenditel.ppm: Add PPM" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
     </permission>
-    <permission name="cenditel.ppm: Add project" acquire="False">
+
+    <permission name="cenditel.ppm: Add Proposals" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
     </permission>
-    <permission name="cenditel.ppm: Add folderproj" acquire="False">
+
+    <permission name="cenditel.ppm: Add Project" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
     </permission>
+
   </permissions>
 </rolemap>

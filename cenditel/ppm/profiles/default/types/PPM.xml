@@ -6,7 +6,7 @@
   <property name="title" i18n:translate="">PPM</property>
   <property name="description" i18n:translate="">A Folder dedicate to proposals and projects</property>
   <property name="content_meta_type">PPM</property>
-  <property name="content_icon">++resource++cenditel.ppm.images/folder_icon.png</property>
+  <property name="content_icon">++resource++cenditel.ppm.images/ppm.png</property>
   <property name="product">cenditel.ppm</property>
   <property name="factory">addPPM</property>
   <property name="immediate_view">atct_edit</property>
@@ -14,22 +14,22 @@
   <property name="filter_content_types">True</property>
 
   <property name="allowed_content_types">
-   <element value="proposals"/>
+   <element value="Proposals"/>
    <element value="Project"/>
    <element value="Folder"/>
   </property>
 
   <property name="allow_discussion">False</property>
-  <property name="default_view">@@folderproj_view</property>
+  <property name="default_view">@@ppm_view</property>
 
   <property name="view_methods">
     <element value="base_view" />
   </property>
 
-  <alias from="(Default)" to="@@folderproj_view" />
+  <alias from="(Default)" to="@@ppm_view" />
   <alias from="edit" to="atct_edit" />
   <alias from="sharing" to="@@sharing" />
-  <alias from="view" to="@@folderproj_view" />
+  <alias from="view" to="@@ppm_view" />
 
   <action title="View" action_id="view" category="object" condition_expr=""
     url_expr="string:${folder_url}/" visible="True">

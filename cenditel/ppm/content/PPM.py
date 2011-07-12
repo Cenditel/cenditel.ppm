@@ -1,4 +1,4 @@
-"""Definition of the folderproj content type
+"""Definition of the PPM content type
 """
 
 from zope.interface import implements
@@ -8,7 +8,7 @@ from Products.ATContentTypes.content import folder
 from Products.ATContentTypes.content import schemata
 
 
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 from cenditel.ppm.config import PROJECTNAME
 from cenditel.ppm.interfaces import IPPM
 #from cenditel.ppm.validator import GroupsValidator

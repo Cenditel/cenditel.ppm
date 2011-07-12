@@ -1,6 +1,6 @@
 #from Acquisition import aq_inner
 #from Acquisition import aq_base, aq_inner, aq_parent
-#from cenditel.ppm.interfaces import Ifolderproj
+#from cenditel.ppm.interfaces import IPPM
 from DateTime import DateTime
 
 from Products.Five.browser import BrowserView

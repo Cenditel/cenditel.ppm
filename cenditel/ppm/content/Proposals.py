@@ -1,4 +1,4 @@
-"""Definition of the proposals content type
+"""Definition of the Proposals content type
 """
 
 from zope.interface import implements
@@ -9,9 +9,9 @@ from Products.Archetypes.utils import Message
 from Products.ATContentTypes.content import base
 from Products.ATContentTypes.content import schemata
 
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 from cenditel.ppm.config import PROJECTNAME
-from cenditel.ppm.interfaces import Iproposals
+from cenditel.ppm.interfaces import IProposals
 from cenditel.ppm.validator import GroupsValidator
 from Products.DataGridField import DataGridField, DataGridWidget
 from Products.FCKeditor.FckWidget import FckWidget
@@ -68,15 +68,15 @@ proposalsSchema['description'].storage = atapi.AnnotationStorage()
 schemata.finalizeATCTSchema(proposalsSchema, moveDiscussion=False)
 
 
-class proposals(base.ATCTContent):
+class Proposals(base.ATCTContent):
     """Create proposals of future projects for a project portfolio"""
 
-    implements(Iproposals)
+    implements(IProposals)
 
-    meta_type = "proposals"
+    meta_type = "Proposals"
     schema = proposalsSchema
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
     
-atapi.registerType(proposals, PROJECTNAME)
+atapi.registerType(Proposals, PROJECTNAME)

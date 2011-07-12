@@ -4,5 +4,5 @@
   <layer name="cenditel.ppm"
          interface="cenditel.ppm.interfaces.PPM.IPPMSpecific" />
   <layer name="cenditel.ppm"
-         interface="cenditel.ppm.interfaces.project.IprojectSpecific" />
+         interface="cenditel.ppm.interfaces.Project.IProjectSpecific" />
 </layers>

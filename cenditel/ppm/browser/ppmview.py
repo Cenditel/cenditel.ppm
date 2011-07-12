@@ -5,11 +5,11 @@ from Products.CMFCore.utils import getToolByName
 #from Products.CMFPlone.utils import _createObjectByType
 from Products.ATContentTypes.lib import constraintypes
 	
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 from cenditel.ppm import search
 from cenditel.ppm.config import SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
 	
-class IPPMview(Interface):
+class IPPMView(Interface):
     """
     proj view interface
     """
@@ -17,12 +17,12 @@ class IPPMview(Interface):
     def test():
         """ test method """
     
-class PPMview(BrowserView, object):
+class PPMView(BrowserView, object):
     """
     proj browser view
     """
 
-    implements(IPPMview)
+    implements(IPPMView)
 	
     def __init__(self, context, request):
         self.context = context

@@ -12,7 +12,7 @@
    <bound-workflow workflow_id="plone_workflow" />
   </default>
 
-  <type type_id="proposals">
+  <type type_id="Proposals">
    <bound-workflow workflow_id="proposal_workflow" />
   </type>
 

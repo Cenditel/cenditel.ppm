@@ -8,27 +8,29 @@
   <browser:page
       for="cenditel.ppm.interfaces.PPM.IPPM"
       layer="cenditel.ppm.interfaces.PPM.IPPMSpecific"
-      name="folderproj_view"
-      class=".folderprojview.PPMview"
-      template="templates/folderprojview.pt"
-      allowed_interface=".folderprojview.IPPMview"
+      name="ppm_view"
+      class=".ppmview.PPMView"
+      template="templates/ppmview.pt"
+      allowed_interface=".ppmview.IPPMView"
       permission="zope.Public"
       />
 
   <browser:page
-      for="cenditel.ppm.interfaces.project.Iproject"
+      for="cenditel.ppm.interfaces.Project.IProject"
       class=".projectview.projectview"
       name="project_view"
       template="templates/projectview.pt"
       permission="zope.Public"
       />
 
+<!--
   <browser:page
       for="cenditel.ppm.interfaces.PPM.IPPM"
       name="newproposal"
       class=".proposaltemplate.proposaltemplateview"
       permission="cmf.AddPortalContent"
       />
+-->
 
   <browser:resourceDirectory
       name="cenditel.ppm.images"
