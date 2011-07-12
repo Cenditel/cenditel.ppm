@@ -3,7 +3,7 @@
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="ppm">
+    i18n_domain="cenditel.ppm">
 
   <five:registerPackage package="." initialize=".initialize" />
 
@@ -15,19 +15,14 @@
   <include package=".portlets" />
   <include file="profiles.zcml" />
   
-  #
- <subscriber
+  <subscriber 
+    for="cenditel.ppm.interfaces.IProject
+    Products.Archetypes.interfaces.IObjectInitializedEvent"
+    handler="cenditel.ppm.events.SavedElement" />
 
-  for="cenditel.ppm.interfaces.Iproject
-  Products.Archetypes.interfaces.IObjectInitializedEvent"
-  handler="cenditel.ppm.events.SavedElement"
- />
-
- <subscriber
-
-  for="cenditel.ppm.interfaces.Iproject
-  Products.Archetypes.interfaces.IObjectEditedEvent"
-  handler="cenditel.ppm.events.SavedElement"
- />
+  <subscriber
+    for="cenditel.ppm.interfaces.IProject
+    Products.Archetypes.interfaces.IObjectEditedEvent"
+    handler="cenditel.ppm.events.SavedElement" />
   
 </configure>

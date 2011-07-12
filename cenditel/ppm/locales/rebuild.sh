@@ -1,5 +1,5 @@
-i18ndude rebuild-pot --pot ./ppm.pot --create ppm ../ || exit 1
-i18ndude sync --pot ./ppm.pot ./*/LC_MESSAGES/ppm.po
+i18ndude rebuild-pot --pot ./cenditel.ppm.pot --create cenditel.ppm ../ || exit 1
+i18ndude sync --pot ./cenditel.ppm.pot ./*/LC_MESSAGES/cenditel.ppm.po
 
 i18ndude rebuild-pot --pot ../i18n/ppm-plone.pot --merge ../i18n/manual.pot --create plone ../profiles || exit 1
 i18ndude sync --pot ../i18n/ppm-plone.pot ../i18n/ppm-plone-*.po

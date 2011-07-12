@@ -8,7 +8,7 @@ from zope.interface import implements
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from cenditel.ppm import searchportlet
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 
 class IProjectsDashboardPortlet(IPortletDataProvider):
     pass

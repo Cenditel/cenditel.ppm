@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-07-04 22:16+0000\n"
+"POT-Creation-Date: 2011-07-06 23:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -89,7 +89,7 @@ msgid "Deferred"
 msgstr ""
 
 #. Default: "Groups"
-#: ../content/folderproj.py:
+#: ../content/PPM.py:
 msgid "Groups"
 msgstr ""
 
@@ -127,7 +127,7 @@ msgid "Prioritized"
 msgstr ""
 
 #. Default: "Project"
-#: ../content/project.py:
+#: ../content/Project.py:
 msgid "Project"
 msgstr ""
 

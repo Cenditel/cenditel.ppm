@@ -7,7 +7,7 @@ from plone.app.portlets.portlets import base
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 
 class INavigationPortlet(IPortletDataProvider):
     pass

@@ -2,7 +2,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="ppm">
+    i18n_domain="cenditel.ppm">
 
   <!-- Ensure Plone's portlets ZCML has already been processed;
        without this, we may get a permission lookup error -->
@@ -17,16 +17,6 @@
       addview=".navigation.AddForm"
       />
 
-
-
-  <plone:portlet
-      name="ppm.select_project"
-      interface=".select_project.IProjectsDashboardPortlet"
-      assignment=".select_project.Assignment"
-      renderer=".select_project.Renderer"
-      addview=".select_project.AddForm"
-      />
-
 <!--
   <plone:portlet
       name="ppm.select_proposal"
@@ -35,7 +25,13 @@
       renderer=".select_proposal.Renderer"
       addview=".select_proposal.AddForm"
       />
-
 -->
 
+  <plone:portlet
+      name="ppm.select_project"
+      interface=".select_project.IProjectsDashboardPortlet"
+      assignment=".select_project.Assignment"
+      renderer=".select_project.Renderer"
+      addview=".select_project.AddForm"
+      />
 </configure>

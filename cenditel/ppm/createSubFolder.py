@@ -46,13 +46,11 @@ class CreatefolderActionExecutor(object):
                         self.context.invokeFactory(type, title=title, id=title)
                         holder=self.context
                         folder=getattr(holder, title)
+                        # Enable contstraining
                         folder.setConstrainTypesMode(constraintypes.ENABLED)
+                        # Types for which we perform Unauthorized check
                         folder.setLocallyAllowedTypes(['Event'])
                         #import pdb; pdb.set_trace()
-                        # Enable contstraining
-                        #self.context.setConstrainTypesMode(constraintypes.ENABLED)
-                        # Types for which we perform Unauthorized check
-                        #self.context.setLocallyAllowedTypes(['Event'])
                         # Add new... menu  listing
                         #folder.setImmediatelyAddableTypes(["Event"])
                         # Object reindex for enabled to search
@@ -62,12 +60,10 @@ class CreatefolderActionExecutor(object):
                         self.context.invokeFactory(type, title=title, id=title)
                         holder=self.context
                         folder=getattr(holder, title)
-                        folder.setConstrainTypesMode(constraintypes.ENABLED)
-                        folder.setLocallyAllowedTypes(['File'])
                         # Enable contstraining
-                        #self.context.setConstrainTypesMode(constraintypes.ENABLED)
+                        folder.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check
-                        #self.context.setLocallyAllowedTypes(['File'])
+                        folder.setLocallyAllowedTypes(['File'])
                         # Add new... menu  listing
                         #folder.setImmediatelyAddableTypes(["File"])
                         # Object reindex for enabled to search
@@ -77,12 +73,10 @@ class CreatefolderActionExecutor(object):
                         self.context.invokeFactory(type, title=title, id=title)
                         holder=self.context
                         folder=getattr(holder, title)
-                        folder.setConstrainTypesMode(constraintypes.ENABLED)
-                        folder.setLocallyAllowedTypes(['File','Image','Document'])
                         # Enable contstraining
-                        #self.context.setConstrainTypesMode(constraintypes.ENABLED)
+                        folder.setConstrainTypesMode(constraintypes.ENABLED)
                         # Types for which we perform Unauthorized check
-                        #self.context.setLocallyAllowedTypes(['File','Image','Document'])
+                        folder.setLocallyAllowedTypes(['File','Image','Document'])
                         # Add new... menu  listing
                         #folder.setImmediatelyAddableTypes(['File','Image','Document'])
                         # Object reindex for enabled to search

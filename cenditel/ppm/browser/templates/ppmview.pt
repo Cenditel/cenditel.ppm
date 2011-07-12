@@ -4,7 +4,8 @@
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="ppm">
+      i18n:domain="cenditel.ppm">
+
 <metal:slot fill-slot="style_slot">
 <style>
 	ul#ListTags {

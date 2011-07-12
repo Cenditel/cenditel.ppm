@@ -3,14 +3,14 @@
 
 from Products.Archetypes.utils import DisplayList
 
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 
 
 PROJECTNAME = 'cenditel.ppm'
 
 ADD_PERMISSIONS = {
     'PPM': 'cenditel.ppm: Add PPM',
-    'proposals': 'cenditel.ppm: Add proposals',
+    'Proposals': 'cenditel.ppm: Add Proposals',
     'Project': 'cenditel.ppm: Add Project',
 }
 

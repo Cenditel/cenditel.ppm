@@ -13,7 +13,8 @@
   <extra name="index_type" value="Cosine Measure"/>
   <extra name="lexicon_id" value="plaintext_lexicon"/>
  </index>
+ 
  <column value="tags"/>
-<column value="manager"/>
+ <column value="manager"/>
 
 </object>

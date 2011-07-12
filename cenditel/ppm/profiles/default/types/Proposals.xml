@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <object name="Proposals"
    meta_type="Factory-based Type Information with dynamic views"
-   xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="ppm">
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="cenditel.ppm">
 
   <property name="title" i18n:translate="">Proposals</property>
   <property name="description" i18n:translate="">Create proposals of future projects for a project portfolio</property>

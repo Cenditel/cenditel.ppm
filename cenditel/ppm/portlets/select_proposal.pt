@@ -1,18 +1,7 @@
-<!--
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xml:lang="en" lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      metal:use-macro="here/main_template/macros/master"
-      i18n:domain="ppm">
-
- <body>
--->
   <div metal:define-macro="portlet"
-       i18n:domain="plone"
        tal:define="global mbr python:str(here.getUserById())"
-       tal:condition="python:str(mbr) != 'Anonymous User'">
+       tal:condition="python:str(mbr) != 'Anonymous User'"
+       i18n:domain="cenditel.ppm">
 
    <span tal:define="global parms view/getMemberProfile(mbr=mbr);
                      global purl  view/getPPMUrl;
@@ -26,10 +15,7 @@
      <a tal:attributes="href string:$curl/createObject?type_name=project" title="Create New Project" 
         i18n:attributes="title label_createnewproject" i18n:translate="label_createnewproject">Create New Project</a>
      <br />
-<!--
-     <a tal:attributes="href string:$curl/how-to/HowTo">View How-To Document</a><br/>
-     <a tal:attributes="href string:$curl/viewRecentChanges">View Recent Changes to Functionality</a><br/><br/>
--->
+
      <span tal:define="global selpm   view/getFormTags(key='pm',   parms=parms);
                        global seltag  view/getFormTags(key='tag',  parms=parms);
                        global selxtag view/getFormTags(key='xtag', parms=parms);" />
@@ -100,8 +86,4 @@
     </dd>
    </dl>
 
-
   </div>
-<!--
- </body>
-</html>-->

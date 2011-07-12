@@ -1,4 +1,4 @@
-<dl class="portlet" i18n:domain="ppm">
+<dl class="portlet" i18n:domain="cenditel.ppm">
 
  <dt class="portletHeader" 
      i18n:translate='label_navigation_porlet'>Navigation Portlet</dt>

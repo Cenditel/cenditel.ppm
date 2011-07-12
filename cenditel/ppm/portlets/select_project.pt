@@ -1,4 +1,4 @@
-<dl class="portlet" i18n:domain="ppm">
+<dl class="portlet" i18n:domain="cenditel.ppm">
 
  <dt class="portletHeader" 
      i18n:translate='label_project_porlet'>Project Portlet</dt>
@@ -17,8 +17,9 @@
    
       <label for="pm" i18n:translate="">By Manager</label>
        
-     <input type="hidden" id="Type" name="Type" value="project"/>
-       <label i18n:translate="label_project" value="project">projects</label>   
+      <input type="hidden" id="Type" name="Type" value="project" />
+
+      <label i18n:translate="label_project" value="project">projects</label>   
      
        
      <select id="manager" name="manager">
@@ -39,22 +40,16 @@
               
      </select>
      
-        </tbody>
+     </tbody>
 
-       </table> 
+    </table> 
      
-    
-     
-     <br />
-     <br />
-    <input 
-    type="submit" 
-    name="form.button.Search"
-    value="Search"
-    title="Show Projects by Manager/Tag"
-    i18n:attributes="value label_valuebottonsearch;
-                    title label_titlebottonsearch"
-    method="" /> 
+     <br /><br />
+    <input type="submit" name="form.button.Search"
+           value="Search" title="Show Projects by Manager/Tag"
+           i18n:attributes="value label_valuebottonsearch;
+                            title label_titlebottonsearch"
+           method="" /> 
   
     </form>
   

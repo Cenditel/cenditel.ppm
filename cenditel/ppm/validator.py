@@ -9,7 +9,7 @@ except ImportError:
     from interfaces.IValidator import IValidator
     del sys, os
 
-from cenditel.ppm import ppmMessageFactory as _
+from cenditel.ppm import CenditelPpmMF as _
 
 ValidatorsList=[]
 

@@ -9,11 +9,10 @@ from Products.CMFCore import utils
 # Define a message factory for when this product is internationalised.
 # This will be imported with the special name "_" in most modules. Strings
 # like _(u"message") will then be extracted by i18n tools for translation.
-ppmMessageFactory = MessageFactory('ppm')
+CenditelPpmMF = MessageFactory('cenditel.ppm')
 
 from cenditel.ppm import config
 from cenditel.ppm import validator
-
 
 def initialize(context):
     """Initializer called when used as a Zope 2 product.
@@ -49,3 +48,4 @@ def initialize(context):
             permission=config.ADD_PERMISSIONS[atype.portal_type],
             extra_constructors=(constructor,),
             ).initialize(context)
+

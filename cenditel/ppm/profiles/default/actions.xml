@@ -4,8 +4,8 @@
    
  <object name="content_actions" meta_type="CMF Action Category">
 
-  <!-- TODO verificar si esta acción tiene sentido en el estado actual del producto -->  
-  <object name="select_template" meta_type="CMF Action" i18n:domain="ppm">
+  <!-- TODO verificar si esta acción tiene sentido en el estado actual del producto  -->  
+  <object name="select_template" meta_type="CMF Action" i18n:domain="cenditel.ppm">
    <property name="title" i18n:translate="">Select Template</property>
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:${object_url}/@@newproposal</property>
@@ -17,8 +17,7 @@
    <property name="visible">True</property>
   </object>
   
-  
-  <object name="select_template" meta_type="CMF Action" i18n:domain="ppm">
+  <object name="select_template" meta_type="CMF Action" i18n:domain="cenditel.ppm">
    <property name="title" i18n:translate="">Search Project</property>
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:${object_url}/@@SearchPro</property>
@@ -29,7 +28,6 @@
    </property>
    <property name="visible">True</property>
   </object>
-
 
  </object>
 </object>

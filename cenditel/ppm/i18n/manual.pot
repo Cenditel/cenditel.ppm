@@ -18,12 +18,12 @@ msgstr ""
 "Domain: ppm\n"
 
 #. Default: "Groups"
-#: ../content/folderproj.py:
+#: ../content/PPM.py:
 msgid "Groups"
 msgstr ""
 
 #. Default: "Project"
-#: ../content/project.py:
+#: ../content/Project.py:
 msgid "Project"
 msgstr ""
 

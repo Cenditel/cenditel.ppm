@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cenditel.ppm\n"
-"POT-Creation-Date: 2011-07-04 22:16+0000\n"
-"PO-Revision-Date: 2011-07-04 17:38-0400\n"
-"Last-Translator: Oswaldo Lopez <oswaldolo@hotmail.com>\n"
+"POT-Creation-Date: 2011-07-06 23:00+0000\n"
+"PO-Revision-Date: 2011-07-06 16:26-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish <plone-conosur@lists.plone.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -87,7 +87,7 @@ msgid "Deferred"
 msgstr "Diferida"
 
 #. Default: "Groups"
-#: ../content/folderproj.py:
+#: ../content/PPM.py:
 msgid "Groups"
 msgstr "Grupos"
 
@@ -125,7 +125,7 @@ msgid "Prioritized"
 msgstr "Priorizada"
 
 #. Default: "Project"
-#: ../content/project.py:
+#: ../content/Project.py:
 msgid "Project"
 msgstr "Proyecto"
 

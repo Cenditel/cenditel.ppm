@@ -8,6 +8,7 @@ from plone.portlets.interfaces import IPortletManager
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from Products.CMFCore.utils import getToolByName
 
+from cenditel.ppm import CenditelPpmMF as _
 from cenditel.ppm.portlets import navigation
 from cenditel.ppm.portlets import select_project
 
@@ -15,7 +16,6 @@ from plone.portlets.constants import CONTEXT_ASSIGNMENT_KEY, CONTEXT_CATEGORY
 from plone.app.portlets.storage import PortletAssignmentMapping
 from smtplib import SMTPRecipientsRefused
 from Products.MailHost.MailHost import MailHostError
-from cenditel.ppm import ppmMessageFactory as _
 import logging
 
 DEFAULT_RIGHT_PORTLETS = (
