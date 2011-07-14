@@ -12,6 +12,12 @@
 				 list-style:none;
                 }
 </style>
+
+<style>
+	ul#ListTags {
+				 list-style:none;
+                }
+</style>
 </metal:slot>
 
  <body>
@@ -137,7 +143,15 @@
          <tr tal:repeat="projectTitle python:Element">  
           <span tal:define="link projectTitle/absolute_url">
            <td><a href="" tal:attributes="href link"><span tal:content="projectTitle/Title" /></a></td> 
-           <td tal:content="projectTitle/getManager"></td> 
+            
+           <td > <ul tal:define="Mangs projectTitle/getManager"> 
+           <li tal:repeat="Mang Mangs">
+                <a  tal:define=" url string:../author/;
+                                 author python: url+Mang " href="" tal:attributes="href author" >
+                <span tal:content="Mang"/></a>
+              </li>
+              </ul>
+           </td> 
            
            <td tal:define="status projectTitle/status; 
                            realstatus python: RealStatus[status];
