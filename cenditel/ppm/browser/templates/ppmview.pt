@@ -133,7 +133,6 @@
           <th i18n:translate="label_budgetstatus">Budget Status</th> 
           <th i18n:translate="label_begindate">Begin Date</th> 
           <th i18n:translate="label_enddate">End Date</th> 
-          <th i18n:translate="label_suscribers">Suscribers</th> 
           <th i18n:translate="label_tags">Tags</th> 
          </tr> 
         </thead> 
@@ -173,7 +172,6 @@
                
            <td tal:content="projectTitle/begin_date"></td> 
            <td tal:content="projectTitle/end_date" bgcolor="White"><a href=""><br /></a></td> 
-           <td tal:content="projectTitle/suscribers" bgcolor="White"></td> 
            <td>
             <ul id="ListTags" tal:define="objets projectTitle/tags">
               <li tal:repeat="objet objets">
