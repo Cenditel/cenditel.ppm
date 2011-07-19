@@ -57,7 +57,7 @@ def MakeDefaultUser(context, username, title,):
         'username' : username,
         # Full name must be always as utf-8 encoded
         'fullname' : title.encode("utf-8"),
-        'email' : 'oswaldolosa@yahoo.es',
+        'email' : 'ppmadmin@admin.com',
     	}
     logger = logging.getLogger("SetupHandlers.cenditel.ppm")
     try:
