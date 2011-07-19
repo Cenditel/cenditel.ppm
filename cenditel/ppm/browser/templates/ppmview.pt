@@ -170,8 +170,8 @@
                tal:attributes="bgcolor string:$py_budcolor"
                tal:content="realbud"></td>  
                
-           <td tal:content="projectTitle/begin_date"></td> 
-           <td tal:content="projectTitle/end_date" bgcolor="White"><a href=""><br /></a></td> 
+           <td tal:define="begindate python: view.MyDate(projectTitle.getBegin_date())" tal:content="begindate"></td> 
+           <td tal:define="enddate python: view.MyDate(projectTitle.getEnd_date())" tal:content="enddate" bgcolor="White"><a href=""><br /></a></td> 
            <td>
             <ul id="ListTags" tal:define="objets projectTitle/tags">
               <li tal:repeat="objet objets">

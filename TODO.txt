@@ -24,26 +24,26 @@ Al Agregar un PPM
  - Debe bloquear automáticamente los portlets globales y habilitar los locales
  **- Debe instalar el producto cenditel.ppm debe instalar las dependencias automáticamente
  **- Cambiar de folderproj a PPM en nombre de la clase y del archivo
- - Cambiar los nombres de los content types a Capitales tanto en el código como en los nombres de archivos dentro content/, profiles/default/types
+ **- Cambiar los nombres de los content types a Capitales tanto en el código como en los nombres de archivos dentro content/, profiles/default/types
  **- En la carpeta "Proposal Templates" dentro el PPM debe restringirse los tipos de contenidos a solamente "FCKTemplate"
  **- Al instalar "FCKTemplate" debería cambiar la configuración por defecto de editor solo para contexto de PPM, Propuestas, Proyecto.
- - Al Instalar el producto PPM crea un usuario para administración para el producto como miembro Plone, la idea es que restrinja los permisos a que solo pueda administrar ppm, propuestas y proyectos, ejemplo de esto es el caso del producto FacultyStaffDirectory que crea un rol "Personnel Manager" y le define permisos para agregar el contenido Persona del mismo.
+ **- Al Instalar el producto PPM crea un usuario para administración para el producto como miembro Plone, la idea es que restrinja los permisos a que solo pueda administrar ppm, propuestas y proyectos, ejemplo de esto es el caso del producto FacultyStaffDirectory que crea un rol "Personnel Manager" y le define permisos para agregar el contenido Persona del mismo.
  - Al desglosar la vista "Todos los Proyectos" mejorar los siguientes campos:
-   - En la columna "Administrador del Proyecto" debe mostrar el nombre completo del usuario activando su respectivo vinculo hacia la pagina del perfil del estos usuarios por ejemplo http://localhost:8080/demo/ppm/author/PPM
-   - En la columna "Fecha de inicio" y "Fecha de Finalización" esta en formato ingles la fecha 2011/07/28 debe estar así 28/07/2012
-   - La columna "Suscriptores" no es necesaria mostrarla en la tabla, debido que las suscripciones se manejarán por parte de usuario as lo desea o por ser administrador del proyecto.
+   **- En la columna "Administrador del Proyecto" debe mostrar el nombre completo del usuario activando su respectivo vinculo hacia la pagina del perfil del estos usuarios por ejemplo http://localhost:8080/demo/ppm/author/PPM
+   **- En la columna "Fecha de inicio" y "Fecha de Finalización" esta en formato ingles la fecha 2011/07/28 debe estar así 28/07/2012
+   **- La columna "Suscriptores" no es necesaria mostrarla en la tabla, debido que las suscripciones se manejarán por parte de usuario as lo desea o por ser administrador del proyecto.
 
 Al Agregar Propuestas
  - la segunda pestaña sale en ingles "Groups", 
  - la validación de los grupos "Group required, please correct." deben estar traducidas 
- - Las variables de la platilla $Date deben generarsea algo asi 06/06/2011 al usar en la plantilla de la propuesta.
- - Revisar el formato en estilos de la platilla de la propuesta.
+ **- Las variables de la platilla $Date deben generarsea algo asi 06/06/2011 al usar en la plantilla de la propuesta.
+ **- Revisar el formato en estilos de la platilla de la propuesta.
  - A las N plantillas de propuestas creadas automaticamente cargar sus iconos, como referencia el perfil Test del productos PloneMeeting http://svn.communesplone.org/svn/communesplone/PloneMeeting/trunk/profiles/test/import_data.py
 
 Al Agregar Proyecto 
- - Los campos de costos usar el Widget del producto Products.FinanceFields para gestionar el tema del tipode moneda http://pypi.python.org/pypi/Products.FinanceFields/1.0
- - El mecanismo para lista los usuarios de Plone en el proyecto muestra un mensaje en la consola como este 'DeprecationWarning: getUserIds is deprecated. Use the PAS methods instead' en la linea 18 del archivo cenditel.ppm/cenditel/ppm/users.py, la solución planteada esta expuesta aca http://plone.293351.n2.nabble.com/DeprecationWarning-getUserIds-is-deprecated-td331462.html
- - la segunda pestaña sale en ingles "Project" deben estar traducida
+ **- Los campos de costos usar el Widget del producto Products.FinanceFields para gestionar el tema del tipode moneda http://pypi.python.org/pypi/Products.FinanceFields/1.0
+ **- El mecanismo para lista los usuarios de Plone en el proyecto muestra un mensaje en la consola como este 'DeprecationWarning: getUserIds is deprecated. Use the PAS methods instead' en la linea 18 del archivo cenditel.ppm/cenditel/ppm/users.py, la solución planteada esta expuesta aca http://plone.293351.n2.nabble.com/DeprecationWarning-getUserIds-is-deprecated-td331462.html
+ **- la segunda pestaña sale en ingles "Project" deben estar traducida
  - En la segunda pestaña "Project" en el campo "Administrador del Proyecto" 
  **- por defecto no tiene agregado usuario con rol administrador definido
  **- La lista de selección simple solo me deja seleccionar un administrador por proyecto, a diferencia de la versión en plone 2.5, 

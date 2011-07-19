@@ -33,7 +33,7 @@ class GroupsValidator:
     	  Dic=value[0]
     	  value = str(value)
     	  if Dic['Title']=='':
-    	      return (_(u'Group required, please correct.'))
+    	      return _(u'Group required, please correct.')
        
 ValidatorsList.append(GroupsValidator('isGroups', title='', description=''))
 

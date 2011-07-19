@@ -15,16 +15,16 @@ def userVocabularyFactory(context):
     
     @return: values
     """
-    users = context.acl_users.getUserIds()
-    #users = IPAS.searchUsers()
+    users=context.acl_users.getUsers()
     i = 0
     items = []
     for user in users:
+        userid=user.getUserId()
         if len(users)==1:
-            items.append((user,user))
+            items.append((userid,userid))
             break
         else:
-            items.append((user,user))
+            items.append((userid,userid))
     tuple_items = tuple(items)
     values = SimpleVocabulary.fromItems(tuple_items)    
     return values

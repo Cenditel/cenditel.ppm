@@ -24,6 +24,8 @@ from Products.Archetypes.atapi import InAndOutWidget
 from Products.AddRemoveWidget import AddRemoveWidget
 from Products.FCKeditor.FckWidget import FckWidget
 from collective.calendarwidget.widget import CalendarWidget
+from Products.FinanceFields.MoneyField import MoneyField
+from Products.FinanceFields.Money import Money
 
 from cenditel.ppm import CenditelPpmMF as _
 from cenditel.ppm.config import PROJECTNAME, TYPE_SUBFOLDER_PROJECT, SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
@@ -77,7 +79,7 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
     atapi.DateTimeField(
         name='end_date',
         widget=CalendarWidget(
-            #format=('%Y;%m;%d;%H;%M'),
+            format='%d:%m:%Y',
             label=_(u'End Date'),
             description=_(u"Project End Date"),
         ),
@@ -97,18 +99,18 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         storage=atapi.AnnotationStorage(),
         schemata='Project',
     ),
-    atapi.StringField(
+    MoneyField(
         name='est_budget',
-        widget=atapi.StringWidget(
+        widget=MoneyField._properties['widget'](
             label=_(u"Estimated Budget"),
             description=_(u"Project Estimated Budget"),
         ),
         schemata='Project',
     ),
 
-    atapi.StringField(
+    MoneyField(
         name='act_budget',
-        widget=atapi.StringWidget(
+        widget=MoneyField._properties['widget'](
             label=_(u"Actual Budget"),
             description=_(u"Project Actual Budget"),
         ),
@@ -199,7 +201,8 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
 
 # Set storage on fields copied from ATFolderSchema, making sure
 # they work well with the python bridge properties.
-
+projectSchema["act_budget"].default_currency_method = 'VEB'
+projectSchema["est_budget"].default_currency_method = 'VEB'
 projectSchema['title'].storage = atapi.AnnotationStorage()
 projectSchema['description'].storage = atapi.AnnotationStorage()
 schemata.finalizeATCTSchema(

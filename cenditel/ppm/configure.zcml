@@ -24,5 +24,15 @@
     for="cenditel.ppm.interfaces.IProject
     Products.Archetypes.interfaces.IObjectEditedEvent"
     handler="cenditel.ppm.events.SavedElement" />
+    
+  <subscriber 
+    for="cenditel.ppm.interfaces.IProposals
+    Products.Archetypes.interfaces.IObjectInitializedEvent"
+    handler="cenditel.ppm.events.SavedProposal" />
+    
+ <subscriber 
+    for="cenditel.ppm.interfaces.IPPM
+    Products.Archetypes.interfaces.IObjectInitializedEvent"
+    handler="cenditel.ppm.events.SavedPPM" />
   
 </configure>

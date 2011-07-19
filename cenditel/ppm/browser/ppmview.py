@@ -87,9 +87,9 @@ class PPMView(BrowserView, object):
         and a template 
         """
         holder = self.context
-        txt = """Subject: $Subject
+        txt = """Subject: 
 
-Group: $Group
+
 
 Email: 
 
@@ -139,3 +139,9 @@ contents with the information you want collected.
             pass
         return 
 
+
+    def MyDate(self, OriginalDate):
+        (Y,m,d)=str(OriginalDate).split('/')
+        Date=(d,m,Y)
+        NewDate='/'.join(Date)
+        return NewDate

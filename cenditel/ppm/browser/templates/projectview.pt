@@ -85,14 +85,14 @@
         <tr> 
          <span> 
           <th i18n:translate='label_estimatebud' align="left" width="20%">Estimated Budget</th> 
-          <td width="80%">$ <p tal:replace="est_budget"></p></td>  
+          <td width="80%"> <p tal:replace="est_budget"></p></td>  
          </span> 
         </tr> 
         
         <tr> 
          <span>  
           <th i18n:translate='label_actualbud' align="left" width="20%">Actual Budget</th> 
-          <td width="80%">$ <p tal:replace="act_budget"></p></td>  
+          <td width="80%"> <p tal:replace="act_budget"></p></td>  
          </span> 
         </tr> 
         

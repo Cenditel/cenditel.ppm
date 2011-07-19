@@ -73,6 +73,7 @@ setup(name='cenditel.ppm',
                         #"Products.Poi==1.2.9",
                         #"Products.Calendaring==0.5b1",
                         "collective.calendarwidget==0.2.1",
+                        "Products.FinanceFields==1.0",
                         "collective.js.jqueryui==1.8.7.1"
                         ],
       tests_require=tests_require,

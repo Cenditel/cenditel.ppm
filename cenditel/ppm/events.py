@@ -17,11 +17,27 @@ from plone.app.portlets.storage import PortletAssignmentMapping
 from smtplib import SMTPRecipientsRefused
 from Products.MailHost.MailHost import MailHostError
 import logging
+from DateTime import DateTime
+
 
 DEFAULT_RIGHT_PORTLETS = (
     ('navigation', navigation.Assignment, {}),
     ('select_project', select_project.Assignment, {}),
     )
+
+def SavedPPM(object, evt, ):
+    #roles = object.get_local_roles()
+    object.manage_setLocalRoles("PPM", ['Manager','Owner'])
+    
+def SavedProposal(object, evt, ):   
+    date = str(DateTime())[:10]
+    (Y,m,d)=str(date).split('/')
+    Date=(d,m,Y)
+    NText=object.getTemplatest()
+    FDate='/'.join(Date)
+    NText=NText.replace('$Date',FDate)
+    object.setTemplatest(NText)
+
 
 def SavedElement(object, evt, ):
     managers=object.getManager()
@@ -30,6 +46,7 @@ def SavedElement(object, evt, ):
     object.setContributors(managers)
     Makeportlets(object, evt)
     SendEmail(object, evt)
+    AsingSuscribers(object, evt)
     
 def Makeportlets(object, evt):
     annotated = IAnnotations(object)
@@ -47,6 +64,23 @@ def Makeportlets(object, evt):
             
     portlets['plone.rightcolumn'] = right_portlets
     annotated[CONTEXT_ASSIGNMENT_KEY] = portlets
+    
+def AsingSuscribers(object, evt):
+    suscribers=list(object.getSuscribers())
+    managers=object.getManager()
+    list_emails = []
+    
+    for manager in managers:
+        
+        user=object.acl_users.getUserById(manager)
+        email=user.getProperty('email')
+        if suscribers.count(email)==0:
+            list_emails.append(email)
+        else:
+             pass    
+    suscribers.extend(list_emails)    
+
+    object.setSuscribers(suscribers)
 
 def SendEmail(object, evt):
     host = getToolByName(object, 'MailHost')
