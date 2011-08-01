@@ -26,7 +26,7 @@ DEFAULT_RIGHT_PORTLETS = (
     )
 
 def SavedPPM(object, evt, ):
-    #roles = object.get_local_roles()
+
     object.manage_setLocalRoles("PPM", ['Manager','Owner'])
     
 def SavedProposal(object, evt, ):   
@@ -54,10 +54,7 @@ def Makeportlets(object, evt):
 
     left_portlets = portlets.get('plone.leftcolumn', PortletAssignmentMapping())
     right_portlets = portlets.get('plone.rightcolumn', PortletAssignmentMapping())
-    
-    #for name, assignment, kwargs in DEFAULT_LEFT_PORTLETS:
-        #if not left_portlets.has_key(name):
-            #left_portlets[name] = assignment(**kwargs)
+
     for name, assignment, kwargs in DEFAULT_RIGHT_PORTLETS:
         if not right_portlets.has_key(name):
             right_portlets[name] = assignment(**kwargs)
@@ -92,9 +89,9 @@ def SendEmail(object, evt):
     if ToList == "" or ToList==[]:
         return
     else:
-        #import pdb; pdb.set_trace()
+
         try:
-            #import pdb; pdb.set_trace()
+
             host.secureSend(message, ToList, From,subject=Subject, subtype='plain', charset='UTF-8')
          
         except MailHostError:

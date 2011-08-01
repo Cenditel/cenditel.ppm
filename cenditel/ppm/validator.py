@@ -77,15 +77,14 @@ class SuscriberValidator:
             self.description = description
        
     def __call__(self, value, *args, **kwargs):
-        #for email in self.suscribers:
-        #value = str(value)
+
         Wrongs=[]
         for email in value:
             
             try:
                 checkEmailAddress(email)
             except EmailAddressInvalid:
-                #raise InvalidEmailAddress(email)
+
                 Wrongs.append(email)
         if len(Wrongs)==1:
             return _(u"The next email address is invalid: %s") % (Wrongs[0])

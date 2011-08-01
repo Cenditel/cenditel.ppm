@@ -3,8 +3,7 @@ from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
 
 from Products.CMFCore.utils import getToolByName
-#from Products.PluggableAuthService.interfaces.authserve.IPluggableAuthService import searchUsers
-#from Products.PluggableAuthService.interfaces import IPluggableAuthService as IPAS
+
 
 from cenditel.ppm.interfaces import IProject
 

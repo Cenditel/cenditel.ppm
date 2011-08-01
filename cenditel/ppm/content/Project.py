@@ -193,7 +193,6 @@ projectSchema = folder.ATFolderSchema.copy() +  atapi.Schema((
         ),
         schemata='Project',
         required=True,
-        vocabulary_factory="cenditel.ppm.getLocalSubFolderVocabulary", #TODO verificar si existe
      ),
 
 ))

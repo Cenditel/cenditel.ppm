@@ -1,10 +1,4 @@
-#from zope.component import getMultiAdapter
-#from zope.component import getUtility
-#from plone.i18n.normalizer.interfaces import IIDNormalizer
-#from Products.Five import BrowserView
-#from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-#from AccessControl import ClassSecurityInfo, getSecurityManager
-#from Acquisition import aq_base, aq_inner, aq_parent
+
 from Products.CMFCore.utils import getToolByName
 from AccessControl import ClassSecurityInfo
 from Acquisition import aq_base

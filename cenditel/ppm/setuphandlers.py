@@ -51,11 +51,10 @@ def MakeDefaultUser(context, username, title,):
     regtool = getToolByName(site, 'portal_registration')
     passwd=None
     if passwd == None:
-        #crear un password aleatorio con el scritp de ejemplo
+
         passwd = passwds
         properties = {
         'username' : username,
-        # Full name must be always as utf-8 encoded
         'fullname' : title.encode("utf-8"),
         'email' : 'ppmadmin@admin.com',
     	}

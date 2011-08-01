@@ -1,6 +1,4 @@
-#from Products.CMFCore.utils import getToolByName
-#from Products.CMFPlone.utils import _createObjectByType
-#from AccessControl import ClassSecurityInfo, getSecurityManager
+
 from AccessControl import ClassSecurityInfo
 from zope.interface import implements
 from plone.contentrules.rule.interfaces import IExecutable
@@ -46,41 +44,22 @@ class CreatefolderActionExecutor(object):
                         self.context.invokeFactory(type, title=title, id=title)
                         holder=self.context
                         folder=getattr(holder, title)
-                        # Enable contstraining
                         folder.setConstrainTypesMode(constraintypes.ENABLED)
-                        # Types for which we perform Unauthorized check
                         folder.setLocallyAllowedTypes(['Event'])
-                        #import pdb; pdb.set_trace()
-                        # Add new... menu  listing
-                        #folder.setImmediatelyAddableTypes(["Event"])
-                        # Object reindex for enabled to search
-                        #self.context.reindexObject()
 
                     elif type == 'Folder' and title=='Documents':
                         self.context.invokeFactory(type, title=title, id=title)
                         holder=self.context
                         folder=getattr(holder, title)
-                        # Enable contstraining
                         folder.setConstrainTypesMode(constraintypes.ENABLED)
-                        # Types for which we perform Unauthorized check
                         folder.setLocallyAllowedTypes(['File'])
-                        # Add new... menu  listing
-                        #folder.setImmediatelyAddableTypes(["File"])
-                        # Object reindex for enabled to search
-                        #self.context.reindexObject()
 
                     elif type == 'Folder' and title=='Plans':
                         self.context.invokeFactory(type, title=title, id=title)
                         holder=self.context
                         folder=getattr(holder, title)
-                        # Enable contstraining
                         folder.setConstrainTypesMode(constraintypes.ENABLED)
-                        # Types for which we perform Unauthorized check
                         folder.setLocallyAllowedTypes(['File','Image','Document'])
-                        # Add new... menu  listing
-                        #folder.setImmediatelyAddableTypes(['File','Image','Document'])
-                        # Object reindex for enabled to search
-                        #self.context.reindexObject()
 
                     if type != 'Folder':
                         self.context.invokeFactory(type, title=title, id=title)

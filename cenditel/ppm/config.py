@@ -76,6 +76,7 @@ PRODUCT_DEPENDENCIES = (
     "Calendaring",
     "collective.calendarwidget",
     "Products.FCKeditor",
+    "FinanceFields",
     "CPFCKTemplates",
      )
      
