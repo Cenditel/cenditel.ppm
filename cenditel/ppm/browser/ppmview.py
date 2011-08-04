@@ -8,6 +8,7 @@ from Products.ATContentTypes.lib import constraintypes
 from cenditel.ppm import CenditelPpmMF as _
 from cenditel.ppm import search
 from cenditel.ppm.config import SCHEDULE_STATUS_PROJECT, BUDGET_STATUS_PROJECT
+from cenditel.ppm.Image import DefaultImage
 	
 class IPPMView(Interface):
     """
@@ -130,10 +131,8 @@ contents with the information you want collected.
             foldert=getattr(holder, "Templates")
             foldert.setConstrainTypesMode(constraintypes.ENABLED)
             foldert.setLocallyAllowedTypes(['FCKTemplate'])
-            foldert.invokeFactory("FCKTemplate", title="Example", id="example")
-            
+            foldert.invokeFactory("FCKTemplate", title="Example", id="example", anIcon=DefaultImage())
             example=getattr(foldert, "example")
-
             example.setText(txt)
         except:
             pass
